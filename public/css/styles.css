@@ -1,0 +1,21 @@
+body {
+  padding: 20px 50px;
+  font: 14px/1.5 "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Sans-Serif;
+}
+
+#search-form {
+  width: 50%;
+  margin: auto;
+  margin-bottom: 30px;
+}
+#search-form input {
+  width: 100%;
+  font-size: 20px;
+  margin: 15px 0;
+}
+
+#search-form input[type='submit'] {
+  cursor: pointer;
+  width: auto;
+  margin: auto;
+}
