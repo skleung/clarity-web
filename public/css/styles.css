@@ -19,3 +19,16 @@ body {
   width: auto;
   margin: auto;
 }
+
+#soundcloud-result iframe {
+  height: 130px;
+}
+
+.result-wrappers {
+  color: #666;
+  text-align: center;
+}
+
+.youtube-post-load {
+  display: none;
+}

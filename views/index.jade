@@ -3,13 +3,15 @@ extend layout
 block content
   h1 Callback Newsfeed
   div.container
-    form(action='/search', method='post', id='search-form')
+    form(action='/search', method='post', id='search-form', class='text-center')
       input(name='query', type='text',autofocus,placeholder='Enter something to search for')
-      input(type='submit', class='btn btn-block btn-primary')
+      input(type='submit', class='btn btn-block btn-primary', disable)
+      small.youtube-post-load.text-success
+        | YouTube client loaded
     div.row
       div.col-md-4
-        div(id="soundcloud-result")
+        div.result-wrappers(id="soundcloud-result")
       div.col-md-4
-        div(id="youtube-result")
+        div.result-wrappers(id="youtube-result")
       div.col-md-4
-        div(id="reddit-result")
+        div.result-wrappers(id="reddit-result")
