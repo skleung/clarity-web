@@ -28,15 +28,21 @@ header {
 .newsfeed-wrapper li.form-wrapper {
   padding: 15px 0 0 0;
 }
-.submit-wrapper {
-  background-color: #eaeaea;
+.submit-wrapper, .post-wrapper{
   padding: 10px 0;
   height: 60px;
+  position: relative;
+}
+.submit-wrapper {
+  background-color: #eaeaea;
 }
 .btn-primary {
   background-color: #3b5998;
-  margin-right: 15px;
-  float: right;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  height: 40px;
+  margin-top: -20px;
 }
 
 #search-form input[type='text'] {
@@ -51,7 +57,7 @@ header {
   display: none;
   width: 100%;
   padding: 20px;
-  color: #666;
+  color: black;
   border-radius: 5px;
   text-align: center;
 }

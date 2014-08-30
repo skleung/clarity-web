@@ -1,9 +1,32 @@
+
+// all the jQuery objects 
 var $searchForm = $("#search-form");
 var $soundcloudResult = $("#soundcloud-result");
 var $youtubeResult = $("#youtube-result");
 var $spotifyResult = $("#spotify-result");
 
-//callback for the search request
+
+/* Helper method to generate spotify's iframe
+ *
+ * Arguments:
+ * trackURI -- the track's URI (e.g. "spotify:track:2toEICLQiCx8twlZw21eBB")
+ */
+function generateSpotifyIframe(trackURI) {
+  return '<iframe src="https://embed.spotify.com/?uri='+trackURI+'" width="100%" height="80px" frameborder="0" allowtransparency="true"></iframe>';
+}
+/* Helper method to generate Youtube's iframe
+ *
+ * Arguments:
+ * videoID -- video ID of the youtube video
+ */
+function generateYoutubeIframe(videoID) {
+  return '<iframe id="ytplayer" type="text/html" width="100%" height="80px" src="http://www.youtube.com/embed/'+videoID+'" frameborder="0"/>';
+}
+/* Displays a SoundCloud player for the first search result.
+ *
+ * Arguments:
+ * searchResults -- the raw string of search results from the SoundCloud API
+ */
 function displaySoundCloudPlayer(searchResults){
    searchResults = JSON.parse(searchResults);
 
@@ -20,53 +43,11 @@ function displaySoundCloudPlayer(searchResults){
   });
 }
 
-function searchSoundCloud(query) {
-  var title = query
-
-  $soundcloudResult.html("Loading Soundcloud results...");
-
-  // make AJAX request to /search
-  var searchRequest = new XMLHttpRequest();
-  searchRequest.addEventListener("load", function() {
-    displaySoundCloudPlayer(searchRequest.responseText);
-  });
-
-  searchRequest.open('GET', "/search?title=" + encodeURIComponent(title), true);
-  searchRequest.send();
-}
-
-//hardcoded height here
-function generateYoutubeIframe(videoID) {
-  return '<iframe id="ytplayer" type="text/html" width="100%" height="80px" src="http://www.youtube.com/embed/'+videoID+'" frameborder="0"/>';
-}
-
-function displayYoutube(searchResults) {
-  searchResults = JSON.parse(searchResults);
-  var videoID = searchResults.items[0].id.videoId;
-  if (videoID) {
-    $youtubeResult.html(generateYoutubeIframe(videoID));
-  } else {
-    $youtubeResult.html("No results found.");
-  }
-}
-
-function searchYoutube(query){
-  $youtubeResult.html("Loading Youtube Results...");
-
-  // make AJAX request to /searchYoutube
-  var searchRequest = new XMLHttpRequest();
-  searchRequest.addEventListener("load", function() {
-    displayYoutube(searchRequest.response);
-  });
-
-  searchRequest.open('GET', "/searchYoutube?title=" + encodeURIComponent(query), true);
-  searchRequest.send();
-}
-
-function generateSpotifyIframe(trackURI) {
-  return '<iframe src="https://embed.spotify.com/?uri='+trackURI+'" width="100%" height="80px" frameborder="0" allowtransparency="true"></iframe>';
-}
-
+/* Displays a Spotify player for the first search result.
+ *
+ * Arguments:
+ * searchResults -- the raw string of search results from the SoundCloud API
+ */
 function displaySpotify(searchResults) {
   var searchResults = JSON.parse(searchResults);
   // var videoID = searchResults.items[0].id.videoId;
@@ -78,8 +59,60 @@ function displaySpotify(searchResults) {
   }
 }
 
-function searchSpotify(query){
+/* Displays a YouTube player for the first search result.
+ *
+ * Arguments:
+ * searchResults -- the raw string of search results from the SoundCloud API
+ */
+function displayYoutube(searchResults) {
+  searchResults = JSON.parse(searchResults);
+  var videoID = searchResults.items[0].id.videoId;
+  if (videoID) {
+    $youtubeResult.html(generateYoutubeIframe(videoID));
+  } else {
+    $youtubeResult.html("No results found.");
+  }
+}
+
+/* Displays loading messages in the result boxes
+ *
+ */
+function displayLoadingMessages() {
+  $(".result").show();
   $spotifyResult.html("Loading Spotify Results...");
+  $youtubeResult.html("Loading YouTube Results...");
+  $soundcloudResult.html("Loading SoundCloud Results...");
+}
+/* Displays a SoundCloud player for the first search result.
+ *
+ * Arguments:
+ * searchResults -- the raw string of search results from the SoundCloud API
+ */
+function searchSoundCloud(query) {
+
+  // make AJAX request to /search
+  var searchRequest = new XMLHttpRequest();
+  searchRequest.addEventListener("load", function() {
+    displaySoundCloudPlayer(searchRequest.responseText);
+  });
+
+  searchRequest.open('GET', "/search?queryStr=" + encodeURIComponent(query), true);
+  searchRequest.send();
+}
+
+function searchYoutube(query){
+
+  // make AJAX request to /searchYoutube
+  var searchRequest = new XMLHttpRequest();
+  searchRequest.addEventListener("load", function() {
+    displayYoutube(searchRequest.response);
+  });
+
+  searchRequest.open('GET', "/searchYoutube?queryStr=" + encodeURIComponent(query), true);
+  searchRequest.send();
+}
+
+function searchSpotify(query){
 
   // make AJAX request to /searchSpotify
   var searchRequest = new XMLHttpRequest();
@@ -87,13 +120,14 @@ function searchSpotify(query){
     displaySpotify(searchRequest.response);
   });
 
-  searchRequest.open('GET', "/searchSpotify?title=" + encodeURIComponent(query), true);
+  searchRequest.open('GET', "/searchSpotify?queryStr=" + encodeURIComponent(query), true);
   searchRequest.send();
 }
 
 function searchAllAPIs(event){
   event.preventDefault();
   $(".result").show();
+
   var query = $("#search-form input[name='query']").val();
 
   // validation of input for all APIs

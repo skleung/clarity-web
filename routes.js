@@ -9,8 +9,8 @@ module.exports = function(app, nconf) {
   });
 
   app.get('/search', function(req, res) {
-    console.log("Searching soundcloud for  "+req.query.title);
-    soundCloud.search(req.query.title, function(error, body) {
+    console.log("Searching soundcloud for  "+req.query.queryStr);
+    soundCloud.search(req.query.queryStr, function(error, body) {
       if (error) {
           throw error;
       } else {
@@ -20,8 +20,8 @@ module.exports = function(app, nconf) {
   });
 
   app.get('/searchYoutube', function(req, res) {
-    console.log("Searching youtube for  "+req.query.title);
-    youTube.search(req.query.title, function(error, body) {
+    console.log("Searching youtube for  "+req.query.queryStr);
+    youTube.search(req.query.queryStr, function(error, body) {
       if (error) {
           throw error;
       } else {
@@ -31,8 +31,8 @@ module.exports = function(app, nconf) {
   });
 
   app.get('/searchSpotify', function(req, res) {
-    console.log("Searching spotify for  "+req.query.title);
-    spotify.search(req.query.title, function(error, body) {
+    console.log("Searching spotify for  "+req.query.queryStr);
+    spotify.search(req.query.queryStr, function(error, body) {
       if (error) {
           throw error;
       } else {
