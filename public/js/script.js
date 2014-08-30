@@ -37,7 +37,7 @@ function searchSoundCloud(query) {
 
 //hardcoded height here
 function generateYoutubeIframe(videoID) {
-  return '<iframe id="ytplayer" type="text/html" width="100%" height="80px" src="http://www.youtube.com/embed/'+videoID+'" frameborder="0"/>';
+  return '<iframe id="ytplayer" type="text/html" width="100%" height="100px" src="http://www.youtube.com/embed/'+videoID+'" frameborder="0"/>';
 }
 
 function displayYoutube(searchResults) {
@@ -64,7 +64,7 @@ function searchYoutube(query){
 }
 
 function generateSpotifyIframe(trackURI) {
-  return '<iframe src="https://embed.spotify.com/?uri='+trackURI+'" width="100%" height="80" frameborder="0" allowtransparency="true"></iframe>';
+  return '<iframe src="https://embed.spotify.com/?uri='+trackURI+'" width="100%" height="100px" frameborder="0" allowtransparency="true"></iframe>';
 }
 
 function displaySpotify(searchResults) {

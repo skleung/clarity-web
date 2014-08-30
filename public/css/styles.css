@@ -1,33 +1,61 @@
 body {
-  padding: 20px 50px;
-  font: 14px/1.5 "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Sans-Serif;
+  font: 14px/1.5 Tahoma, Helvetica, Sans-Serif;
+  margin: 0;
+  background-color: #e9eaed;
+}
+header {
+  padding: 10px 0;
+  background-color: #3b5998;
+  color: white;
+  font-weight: 700;
+  font-size: 24px;
 }
 
-#search-form {
+.newsfeed-wrapper {
+  margin: auto;
   width: 50%;
-  margin: auto;
-  margin-bottom: 30px;
+}
+.newsfeed-wrapper ul {
+  list-style-type: none;
+}
+.newsfeed-wrapper li {
+  border-radius: 3px;
+  background-color: white;
+  border: 1px solid #ccc;
+  margin-top: 20px;
+}
+.newsfeed-wrapper li form {
+  padding: 0;
+}
+.submit-wrapper {
+  background-color: #eaeaea;
+  padding: 10px 0;
+}
+#search-form .btn-primary{
+  background-color: #3b5998;
 }
 
-#search-form input {
-  width: 100%;
+#search-form input[type='text'] {
+  width: 90%;
   font-size: 20px;
-  margin: 15px 0;
-}
-
-#search-form input[type='submit'] {
-  cursor: pointer;
-  width: auto;
-  margin: auto;
+  border: 0;
+  outline: none;
+  margin: 15px auto;
 }
 
 #soundcloud-result iframe {
-  height: 80px;
+  height: 100px;
 }
 
 .result-wrappers {
+  width: 100%;
+  padding: 15px;
   color: #666;
   text-align: center;
+}
+.result-wrappers:hover {
+  background-color: aliceblue;
+  cursor: pointer;
 }
 
 .youtube-post-load {

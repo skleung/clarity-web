@@ -1,14 +1,17 @@
 extend layout
 
 block content
-  h1 Callback Newsfeed
-  div.container
-    form(action='/search', method='post', id='search-form', class='text-center')
-      input(name='query', type='text',autofocus,placeholder='Enter something to search for')
-      input(type='submit', class='btn btn-block btn-primary', disable)
-      small.youtube-post-load.text-success
-        | YouTube client loaded
-    div.row
+  div.newsfeed-wrapper
+    
+    ul
+      li
+        form(action='/search', method='post', id='search-form', class='text-center')
+          input(name='query', type='text',autofocus,placeholder='Enter something to search for')
+          div.submit-wrapper
+            input(type='submit', class='btn btn-primary', disable)
+          small.youtube-post-load.text-success
+            | YouTube client loaded
+    div.row-fluid
       div.col-md-4
         div.result-wrappers(id="soundcloud-result")
       div.col-md-4
