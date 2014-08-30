@@ -4,17 +4,22 @@ block content
   div.newsfeed-wrapper
     
     ul
-      li
+      li.form-wrapper
+        div.row-fluid
+          div.col-md-4
+            div.result(id="soundcloud-result")
+          div.col-md-4
+            div.result(id="youtube-result")
+          div.col-md-4
+            div.result(id="spotify-result")
         form(action='/search', method='post', id='search-form', class='text-center')
           input(name='query', type='text',autofocus,placeholder='Enter something to search for')
           div.submit-wrapper
-            input(type='submit', class='btn btn-primary', disable)
-          small.youtube-post-load.text-success
-            | YouTube client loaded
-    div.row-fluid
-      div.col-md-4
-        div.result-wrappers(id="soundcloud-result")
-      div.col-md-4
-        div.result-wrappers(id="youtube-result")
-      div.col-md-4
-        div.result-wrappers(id="spotify-result")
+            input(type='submit', class='btn btn-primary')
+      li.select-wrapper
+        div.row
+          div.col-md-10.selected
+          div.col-md-2
+            div.btn.btn-primary
+              | post
+

@@ -13,7 +13,7 @@ header {
 
 .newsfeed-wrapper {
   margin: auto;
-  width: 50%;
+  width: 60%;
 }
 .newsfeed-wrapper ul {
   list-style-type: none;
@@ -22,17 +22,21 @@ header {
   border-radius: 3px;
   background-color: white;
   border: 1px solid #ccc;
-  margin-top: 20px;
+  padding: 15px;
+  margin: 15px 0;
 }
-.newsfeed-wrapper li form {
-  padding: 0;
+.newsfeed-wrapper li.form-wrapper {
+  padding: 15px 0 0 0;
 }
 .submit-wrapper {
   background-color: #eaeaea;
   padding: 10px 0;
+  height: 60px;
 }
-#search-form .btn-primary{
+.btn-primary {
   background-color: #3b5998;
+  margin-right: 15px;
+  float: right;
 }
 
 #search-form input[type='text'] {
@@ -43,21 +47,21 @@ header {
   margin: 15px auto;
 }
 
-#soundcloud-result iframe {
-  height: 100px;
-}
-
-.result-wrappers {
+.result {
+  display: none;
   width: 100%;
-  padding: 15px;
+  padding: 20px;
   color: #666;
+  border-radius: 5px;
   text-align: center;
 }
-.result-wrappers:hover {
-  background-color: aliceblue;
+.result:hover {
+  background-color: #dff0d8;
   cursor: pointer;
 }
-
-.youtube-post-load {
+.active, .active:hover {
+  background-color: #3c763d;
+}
+.select-wrapper{
   display: none;
 }
