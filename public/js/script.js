@@ -1,5 +1,7 @@
 var $searchForm = $("#search-form");
 var $soundcloudResult = $("#soundcloud-result");
+var $youtubeResult = $("#youtube-result");
+
 //callback for the search request
 function displaySoundCloudPlayer(searchResults){
    searchResults = JSON.parse(searchResults);
@@ -37,37 +39,28 @@ function generateYoutubeIframe(videoID) {
   return '<iframe id="ytplayer" type="text/html" width="100%" height="130px" src="http://www.youtube.com/embed/'+videoID+'?autoplay=1" frameborder="0"/>';
 }
 
-function youtubeAPIready() {
-  
-  
+function displayYoutube(searchResults) {
+  searchResults = JSON.parse(searchResults);
+  var videoID = searchResults.items[0].id.videoId;
+  if (videoID) {
+    $youtubeResult.html(generateYoutubeIframe(videoID));
+  } else {
+    $youtubeResult.html("No results found.");
+  }
 }
+
 function searchYoutube(query){
-  gapi.client.setApiKey('AIzaSyDDP01Gnj3-wfoqM59xQz6pryJQhmYWCt8');
 
-  gapi.client.load('youtube', 'v3', function() {
-    $(".youtube-post-load").fadeIn(100).fadeOut(100); //flashes the post load
-    $('input[type="submit"]').removeAttr('disabled');
-    console.log("searching youtube for "+query);
-    var request = gapi.client.youtube.search.list({
-      q: query,
-      //The part parameter specifies a comma-separated 
-      //list of one or more search resource properties 
-      //that the API response will include. Set the parameter 
-      //value to snippet. The snippet part has a quota cost of
-      // 1 unit.
-      part: 'snippet'
-    });
+  $youtubeResult.html("Loading Youtube Results...");
 
-    request.execute(function(response) {
-      //see https://developers.google.com/youtube/v3/docs/search/list for the structure
-      var videoID = response.items[0].id.videoId
-      if (videoID) {
-        $('#youtube-result').html(generateYoutubeIframe(videoID));
-      } else {
-        $('#youtube-result').html("No results found.");
-      }
-    });
+  // make AJAX request to /searchYoutube
+  var searchRequest = new XMLHttpRequest();
+  searchRequest.addEventListener("load", function() {
+    displayYoutube(searchRequest.response);
   });
+
+  searchRequest.open('GET', "/searchYoutube?title=" + encodeURIComponent(query), true);
+  searchRequest.send();
 }
 
 function searchAllAPIs(event){
