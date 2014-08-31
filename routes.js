@@ -8,7 +8,7 @@ module.exports = function(app, nconf) {
     res.render('index');
   });
 
-  app.get('/search', function(req, res) {
+  app.get('/searchSoundcloud', function(req, res) {
     console.log("Searching soundcloud for  "+req.query.queryStr);
     soundCloud.search(req.query.queryStr, function(error, body) {
       if (error) {

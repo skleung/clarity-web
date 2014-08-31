@@ -38,6 +38,7 @@ function displaySoundCloudPlayer(searchResults){
 
   // show SoundCloud player
   var trackURL = searchResults[0].permalink_url;
+  $soundcloudResult.
   SC.oEmbed(trackURL, { auto_play: false, maxheight: "80px" }, function(embed) {
     $soundcloudResult.html(embed.html);
   });
@@ -96,7 +97,7 @@ function searchSoundCloud(query) {
     displaySoundCloudPlayer(searchRequest.responseText);
   });
 
-  searchRequest.open('GET', "/search?queryStr=" + encodeURIComponent(query), true);
+  searchRequest.open('GET', "/searchSoundcloud?queryStr=" + encodeURIComponent(query), true);
   searchRequest.send();
 }
 

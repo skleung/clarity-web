@@ -12,7 +12,7 @@ $(".result").click(function() {
 });
 
 $("#post-button").click(function() {
-  var htmlToSave = $(".selected").html();
-  console.log(htmlToSave);
+  var urlToSave = $(".selected iframe").attr("src");
+  console.log(urlToSave);
   //david saves the above string
 });
