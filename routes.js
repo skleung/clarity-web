@@ -8,35 +8,40 @@ module.exports = function(app, nconf) {
     res.render('index');
   });
 
-  app.get('/searchSoundcloud', function(req, res) {
-    console.log("Searching soundcloud for  "+req.query.queryStr);
-    soundCloud.search(req.query.queryStr, function(error, body) {
+  app.get('/search', function(req, res) {
+    console.log('Search YouTube and Spotify [not SoundCloud] for %s', req.query.q);
+
+  })
+
+  app.get('/searchSoundCloud', function(req, res) {
+    console.log('Searching SoundCloud for "%s"', req.query.q);
+    soundCloud.search(req.query.q, function(error, body) {
       if (error) {
-          throw error;
+        throw error;
       } else {
-          res.send(200, body);
+        res.send(200, body);
       }
     });
   });
 
-  app.get('/searchYoutube', function(req, res) {
-    console.log("Searching youtube for  "+req.query.queryStr);
-    youTube.search(req.query.queryStr, function(error, body) {
+  app.get('/searchYouTube', function(req, res) {
+    console.log('Searching YouTube for "%s"',  req.query.q);
+    youTube.search(req.query.q, function(error, body) {
       if (error) {
-          throw error;
+        throw error;
       } else {
-          res.send(200, body);
+        res.send(200, body);
       }
     });
   });
 
   app.get('/searchSpotify', function(req, res) {
-    console.log("Searching spotify for  "+req.query.queryStr);
-    spotify.search(req.query.queryStr, function(error, body) {
+    console.log('Searching Spotify for "%s"', req.query.q);
+    spotify.search(req.query.q, function(error, body) {
       if (error) {
-          throw error;
+        throw error;
       } else {
-          res.send(200, body);
+        res.send(200, body);
       }
     });
   });
