@@ -5,6 +5,10 @@ var $youtubeResult = $("#youtube-result");
 var $spotifyResult = $("#spotify-result");
 
 
+
+function generateSoundCloudURL(trackID) {
+  return "https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F"+trackID;
+}
 /* Helper method to generate generic iFrame
  *
  * Arguments:
@@ -19,19 +23,18 @@ function generateIframe(embedURL) {
  * Arguments:
  * searchResults -- the raw string of search results from the SoundCloud API
  */
-function displaySoundCloudPlayer(searchResults){
+function displaySoundCloudPlayer(searchResults) {
    searchResults = JSON.parse(searchResults);
   // ensures search results exist
   if (searchResults.length === 0 || !searchResults[0].permalink_url) {
     $soundcloudResult.html("No tracks found.");
-    return;
+  } else {
+    var trackID = searchResults[0].id;
+    var srcURL = generateSoundCloudURL(trackID);
+    $soundcloudResult.html(generateIframe(srcURL));  
   }
-
   // show SoundCloud player
-  var trackURL = searchResults[0].permalink_url;
-  SC.oEmbed(trackURL, { auto_play: false, maxheight: "80px" }, function(embed) {
-    $soundcloudResult.html(embed.html);
-  });
+
 } 
 
 /* Displays a Spotify player for the first search result.
@@ -119,5 +122,4 @@ function searchAll(event) {
   }
 }
 
-SC.initialize({ client_id: "1c3aeb3f91390630d351f3c708148086" });
 $searchForm.submit(searchAll);
