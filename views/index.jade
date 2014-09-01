@@ -2,7 +2,6 @@ extend layout
 
 block content
   div.newsfeed-wrapper
-    
     ul
       li.form-wrapper
         div.row-fluid
@@ -13,7 +12,7 @@ block content
           div.col-md-4
             div.result(id="spotify-result")
         form(action='/search', method='post', id='search-form', class='text-center')
-          input(name='query', type='text',autofocus,placeholder='Enter something to search for')
+          input(name='query', type='text', autofocus, autocomplete='off' placeholder='Search for music')
           div.submit-wrapper
             input(type='submit', class='btn btn-primary')
       li.select-wrapper
