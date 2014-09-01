@@ -3,6 +3,9 @@ var http = require('http'),
     app = express(),
     nconf = require('nconf');
 
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost:27017/callback-newsfeed-db');
+
 var server = http.createServer(app);
 
 nconf.argv().env().file({ file: 'local.json' });
