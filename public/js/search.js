@@ -6,6 +6,14 @@ var $youtubeResult = $("#youtube-result");
 var $spotifyResult = $("#spotify-result");
 
 
+/* Helper method to generate generic iFrame
+ *
+ * Arguments:
+ * embedURL -- the URL to embed
+ */
+function generateIframe(embedURL) {
+  return '<iframe id="ytplayer" type="text/html" width="100%" height="80px" frameborder="0" src="'+embedURL+'"></iframe>'
+}
 /* Helper method to generate spotify's iframe
  *
  * Arguments:
@@ -29,7 +37,7 @@ function generateYoutubeIframe(videoID) {
  */
 function displaySoundCloudPlayer(searchResults){
    searchResults = JSON.parse(searchResults);
-
+   console.log(searchResults);
   // ensures search results exist
   if (searchResults.length === 0 || !searchResults[0].permalink_url) {
     $soundcloudResult.html("No tracks found.");
@@ -38,7 +46,7 @@ function displaySoundCloudPlayer(searchResults){
 
   // show SoundCloud player
   var trackURL = searchResults[0].permalink_url;
-  $soundcloudResult.
+
   SC.oEmbed(trackURL, { auto_play: false, maxheight: "80px" }, function(embed) {
     $soundcloudResult.html(embed.html);
   });
