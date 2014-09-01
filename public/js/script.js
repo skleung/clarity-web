@@ -12,7 +12,12 @@ $(".result").click(function() {
 });
 
 $("#post-button").click(function() {
-  var urlToSave = $(".selected iframe").attr("src");
-  console.log(urlToSave);
-  //david saves the above string
+  var url = $(".selected iframe").attr("src");
+  var postContentRequest = new XMLHttpRequest();
+  postContentRequest.addEventListener("load", function() {
+    // callback
+  });
+  postContentRequest.open('POST', "/postContent", true);
+  postContentRequest.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+  postContentRequest.send(JSON.stringify({src: url}));
 });
