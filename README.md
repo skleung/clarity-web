@@ -4,5 +4,5 @@ $ mongod --dbpath data
 $ node app.js
 
 $ mongo
-> use callback-newsfeed-db
-> show collections
+\> use callback-newsfeed-db
+\> show collections
