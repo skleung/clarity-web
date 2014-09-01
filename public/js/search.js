@@ -32,7 +32,7 @@ function displaySoundCloudPlayer(searchResults){
   SC.oEmbed(trackURL, { auto_play: false, maxheight: "80px" }, function(embed) {
     $soundcloudResult.html(embed.html);
   });
-} 
+}
 
 /* Displays a Spotify player for the first search result.
  *
@@ -55,7 +55,7 @@ function displaySpotify(searchResults) {
  * searchResults -- the raw string of search results from the SoundCloud API
  */
 function displayYouTube(searchResults) {
-  searchResults = JSON.parse(searchResults);
+  var searchResults = JSON.parse(searchResults);
   if (searchResults[0]) {
     var srcURL = searchResults[0].src
     $youtubeResult.html(generateIframe(srcURL));
@@ -75,35 +75,37 @@ function displayLoadingMessages() {
 }
 
 // make AJAX request to /searchSoundCloud
-function searchSoundCloud(query) {
+function searchSoundCloud(query, callback) {
   var searchRequest = new XMLHttpRequest();
   searchRequest.addEventListener("load", function() {
-    displaySoundCloudPlayer(searchRequest.responseText);
+    callback(searchRequest.responseText);
   });
   searchRequest.open('GET', "/searchSoundCloud?q=" + encodeURIComponent(query), true);
   searchRequest.send();
 }
 
 // make AJAX request to /searchYouTube
-function searchYouTube(query){
+function searchYouTube(query, callback){
   var searchRequest = new XMLHttpRequest();
   searchRequest.addEventListener("load", function() {
-    displayYouTube(searchRequest.response);
+    callback(searchRequest.response);
   });
   searchRequest.open('GET', "/searchYouTube?q=" + encodeURIComponent(query), true);
   searchRequest.send();
 }
 
 // make AJAX request to /searchSpotify
-function searchSpotify(query){
+function searchSpotify(query, callback){
   var searchRequest = new XMLHttpRequest();
   searchRequest.addEventListener("load", function() {
-    displaySpotify(searchRequest.response);
+    callback(searchRequest.response);
   });
   searchRequest.open('GET', "/searchSpotify?q=" + encodeURIComponent(query), true);
   searchRequest.send();
 }
 
+// Searches APIs via separate invocations of searchYouTube(), searchSoundCloud()
+// and searchSpotify()
 function searchAll(event) {
   event.preventDefault();
   $(".result").show();
@@ -113,11 +115,26 @@ function searchAll(event) {
   if (!query) {
     $soundcloudResult.html("Enter a search query!");
   } else {
-    searchYouTube(query);
-    searchSoundCloud(query);
-    searchSpotify(query);
+    searchYouTube(query, displayYouTube);
+    searchSoundCloud(query, displaySoundCloudPlayer);
+    searchSpotify(query, displaySpotify);
   }
 }
 
 SC.initialize({ client_id: "1c3aeb3f91390630d351f3c708148086" });
 $searchForm.submit(searchAll);
+
+
+
+
+
+
+
+function search(query, callback) {
+  var searchRequest = new XMLHttpRequest();
+  searchRequest.addEventListener("load", function() {
+    callback(searchRequest.response);
+  });
+  searchRequest.open('GET', "/search?q=" + encodeURIComponent(query), true);
+  searchRequest.send();
+}

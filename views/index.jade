@@ -1,24 +1,35 @@
 extend layout
 
 block content
-  div.newsfeed-wrapper
-    ul
-      li.form-wrapper
-        div.row-fluid
-          div.col-md-4
-            div.result(id="soundcloud-result")
-          div.col-md-4
-            div.result(id="youtube-result")
-          div.col-md-4
-            div.result(id="spotify-result")
-        form(action='/search', method='post', id='search-form', class='text-center')
-          input(name='query', type='text', autofocus, autocomplete='off' placeholder='Search for music')
-          div.submit-wrapper
-            input(type='submit', class='btn btn-primary')
-      li.select-wrapper
-        div.row
-          div.col-md-11.selected
-          div.col-md-1.post-wrapper
-            div.btn.btn-primary(id="post-button")
-              | post
+  //- deng layout
+  div(id='wrapper')
+    h1 Callback Newsfeed
+    p Clueless as to where a country is located? It happens to everyone. Enter a country into the form below; a short animation will appear to clear your doubts.
+    form(id='search-form', method='post')
+      input(id='search', name='query' type='text', placeholder='Search for tracks', autocomplete='off', autofocus)
+      input(type='submit')
+  //- end deng layout
+
+  //- //- shermz layout
+  //- div.newsfeed-wrapper
+  //-   ul
+  //-     li.form-wrapper
+  //-       div.row-fluid
+  //-         div.col-md-4
+  //-           div.result(id="soundcloud-result")
+  //-         div.col-md-4
+  //-           div.result(id="youtube-result")
+  //-         div.col-md-4
+  //-           div.result(id="spotify-result")
+  //-       form(action='/search', method='post', id='search-form', class='text-center')
+  //-         input(id='search' name='query', type='text', autofocus, autocomplete='off' placeholder='Search for music')
+  //-         div.submit-wrapper
+  //-           input(type='submit', class='btn btn-primary')
+  //-     li.select-wrapper
+  //-       div.row
+  //-         div.col-md-11.selected
+  //-         div.col-md-1.post-wrapper
+  //-           div.btn.btn-primary(id="post-button")
+  //-             | post
+  //- //-shermz layout
 

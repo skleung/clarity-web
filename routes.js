@@ -1,5 +1,7 @@
-var soundCloud = require('./lib/sound-cloud');
-var youTube    = require('./lib/you-tube')
+var async = require('async');
+
+var soundCloud = require('./lib/soundcloud');
+var youTube    = require('./lib/youtube')
 var spotify    = require('./lib/spotify')
 
 var Post = require('./models/post.js');
@@ -12,14 +14,55 @@ module.exports = function(app, nconf) {
 
   app.get('/search', function(req, res) {
     console.log('Searching YouTube and Spotify [not SoundCloud] for %s', req.query.q);
+    async.parallel({
+      YouTube: function(callback) {
+        youTube.search(req.query.q, function(error, body) {
+          if (error) {
+            throw error;
+          } else {
+            callback(null, body);
+          }
+        });
+      },
+      // SoundCloud: function(callback) {
+      //   soundCloud.search(req.query.q, function(error, body) {
+      //     if (error) {
+      //       throw error;
+      //     } else {
+      //       callback(null, body);
+      //     }
+      //   });
+      // },
+      Spotify: function(callback) {
+        spotify.search(req.query.q, function(error, body) {
+          if (error) {
+            throw error;
+          } else {
+            callback(null, body);
+          }
+        });
+      }
+    },
+    // callback
+    function(err, searchResults) {
+      var body = [];
+      var YouTube = JSON.parse(searchResults.YouTube);
+      // var SoundCloud = JSON.parse(searchResults.SoundCloud);
+      var Spotify = JSON.parse(searchResults.Spotify);
 
+      // rank options here
+      body.push(YouTube[0]);
+      body.push(Spotify[0]);
+
+      res.send(200, JSON.stringify(body));
+    });
   });
 
   app.post('/postContent', function(req, res) {
     console.log('Posting content for "%s"', req.body.src);
     var postContent = new Post({ src: req.body.src });
     postContent.save(function(err, postContent) {
-      if (err) return console.error(err);
+      if (err) console.log(err);
     });
   });
 

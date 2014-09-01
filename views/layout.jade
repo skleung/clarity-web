@@ -3,14 +3,29 @@ html
   head
     title Callback Newsfeed
     link(rel='stylesheet', href='/css/bootstrap.min.css')
-    link(rel='stylesheet', href='/css/styles.css')
+
+    //- //- shermz layout
+    //- link(rel='stylesheet', href='/css/styles.css')
+    //- //- end shermz layout
+
+    //- deng layout
+    link(rel='stylesheet', href='/css/autocomplete.css')
+    //- end deng layout
+
     script(src="/js/jquery.min.js")
   body
-    header 
-      div.container
-        | callbackNewsfeed
+    //- //- shermz layout
+    //- header
+    //-   div.container
+    //-     | callbackNewsfeed
+    //- //- shermz layout
+
     block content
     script(src="/js/bootstrap.min.js")
     script(src="/js/libraries/soundcloud.js")
     script(src="/js/search.js")
     script(src="/js/script.js")
+
+    //- deng layout
+    script(src='/js/autocomplete.js')
+    //- end deng layout
