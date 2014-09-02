@@ -24,6 +24,8 @@
       return;
     }
 
+    $suggestions.html('');
+
     if (searchTerm !== '') {
       search(searchTerm, function(searchResults) {
         // reset suggestions
@@ -31,7 +33,14 @@
 
         var searchResults = JSON.parse(searchResults);
         for (s in searchResults) {
-          $('<li></li>').text(searchResults[s].title).appendTo($suggestions);
+          var title = searchResults[s].title.toLowerCase()
+          var matchIndex = title.indexOf(searchTerm);
+          if (matchIndex !== -1) {
+            // Handlebars??
+            var html = title.substring(0, matchIndex) + '<b>' + title.substring(matchIndex, matchIndex + searchTerm.length) + '</b>' + title.substring(matchIndex + searchTerm.length);
+            // html += '<img display="block" align="right" height="20%" src="img/youtube-icon.png"></img>'
+            $('<li></li>').html(html).appendTo($suggestions);
+          }
         };
       });
     }

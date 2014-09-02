@@ -4,11 +4,6 @@ var $soundcloudResult = $("#soundcloud-result");
 var $youtubeResult = $("#youtube-result");
 var $spotifyResult = $("#spotify-result");
 
-
-
-function generateSoundCloudURL(trackID) {
-  return "https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F"+trackID;
-}
 /* Helper method to generate generic iFrame
  *
  * Arguments:
@@ -24,14 +19,12 @@ function generateIframe(embedURL) {
  * searchResults -- the raw string of search results from the SoundCloud API
  */
 function displaySoundCloudPlayer(searchResults) {
-   searchResults = JSON.parse(searchResults);
-  // ensures search results exist
-  if (searchResults.length === 0 || !searchResults[0].permalink_url) {
-    $soundcloudResult.html("No tracks found.");
+  searchResults = JSON.parse(searchResults);
+  if (searchResults[0]) {
+    var srcURL = searchResults[0].src;
+    $spotifyResult.html(generateIframe(srcURL));
   } else {
-    var trackID = searchResults[0].id;
-    var srcURL = generateSoundCloudURL(trackID);
-    $soundcloudResult.html(generateIframe(srcURL));
+    $soundcloudResult.html("No results found.");
   }
 }
 

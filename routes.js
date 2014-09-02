@@ -24,15 +24,15 @@ module.exports = function(app, nconf) {
           }
         });
       },
-      // SoundCloud: function(callback) {
-      //   soundCloud.search(req.query.q, function(error, body) {
-      //     if (error) {
-      //       throw error;
-      //     } else {
-      //       callback(null, body);
-      //     }
-      //   });
-      // },
+      SoundCloud: function(callback) {
+        soundCloud.search(req.query.q, function(error, body) {
+          if (error) {
+            throw error;
+          } else {
+            callback(null, body);
+          }
+        });
+      },
       Spotify: function(callback) {
         spotify.search(req.query.q, function(error, body) {
           if (error) {
@@ -47,13 +47,13 @@ module.exports = function(app, nconf) {
     function(err, searchResults) {
       var body = [];
       var YouTube = JSON.parse(searchResults.YouTube);
-      // var SoundCloud = JSON.parse(searchResults.SoundCloud);
+      var SoundCloud = JSON.parse(searchResults.SoundCloud);
       var Spotify = JSON.parse(searchResults.Spotify);
 
       // rank options here
       body.push(YouTube[0]);
       body.push(Spotify[0]);
-
+      body.push(SoundCloud[0]);
       res.send(200, JSON.stringify(body));
     });
   });
