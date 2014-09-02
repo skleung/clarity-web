@@ -1,0 +1,2137 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'update' ]
+2 info using npm@2.0.0-alpha-5
+3 info using node@v0.10.30
+4 verbose node symlink /usr/local/bin/node
+5 verbose mapToRegistry name express
+6 verbose mapToRegistry uri https://registry.npmjs.org/express
+7 verbose mapToRegistry name jade
+8 verbose mapToRegistry uri https://registry.npmjs.org/jade
+9 verbose mapToRegistry name mongodb
+10 verbose mapToRegistry uri https://registry.npmjs.org/mongodb
+11 verbose mapToRegistry name mongoose
+12 verbose mapToRegistry uri https://registry.npmjs.org/mongoose
+13 verbose mapToRegistry name nconf
+14 verbose mapToRegistry uri https://registry.npmjs.org/nconf
+15 verbose mapToRegistry name node-fs
+16 verbose mapToRegistry uri https://registry.npmjs.org/node-fs
+17 verbose mapToRegistry name request
+18 verbose mapToRegistry uri https://registry.npmjs.org/request
+19 verbose request where is /express
+20 verbose request registry https://registry.npmjs.org/
+21 verbose request id 41b4ac429e5eefa9
+22 verbose request url raw /express
+23 verbose request url resolving [ 'https://registry.npmjs.org/', './express' ]
+24 verbose request url resolved https://registry.npmjs.org/express
+25 verbose request where is https://registry.npmjs.org/express
+26 verbose request no basic auth needed
+27 info trying registry request attempt 1 at 18:36:29
+28 verbose etag "D68BOP8H1KNW0ST7D65PP4QS0"
+29 http GET https://registry.npmjs.org/express
+30 verbose request where is /jade
+31 verbose request registry https://registry.npmjs.org/
+32 verbose request url raw /jade
+33 verbose request url resolving [ 'https://registry.npmjs.org/', './jade' ]
+34 verbose request url resolved https://registry.npmjs.org/jade
+35 verbose request where is https://registry.npmjs.org/jade
+36 verbose request no basic auth needed
+37 info trying registry request attempt 1 at 18:36:29
+38 verbose etag "E16E6SCBDVRD3S96XG3H77B5T"
+39 http GET https://registry.npmjs.org/jade
+40 verbose request where is /mongoose
+41 verbose request registry https://registry.npmjs.org/
+42 verbose request url raw /mongoose
+43 verbose request url resolving [ 'https://registry.npmjs.org/', './mongoose' ]
+44 verbose request url resolved https://registry.npmjs.org/mongoose
+45 verbose request where is https://registry.npmjs.org/mongoose
+46 verbose request no basic auth needed
+47 info trying registry request attempt 1 at 18:36:29
+48 verbose etag "4IVHMRD9VUUPMT4TWKIC016CS"
+49 http GET https://registry.npmjs.org/mongoose
+50 verbose request where is /mongodb
+51 verbose request registry https://registry.npmjs.org/
+52 verbose request url raw /mongodb
+53 verbose request url resolving [ 'https://registry.npmjs.org/', './mongodb' ]
+54 verbose request url resolved https://registry.npmjs.org/mongodb
+55 verbose request where is https://registry.npmjs.org/mongodb
+56 verbose request no basic auth needed
+57 info trying registry request attempt 1 at 18:36:29
+58 verbose etag "58TH4BE1XHX9CNTKHU1BAT9OU"
+59 http GET https://registry.npmjs.org/mongodb
+60 verbose request where is /node-fs
+61 verbose request registry https://registry.npmjs.org/
+62 verbose request url raw /node-fs
+63 verbose request url resolving [ 'https://registry.npmjs.org/', './node-fs' ]
+64 verbose request url resolved https://registry.npmjs.org/node-fs
+65 verbose request where is https://registry.npmjs.org/node-fs
+66 verbose request no basic auth needed
+67 info trying registry request attempt 1 at 18:36:29
+68 verbose etag "AIZHFGJZGVOW8UYFPW8838WE6"
+69 http GET https://registry.npmjs.org/node-fs
+70 verbose request where is /nconf
+71 verbose request registry https://registry.npmjs.org/
+72 verbose request url raw /nconf
+73 verbose request url resolving [ 'https://registry.npmjs.org/', './nconf' ]
+74 verbose request url resolved https://registry.npmjs.org/nconf
+75 verbose request where is https://registry.npmjs.org/nconf
+76 verbose request no basic auth needed
+77 info trying registry request attempt 1 at 18:36:29
+78 verbose etag "DYUISXCF2COO071A1GFG85JZL"
+79 http GET https://registry.npmjs.org/nconf
+80 verbose request where is /request
+81 verbose request registry https://registry.npmjs.org/
+82 verbose request url raw /request
+83 verbose request url resolving [ 'https://registry.npmjs.org/', './request' ]
+84 verbose request url resolved https://registry.npmjs.org/request
+85 verbose request where is https://registry.npmjs.org/request
+86 verbose request no basic auth needed
+87 info trying registry request attempt 1 at 18:36:29
+88 verbose etag "6CWP5S5RUVXE36N6LHWTDA7BQ"
+89 http GET https://registry.npmjs.org/request
+90 http 304 https://registry.npmjs.org/jade
+91 silly registry.get cb [ 304,
+91 silly registry.get   { date: 'Mon, 01 Sep 2014 22:36:30 GMT',
+91 silly registry.get     server: 'Apache',
+91 silly registry.get     via: '1.1 varnish',
+91 silly registry.get     'last-modified': 'Mon, 01 Sep 2014 22:36:30 GMT',
+91 silly registry.get     'cache-control': 'max-age=60',
+91 silly registry.get     etag: '"E16E6SCBDVRD3S96XG3H77B5T"',
+91 silly registry.get     'x-served-by': 'cache-jfk1024-JFK',
+91 silly registry.get     'x-cache': 'HIT',
+91 silly registry.get     'x-cache-hits': '1',
+91 silly registry.get     'x-timer': 'S1409610990.680097,VS0,VE0',
+91 silly registry.get     vary: 'Accept',
+91 silly registry.get     'content-length': '0',
+91 silly registry.get     'keep-alive': 'timeout=10, max=50',
+91 silly registry.get     connection: 'Keep-Alive' } ]
+92 verbose etag https://registry.npmjs.org/jade from cache
+93 http 304 https://registry.npmjs.org/express
+94 silly registry.get cb [ 304,
+94 silly registry.get   { date: 'Mon, 01 Sep 2014 22:36:30 GMT',
+94 silly registry.get     server: 'Apache',
+94 silly registry.get     via: '1.1 varnish',
+94 silly registry.get     'last-modified': 'Mon, 01 Sep 2014 22:36:12 GMT',
+94 silly registry.get     'cache-control': 'max-age=60',
+94 silly registry.get     etag: '"D68BOP8H1KNW0ST7D65PP4QS0"',
+94 silly registry.get     'x-served-by': 'cache-jfk1024-JFK',
+94 silly registry.get     'x-cache': 'HIT',
+94 silly registry.get     'x-cache-hits': '2',
+94 silly registry.get     'x-timer': 'S1409610990.687487,VS0,VE0',
+94 silly registry.get     vary: 'Accept',
+94 silly registry.get     'content-length': '0',
+94 silly registry.get     'keep-alive': 'timeout=10, max=50',
+94 silly registry.get     connection: 'Keep-Alive' } ]
+95 verbose etag https://registry.npmjs.org/express from cache
+96 http 304 https://registry.npmjs.org/request
+97 silly registry.get cb [ 304,
+97 silly registry.get   { date: 'Mon, 01 Sep 2014 22:36:30 GMT',
+97 silly registry.get     server: 'Apache',
+97 silly registry.get     via: '1.1 varnish',
+97 silly registry.get     'last-modified': 'Mon, 01 Sep 2014 22:23:37 GMT',
+97 silly registry.get     'cache-control': 'max-age=60',
+97 silly registry.get     etag: '"6CWP5S5RUVXE36N6LHWTDA7BQ"',
+97 silly registry.get     'x-served-by': 'cache-jfk1024-JFK',
+97 silly registry.get     'x-cache': 'HIT',
+97 silly registry.get     'x-cache-hits': '147',
+97 silly registry.get     'x-timer': 'S1409610990.714624,VS0,VE0',
+97 silly registry.get     vary: 'Accept',
+97 silly registry.get     'content-length': '0',
+97 silly registry.get     'keep-alive': 'timeout=10, max=49',
+97 silly registry.get     connection: 'Keep-Alive' } ]
+98 verbose etag https://registry.npmjs.org/request from cache
+99 verbose mapToRegistry name qs
+100 verbose mapToRegistry uri https://registry.npmjs.org/qs
+101 verbose mapToRegistry name json-stringify-safe
+102 verbose mapToRegistry uri https://registry.npmjs.org/json-stringify-safe
+103 verbose mapToRegistry name mime-types
+104 verbose mapToRegistry uri https://registry.npmjs.org/mime-types
+105 verbose mapToRegistry name forever-agent
+106 verbose mapToRegistry uri https://registry.npmjs.org/forever-agent
+107 verbose mapToRegistry name node-uuid
+108 verbose mapToRegistry uri https://registry.npmjs.org/node-uuid
+109 verbose mapToRegistry name tough-cookie
+110 verbose mapToRegistry uri https://registry.npmjs.org/tough-cookie
+111 verbose mapToRegistry name form-data
+112 verbose mapToRegistry uri https://registry.npmjs.org/form-data
+113 verbose mapToRegistry name tunnel-agent
+114 verbose mapToRegistry uri https://registry.npmjs.org/tunnel-agent
+115 verbose mapToRegistry name http-signature
+116 verbose mapToRegistry uri https://registry.npmjs.org/http-signature
+117 verbose mapToRegistry name oauth-sign
+118 verbose mapToRegistry uri https://registry.npmjs.org/oauth-sign
+119 verbose mapToRegistry name hawk
+120 verbose mapToRegistry uri https://registry.npmjs.org/hawk
+121 verbose mapToRegistry name aws-sign2
+122 verbose mapToRegistry uri https://registry.npmjs.org/aws-sign2
+123 verbose mapToRegistry name stringstream
+124 verbose mapToRegistry uri https://registry.npmjs.org/stringstream
+125 verbose request where is /qs
+126 verbose request registry https://registry.npmjs.org/
+127 verbose request url raw /qs
+128 verbose request url resolving [ 'https://registry.npmjs.org/', './qs' ]
+129 verbose request url resolved https://registry.npmjs.org/qs
+130 verbose request where is https://registry.npmjs.org/qs
+131 verbose request no basic auth needed
+132 info trying registry request attempt 1 at 18:36:29
+133 verbose etag "8268LYZ2Z0S0NFAUQPOS750Y1"
+134 http GET https://registry.npmjs.org/qs
+135 verbose request where is /mime-types
+136 verbose request registry https://registry.npmjs.org/
+137 verbose request url raw /mime-types
+138 verbose request url resolving [ 'https://registry.npmjs.org/', './mime-types' ]
+139 verbose request url resolved https://registry.npmjs.org/mime-types
+140 verbose request where is https://registry.npmjs.org/mime-types
+141 verbose request no basic auth needed
+142 info trying registry request attempt 1 at 18:36:29
+143 verbose etag "D8JPPGYOVYT19L5S7NQ4VW56O"
+144 http GET https://registry.npmjs.org/mime-types
+145 verbose request where is /json-stringify-safe
+146 verbose request registry https://registry.npmjs.org/
+147 verbose request url raw /json-stringify-safe
+148 verbose request url resolving [ 'https://registry.npmjs.org/', './json-stringify-safe' ]
+149 verbose request url resolved https://registry.npmjs.org/json-stringify-safe
+150 verbose request where is https://registry.npmjs.org/json-stringify-safe
+151 verbose request no basic auth needed
+152 info trying registry request attempt 1 at 18:36:29
+153 verbose etag "EJXZHR46UUQJBCYN8HY0252P2"
+154 http GET https://registry.npmjs.org/json-stringify-safe
+155 verbose request where is /node-uuid
+156 verbose request registry https://registry.npmjs.org/
+157 verbose request url raw /node-uuid
+158 verbose request url resolving [ 'https://registry.npmjs.org/', './node-uuid' ]
+159 verbose request url resolved https://registry.npmjs.org/node-uuid
+160 verbose request where is https://registry.npmjs.org/node-uuid
+161 verbose request no basic auth needed
+162 info trying registry request attempt 1 at 18:36:29
+163 verbose etag "24TR1NAMH1UWN62GAVD8QB5SE"
+164 http GET https://registry.npmjs.org/node-uuid
+165 verbose request where is /tunnel-agent
+166 verbose request registry https://registry.npmjs.org/
+167 verbose request url raw /tunnel-agent
+168 verbose request url resolving [ 'https://registry.npmjs.org/', './tunnel-agent' ]
+169 verbose request url resolved https://registry.npmjs.org/tunnel-agent
+170 verbose request where is https://registry.npmjs.org/tunnel-agent
+171 verbose request no basic auth needed
+172 info trying registry request attempt 1 at 18:36:29
+173 verbose etag "3N3UY2Q1JJAV20HX0166P6RKP"
+174 http GET https://registry.npmjs.org/tunnel-agent
+175 verbose request where is /form-data
+176 verbose request registry https://registry.npmjs.org/
+177 verbose request url raw /form-data
+178 verbose request url resolving [ 'https://registry.npmjs.org/', './form-data' ]
+179 verbose request url resolved https://registry.npmjs.org/form-data
+180 verbose request where is https://registry.npmjs.org/form-data
+181 verbose request no basic auth needed
+182 info trying registry request attempt 1 at 18:36:29
+183 verbose etag "9Q2WYS5J78OQNYID0RJ7EECVE"
+184 http GET https://registry.npmjs.org/form-data
+185 verbose request where is /forever-agent
+186 verbose request registry https://registry.npmjs.org/
+187 verbose request url raw /forever-agent
+188 verbose request url resolving [ 'https://registry.npmjs.org/', './forever-agent' ]
+189 verbose request url resolved https://registry.npmjs.org/forever-agent
+190 verbose request where is https://registry.npmjs.org/forever-agent
+191 verbose request no basic auth needed
+192 info trying registry request attempt 1 at 18:36:29
+193 verbose etag "36IDZHHB8KMK9HB7GP5VJCFJN"
+194 http GET https://registry.npmjs.org/forever-agent
+195 verbose request where is /http-signature
+196 verbose request registry https://registry.npmjs.org/
+197 verbose request url raw /http-signature
+198 verbose request url resolving [ 'https://registry.npmjs.org/', './http-signature' ]
+199 verbose request url resolved https://registry.npmjs.org/http-signature
+200 verbose request where is https://registry.npmjs.org/http-signature
+201 verbose request no basic auth needed
+202 info trying registry request attempt 1 at 18:36:29
+203 verbose etag "2DEU6RS13YG3V8ALKOQHX2IR5"
+204 http GET https://registry.npmjs.org/http-signature
+205 verbose request where is /oauth-sign
+206 verbose request registry https://registry.npmjs.org/
+207 verbose request url raw /oauth-sign
+208 verbose request url resolving [ 'https://registry.npmjs.org/', './oauth-sign' ]
+209 verbose request url resolved https://registry.npmjs.org/oauth-sign
+210 verbose request where is https://registry.npmjs.org/oauth-sign
+211 verbose request no basic auth needed
+212 info trying registry request attempt 1 at 18:36:29
+213 verbose etag "6J3JWUQTL47TIQLQUAEYZ3BJU"
+214 http GET https://registry.npmjs.org/oauth-sign
+215 verbose request where is /hawk
+216 verbose request registry https://registry.npmjs.org/
+217 verbose request url raw /hawk
+218 verbose request url resolving [ 'https://registry.npmjs.org/', './hawk' ]
+219 verbose request url resolved https://registry.npmjs.org/hawk
+220 verbose request where is https://registry.npmjs.org/hawk
+221 verbose request no basic auth needed
+222 info trying registry request attempt 1 at 18:36:29
+223 verbose etag "8G64OO67GKAB28SRMPPTET31K"
+224 http GET https://registry.npmjs.org/hawk
+225 verbose request where is /tough-cookie
+226 verbose request registry https://registry.npmjs.org/
+227 verbose request url raw /tough-cookie
+228 verbose request url resolving [ 'https://registry.npmjs.org/', './tough-cookie' ]
+229 verbose request url resolved https://registry.npmjs.org/tough-cookie
+230 verbose request where is https://registry.npmjs.org/tough-cookie
+231 verbose request no basic auth needed
+232 info trying registry request attempt 1 at 18:36:29
+233 verbose etag "688PET38N1VN3KPHYSMVLBEB8"
+234 http GET https://registry.npmjs.org/tough-cookie
+235 http 304 https://registry.npmjs.org/node-fs
+236 silly registry.get cb [ 304,
+236 silly registry.get   { date: 'Mon, 01 Sep 2014 22:36:30 GMT',
+236 silly registry.get     server: 'Apache',
+236 silly registry.get     via: '1.1 varnish',
+236 silly registry.get     'last-modified': 'Mon, 01 Sep 2014 22:36:30 GMT',
+236 silly registry.get     'cache-control': 'max-age=60',
+236 silly registry.get     etag: '"AIZHFGJZGVOW8UYFPW8838WE6"',
+236 silly registry.get     'x-served-by': 'cache-jfk1027-JFK',
+236 silly registry.get     'x-cache': 'HIT',
+236 silly registry.get     'x-cache-hits': '1',
+236 silly registry.get     'x-timer': 'S1409610990.676971,VS0,VE85',
+236 silly registry.get     vary: 'Accept',
+236 silly registry.get     'content-length': '0',
+236 silly registry.get     'keep-alive': 'timeout=10, max=50',
+236 silly registry.get     connection: 'Keep-Alive' } ]
+237 verbose etag https://registry.npmjs.org/node-fs from cache
+238 http 304 https://registry.npmjs.org/mongodb
+239 silly registry.get cb [ 304,
+239 silly registry.get   { date: 'Mon, 01 Sep 2014 22:36:30 GMT',
+239 silly registry.get     server: 'Apache',
+239 silly registry.get     via: '1.1 varnish',
+239 silly registry.get     'last-modified': 'Mon, 01 Sep 2014 22:36:30 GMT',
+239 silly registry.get     'cache-control': 'max-age=60',
+239 silly registry.get     etag: '"58TH4BE1XHX9CNTKHU1BAT9OU"',
+239 silly registry.get     'x-served-by': 'cache-jfk1029-JFK',
+239 silly registry.get     'x-cache': 'HIT',
+239 silly registry.get     'x-cache-hits': '1',
+239 silly registry.get     'x-timer': 'S1409610990.687436,VS0,VE78',
+239 silly registry.get     vary: 'Accept',
+239 silly registry.get     'content-length': '0',
+239 silly registry.get     'keep-alive': 'timeout=10, max=50',
+239 silly registry.get     connection: 'Keep-Alive' } ]
+240 verbose etag https://registry.npmjs.org/mongodb from cache
+241 verbose request where is /stringstream
+242 verbose request registry https://registry.npmjs.org/
+243 verbose request url raw /stringstream
+244 verbose request url resolving [ 'https://registry.npmjs.org/', './stringstream' ]
+245 verbose request url resolved https://registry.npmjs.org/stringstream
+246 verbose request where is https://registry.npmjs.org/stringstream
+247 verbose request no basic auth needed
+248 info trying registry request attempt 1 at 18:36:29
+249 verbose etag "45H7SV6G7VR1WBWAH4KWF3HU1"
+250 http GET https://registry.npmjs.org/stringstream
+251 verbose request where is /aws-sign2
+252 verbose request registry https://registry.npmjs.org/
+253 verbose request url raw /aws-sign2
+254 verbose request url resolving [ 'https://registry.npmjs.org/', './aws-sign2' ]
+255 verbose request url resolved https://registry.npmjs.org/aws-sign2
+256 verbose request where is https://registry.npmjs.org/aws-sign2
+257 verbose request no basic auth needed
+258 info trying registry request attempt 1 at 18:36:29
+259 verbose etag "CR2NL7RG57MED33DBI38QITC5"
+260 http GET https://registry.npmjs.org/aws-sign2
+261 http 304 https://registry.npmjs.org/nconf
+262 silly registry.get cb [ 304,
+262 silly registry.get   { date: 'Mon, 01 Sep 2014 22:36:30 GMT',
+262 silly registry.get     server: 'Apache',
+262 silly registry.get     via: '1.1 varnish',
+262 silly registry.get     'last-modified': 'Mon, 01 Sep 2014 22:36:30 GMT',
+262 silly registry.get     'cache-control': 'max-age=60',
+262 silly registry.get     etag: '"DYUISXCF2COO071A1GFG85JZL"',
+262 silly registry.get     'x-served-by': 'cache-jfk1024-JFK',
+262 silly registry.get     'x-cache': 'HIT',
+262 silly registry.get     'x-cache-hits': '1',
+262 silly registry.get     'x-timer': 'S1409610990.705100,VS0,VE85',
+262 silly registry.get     vary: 'Accept',
+262 silly registry.get     'content-length': '0',
+262 silly registry.get     'keep-alive': 'timeout=10, max=49',
+262 silly registry.get     connection: 'Keep-Alive' } ]
+263 verbose etag https://registry.npmjs.org/nconf from cache
+264 http 304 https://registry.npmjs.org/mime-types
+265 silly registry.get cb [ 304,
+265 silly registry.get   { date: 'Mon, 01 Sep 2014 22:36:30 GMT',
+265 silly registry.get     server: 'Apache',
+265 silly registry.get     via: '1.1 varnish',
+265 silly registry.get     'last-modified': 'Mon, 01 Sep 2014 22:36:30 GMT',
+265 silly registry.get     'cache-control': 'max-age=60',
+265 silly registry.get     etag: '"D8JPPGYOVYT19L5S7NQ4VW56O"',
+265 silly registry.get     'x-served-by': 'cache-jfk1027-JFK',
+265 silly registry.get     'x-cache': 'HIT',
+265 silly registry.get     'x-cache-hits': '1',
+265 silly registry.get     'x-timer': 'S1409610990.793633,VS0,VE0',
+265 silly registry.get     vary: 'Accept',
+265 silly registry.get     'content-length': '0',
+265 silly registry.get     'keep-alive': 'timeout=10, max=49',
+265 silly registry.get     connection: 'Keep-Alive' } ]
+266 verbose etag https://registry.npmjs.org/mime-types from cache
+267 http 304 https://registry.npmjs.org/json-stringify-safe
+268 silly registry.get cb [ 304,
+268 silly registry.get   { date: 'Mon, 01 Sep 2014 22:36:30 GMT',
+268 silly registry.get     server: 'Apache',
+268 silly registry.get     via: '1.1 varnish',
+268 silly registry.get     'last-modified': 'Mon, 01 Sep 2014 22:36:30 GMT',
+268 silly registry.get     'cache-control': 'max-age=60',
+268 silly registry.get     etag: '"EJXZHR46UUQJBCYN8HY0252P2"',
+268 silly registry.get     'x-served-by': 'cache-jfk1029-JFK',
+268 silly registry.get     'x-cache': 'HIT',
+268 silly registry.get     'x-cache-hits': '1',
+268 silly registry.get     'x-timer': 'S1409610990.795177,VS0,VE0',
+268 silly registry.get     vary: 'Accept',
+268 silly registry.get     'content-length': '0',
+268 silly registry.get     'keep-alive': 'timeout=10, max=49',
+268 silly registry.get     connection: 'Keep-Alive' } ]
+269 verbose etag https://registry.npmjs.org/json-stringify-safe from cache
+270 verbose mapToRegistry name async
+271 verbose mapToRegistry uri https://registry.npmjs.org/async
+272 verbose mapToRegistry name ini
+273 verbose mapToRegistry uri https://registry.npmjs.org/ini
+274 verbose mapToRegistry name optimist
+275 verbose mapToRegistry uri https://registry.npmjs.org/optimist
+276 verbose mapToRegistry name bson
+277 verbose mapToRegistry uri https://registry.npmjs.org/bson
+278 verbose mapToRegistry name kerberos
+279 verbose mapToRegistry uri https://registry.npmjs.org/kerberos
+280 verbose mapToRegistry name readable-stream
+281 verbose mapToRegistry uri https://registry.npmjs.org/readable-stream
+282 verbose request where is /async
+283 verbose request registry https://registry.npmjs.org/
+284 verbose request url raw /async
+285 verbose request url resolving [ 'https://registry.npmjs.org/', './async' ]
+286 verbose request url resolved https://registry.npmjs.org/async
+287 verbose request where is https://registry.npmjs.org/async
+288 verbose request no basic auth needed
+289 info trying registry request attempt 1 at 18:36:29
+290 verbose etag "4TFMAZU4SX1MYB4NK95F5YCYR"
+291 http GET https://registry.npmjs.org/async
+292 verbose request where is /optimist
+293 verbose request registry https://registry.npmjs.org/
+294 verbose request url raw /optimist
+295 verbose request url resolving [ 'https://registry.npmjs.org/', './optimist' ]
+296 verbose request url resolved https://registry.npmjs.org/optimist
+297 verbose request where is https://registry.npmjs.org/optimist
+298 verbose request no basic auth needed
+299 info trying registry request attempt 1 at 18:36:29
+300 verbose etag "9QRQZC93M0V9PREYLQ760PQ0X"
+301 http GET https://registry.npmjs.org/optimist
+302 verbose request where is /ini
+303 verbose request registry https://registry.npmjs.org/
+304 verbose request url raw /ini
+305 verbose request url resolving [ 'https://registry.npmjs.org/', './ini' ]
+306 verbose request url resolved https://registry.npmjs.org/ini
+307 verbose request where is https://registry.npmjs.org/ini
+308 verbose request no basic auth needed
+309 info trying registry request attempt 1 at 18:36:29
+310 verbose etag "D6P1315UN4DUAKZ4CQ8X9YTC7"
+311 http GET https://registry.npmjs.org/ini
+312 verbose request where is /kerberos
+313 verbose request registry https://registry.npmjs.org/
+314 verbose request url raw /kerberos
+315 verbose request url resolving [ 'https://registry.npmjs.org/', './kerberos' ]
+316 verbose request url resolved https://registry.npmjs.org/kerberos
+317 verbose request where is https://registry.npmjs.org/kerberos
+318 verbose request no basic auth needed
+319 info trying registry request attempt 1 at 18:36:29
+320 verbose etag "CMCVRTUVBX7UC6666LXVL4WDF"
+321 http GET https://registry.npmjs.org/kerberos
+322 verbose request where is /readable-stream
+323 verbose request registry https://registry.npmjs.org/
+324 verbose request url raw /readable-stream
+325 verbose request url resolving [ 'https://registry.npmjs.org/', './readable-stream' ]
+326 verbose request url resolved https://registry.npmjs.org/readable-stream
+327 verbose request where is https://registry.npmjs.org/readable-stream
+328 verbose request no basic auth needed
+329 info trying registry request attempt 1 at 18:36:29
+330 verbose etag "CSOE4KF322MPG12B52NEY8JQ6"
+331 http GET https://registry.npmjs.org/readable-stream
+332 verbose request where is /bson
+333 verbose request registry https://registry.npmjs.org/
+334 verbose request url raw /bson
+335 verbose request url resolving [ 'https://registry.npmjs.org/', './bson' ]
+336 verbose request url resolved https://registry.npmjs.org/bson
+337 verbose request where is https://registry.npmjs.org/bson
+338 verbose request no basic auth needed
+339 info trying registry request attempt 1 at 18:36:29
+340 verbose etag "E8AHK7Y1FGR0A5LQ6J9KYU6EC"
+341 http GET https://registry.npmjs.org/bson
+342 http 304 https://registry.npmjs.org/node-uuid
+343 silly registry.get cb [ 304,
+343 silly registry.get   { date: 'Mon, 01 Sep 2014 22:36:30 GMT',
+343 silly registry.get     server: 'Apache',
+343 silly registry.get     via: '1.1 varnish',
+343 silly registry.get     'last-modified': 'Mon, 01 Sep 2014 22:36:20 GMT',
+343 silly registry.get     'cache-control': 'max-age=60',
+343 silly registry.get     etag: '"24TR1NAMH1UWN62GAVD8QB5SE"',
+343 silly registry.get     'x-served-by': 'cache-jfk1024-JFK',
+343 silly registry.get     'x-cache': 'HIT',
+343 silly registry.get     'x-cache-hits': '2',
+343 silly registry.get     'x-timer': 'S1409610990.822203,VS0,VE0',
+343 silly registry.get     vary: 'Accept',
+343 silly registry.get     'content-length': '0',
+343 silly registry.get     'keep-alive': 'timeout=10, max=48',
+343 silly registry.get     connection: 'Keep-Alive' } ]
+344 verbose etag https://registry.npmjs.org/node-uuid from cache
+345 http 304 https://registry.npmjs.org/tunnel-agent
+346 silly registry.get cb [ 304,
+346 silly registry.get   { date: 'Mon, 01 Sep 2014 22:36:30 GMT',
+346 silly registry.get     server: 'Apache',
+346 silly registry.get     via: '1.1 varnish',
+346 silly registry.get     'last-modified': 'Mon, 01 Sep 2014 22:36:30 GMT',
+346 silly registry.get     'cache-control': 'max-age=60',
+346 silly registry.get     etag: '"3N3UY2Q1JJAV20HX0166P6RKP"',
+346 silly registry.get     'x-served-by': 'cache-jfk1027-JFK',
+346 silly registry.get     'x-cache': 'HIT',
+346 silly registry.get     'x-cache-hits': '1',
+346 silly registry.get     'x-timer': 'S1409610990.819266,VS0,VE0',
+346 silly registry.get     vary: 'Accept',
+346 silly registry.get     'content-length': '0',
+346 silly registry.get     'keep-alive': 'timeout=10, max=48',
+346 silly registry.get     connection: 'Keep-Alive' } ]
+347 verbose etag https://registry.npmjs.org/tunnel-agent from cache
+348 http 304 https://registry.npmjs.org/forever-agent
+349 silly registry.get cb [ 304,
+349 silly registry.get   { date: 'Mon, 01 Sep 2014 22:36:30 GMT',
+349 silly registry.get     server: 'Apache',
+349 silly registry.get     via: '1.1 varnish',
+349 silly registry.get     'last-modified': 'Mon, 01 Sep 2014 22:36:30 GMT',
+349 silly registry.get     'cache-control': 'max-age=60',
+349 silly registry.get     etag: '"36IDZHHB8KMK9HB7GP5VJCFJN"',
+349 silly registry.get     'x-served-by': 'cache-jfk1024-JFK',
+349 silly registry.get     'x-cache': 'HIT',
+349 silly registry.get     'x-cache-hits': '1',
+349 silly registry.get     'x-timer': 'S1409610990.849481,VS0,VE0',
+349 silly registry.get     vary: 'Accept',
+349 silly registry.get     'content-length': '0',
+349 silly registry.get     'keep-alive': 'timeout=10, max=47',
+349 silly registry.get     connection: 'Keep-Alive' } ]
+350 verbose etag https://registry.npmjs.org/forever-agent from cache
+351 http 304 https://registry.npmjs.org/http-signature
+352 silly registry.get cb [ 304,
+352 silly registry.get   { date: 'Mon, 01 Sep 2014 22:36:30 GMT',
+352 silly registry.get     server: 'Apache',
+352 silly registry.get     via: '1.1 varnish',
+352 silly registry.get     'last-modified': 'Mon, 01 Sep 2014 22:36:30 GMT',
+352 silly registry.get     'cache-control': 'max-age=60',
+352 silly registry.get     etag: '"2DEU6RS13YG3V8ALKOQHX2IR5"',
+352 silly registry.get     'x-served-by': 'cache-jfk1027-JFK',
+352 silly registry.get     'x-cache': 'HIT',
+352 silly registry.get     'x-cache-hits': '2',
+352 silly registry.get     'x-timer': 'S1409610990.846660,VS0,VE0',
+352 silly registry.get     vary: 'Accept',
+352 silly registry.get     'content-length': '0',
+352 silly registry.get     'keep-alive': 'timeout=10, max=47',
+352 silly registry.get     connection: 'Keep-Alive' } ]
+353 verbose etag https://registry.npmjs.org/http-signature from cache
+354 verbose mapToRegistry name assert-plus
+355 verbose mapToRegistry uri https://registry.npmjs.org/assert-plus
+356 verbose mapToRegistry name asn1
+357 verbose mapToRegistry uri https://registry.npmjs.org/asn1
+358 verbose mapToRegistry name ctype
+359 verbose mapToRegistry uri https://registry.npmjs.org/ctype
+360 verbose request where is /asn1
+361 verbose request registry https://registry.npmjs.org/
+362 verbose request url raw /asn1
+363 verbose request url resolving [ 'https://registry.npmjs.org/', './asn1' ]
+364 verbose request url resolved https://registry.npmjs.org/asn1
+365 verbose request where is https://registry.npmjs.org/asn1
+366 verbose request no basic auth needed
+367 info trying registry request attempt 1 at 18:36:29
+368 verbose etag "1C30QIUE3FQ1K5OM03CKS0HHS"
+369 http GET https://registry.npmjs.org/asn1
+370 verbose request where is /assert-plus
+371 verbose request registry https://registry.npmjs.org/
+372 verbose request url raw /assert-plus
+373 verbose request url resolving [ 'https://registry.npmjs.org/', './assert-plus' ]
+374 verbose request url resolved https://registry.npmjs.org/assert-plus
+375 verbose request where is https://registry.npmjs.org/assert-plus
+376 verbose request no basic auth needed
+377 info trying registry request attempt 1 at 18:36:29
+378 verbose etag "3B48SFWN5JGMRYAJOWQG0EH1V"
+379 http GET https://registry.npmjs.org/assert-plus
+380 verbose request where is /ctype
+381 verbose request registry https://registry.npmjs.org/
+382 verbose request url raw /ctype
+383 verbose request url resolving [ 'https://registry.npmjs.org/', './ctype' ]
+384 verbose request url resolved https://registry.npmjs.org/ctype
+385 verbose request where is https://registry.npmjs.org/ctype
+386 verbose request no basic auth needed
+387 info trying registry request attempt 1 at 18:36:29
+388 verbose etag "EUXP05EGRSXQUWO3GNL9YHO4V"
+389 http GET https://registry.npmjs.org/ctype
+390 http 304 https://registry.npmjs.org/form-data
+391 silly registry.get cb [ 304,
+391 silly registry.get   { date: 'Mon, 01 Sep 2014 22:36:30 GMT',
+391 silly registry.get     server: 'Apache',
+391 silly registry.get     via: '1.1 varnish',
+391 silly registry.get     'last-modified': 'Mon, 01 Sep 2014 22:36:30 GMT',
+391 silly registry.get     'cache-control': 'max-age=60',
+391 silly registry.get     etag: '"9Q2WYS5J78OQNYID0RJ7EECVE"',
+391 silly registry.get     'x-served-by': 'cache-jfk1029-JFK',
+391 silly registry.get     'x-cache': 'HIT',
+391 silly registry.get     'x-cache-hits': '1',
+391 silly registry.get     'x-timer': 'S1409610990.822332,VS0,VE44',
+391 silly registry.get     vary: 'Accept',
+391 silly registry.get     'content-length': '0',
+391 silly registry.get     'keep-alive': 'timeout=10, max=48',
+391 silly registry.get     connection: 'Keep-Alive' } ]
+392 verbose etag https://registry.npmjs.org/form-data from cache
+393 http 304 https://registry.npmjs.org/oauth-sign
+394 silly registry.get cb [ 304,
+394 silly registry.get   { date: 'Mon, 01 Sep 2014 22:36:30 GMT',
+394 silly registry.get     server: 'Apache',
+394 silly registry.get     via: '1.1 varnish',
+394 silly registry.get     'last-modified': 'Mon, 01 Sep 2014 22:36:30 GMT',
+394 silly registry.get     'cache-control': 'max-age=60',
+394 silly registry.get     etag: '"6J3JWUQTL47TIQLQUAEYZ3BJU"',
+394 silly registry.get     'x-served-by': 'cache-jfk1024-JFK',
+394 silly registry.get     'x-cache': 'HIT',
+394 silly registry.get     'x-cache-hits': '1',
+394 silly registry.get     'x-timer': 'S1409610990.869650,VS0,VE0',
+394 silly registry.get     vary: 'Accept',
+394 silly registry.get     'content-length': '0',
+394 silly registry.get     'keep-alive': 'timeout=10, max=46',
+394 silly registry.get     connection: 'Keep-Alive' } ]
+395 verbose etag https://registry.npmjs.org/oauth-sign from cache
+396 http 304 https://registry.npmjs.org/hawk
+397 silly registry.get cb [ 304,
+397 silly registry.get   { date: 'Mon, 01 Sep 2014 22:36:30 GMT',
+397 silly registry.get     server: 'Apache',
+397 silly registry.get     via: '1.1 varnish',
+397 silly registry.get     'last-modified': 'Mon, 01 Sep 2014 22:33:06 GMT',
+397 silly registry.get     'cache-control': 'max-age=60',
+397 silly registry.get     etag: '"8G64OO67GKAB28SRMPPTET31K"',
+397 silly registry.get     'x-served-by': 'cache-jfk1027-JFK',
+397 silly registry.get     'x-cache': 'HIT',
+397 silly registry.get     'x-cache-hits': '35',
+397 silly registry.get     'x-timer': 'S1409610990.868633,VS0,VE0',
+397 silly registry.get     vary: 'Accept',
+397 silly registry.get     'content-length': '0',
+397 silly registry.get     'keep-alive': 'timeout=10, max=46',
+397 silly registry.get     connection: 'Keep-Alive' } ]
+398 verbose etag https://registry.npmjs.org/hawk from cache
+399 http 304 https://registry.npmjs.org/qs
+400 silly registry.get cb [ 304,
+400 silly registry.get   { date: 'Mon, 01 Sep 2014 22:36:30 GMT',
+400 silly registry.get     server: 'Apache',
+400 silly registry.get     via: '1.1 varnish',
+400 silly registry.get     'last-modified': 'Mon, 01 Sep 2014 22:36:30 GMT',
+400 silly registry.get     'cache-control': 'max-age=60',
+400 silly registry.get     etag: '"8268LYZ2Z0S0NFAUQPOS750Y1"',
+400 silly registry.get     'x-served-by': 'cache-jfk1029-JFK',
+400 silly registry.get     'x-cache': 'HIT',
+400 silly registry.get     'x-cache-hits': '1',
+400 silly registry.get     'x-timer': 'S1409610990.869399,VS0,VE0',
+400 silly registry.get     vary: 'Accept',
+400 silly registry.get     'content-length': '0',
+400 silly registry.get     'keep-alive': 'timeout=10, max=50',
+400 silly registry.get     connection: 'Keep-Alive' } ]
+401 verbose etag https://registry.npmjs.org/qs from cache
+402 verbose mapToRegistry name combined-stream
+403 verbose mapToRegistry uri https://registry.npmjs.org/combined-stream
+404 verbose mapToRegistry name mime
+405 verbose mapToRegistry uri https://registry.npmjs.org/mime
+406 verbose mapToRegistry name async
+407 verbose mapToRegistry uri https://registry.npmjs.org/async
+408 verbose request where is /async
+409 verbose request registry https://registry.npmjs.org/
+410 verbose request url raw /async
+411 verbose request url resolving [ 'https://registry.npmjs.org/', './async' ]
+412 verbose request url resolved https://registry.npmjs.org/async
+413 verbose request where is https://registry.npmjs.org/async
+414 verbose request no basic auth needed
+415 info trying registry request attempt 1 at 18:36:30
+416 verbose etag "4TFMAZU4SX1MYB4NK95F5YCYR"
+417 http GET https://registry.npmjs.org/async
+418 verbose request where is /combined-stream
+419 verbose request registry https://registry.npmjs.org/
+420 verbose request url raw /combined-stream
+421 verbose request url resolving [ 'https://registry.npmjs.org/', './combined-stream' ]
+422 verbose request url resolved https://registry.npmjs.org/combined-stream
+423 verbose request where is https://registry.npmjs.org/combined-stream
+424 verbose request no basic auth needed
+425 info trying registry request attempt 1 at 18:36:30
+426 verbose etag "6KMNQZJ8X6ACM44IK4K2SZ1BZ"
+427 http GET https://registry.npmjs.org/combined-stream
+428 verbose request where is /mime
+429 verbose request registry https://registry.npmjs.org/
+430 verbose request url raw /mime
+431 verbose request url resolving [ 'https://registry.npmjs.org/', './mime' ]
+432 verbose request url resolved https://registry.npmjs.org/mime
+433 verbose request where is https://registry.npmjs.org/mime
+434 verbose request no basic auth needed
+435 info trying registry request attempt 1 at 18:36:30
+436 verbose etag "C9HHYWT8MPT3M00UWH0JNR89Z"
+437 http GET https://registry.npmjs.org/mime
+438 http 304 https://registry.npmjs.org/stringstream
+439 silly registry.get cb [ 304,
+439 silly registry.get   { date: 'Mon, 01 Sep 2014 22:36:30 GMT',
+439 silly registry.get     server: 'Apache',
+439 silly registry.get     via: '1.1 varnish',
+439 silly registry.get     'last-modified': 'Mon, 01 Sep 2014 22:35:54 GMT',
+439 silly registry.get     'cache-control': 'max-age=60',
+439 silly registry.get     etag: '"45H7SV6G7VR1WBWAH4KWF3HU1"',
+439 silly registry.get     'x-served-by': 'cache-jfk1024-JFK',
+439 silly registry.get     'x-cache': 'HIT',
+439 silly registry.get     'x-cache-hits': '2',
+439 silly registry.get     'x-timer': 'S1409610990.889971,VS0,VE0',
+439 silly registry.get     vary: 'Accept',
+439 silly registry.get     'content-length': '0',
+439 silly registry.get     'keep-alive': 'timeout=10, max=45',
+439 silly registry.get     connection: 'Keep-Alive' } ]
+440 verbose etag https://registry.npmjs.org/stringstream from cache
+441 http 304 https://registry.npmjs.org/tough-cookie
+442 silly registry.get cb [ 304,
+442 silly registry.get   { date: 'Mon, 01 Sep 2014 22:36:30 GMT',
+442 silly registry.get     server: 'Apache',
+442 silly registry.get     via: '1.1 varnish',
+442 silly registry.get     'last-modified': 'Mon, 01 Sep 2014 22:35:50 GMT',
+442 silly registry.get     'cache-control': 'max-age=60',
+442 silly registry.get     etag: '"688PET38N1VN3KPHYSMVLBEB8"',
+442 silly registry.get     'x-served-by': 'cache-jfk1029-JFK',
+442 silly registry.get     'x-cache': 'HIT',
+442 silly registry.get     'x-cache-hits': '2',
+442 silly registry.get     'x-timer': 'S1409610990.887398,VS0,VE0',
+442 silly registry.get     vary: 'Accept',
+442 silly registry.get     'content-length': '0',
+442 silly registry.get     'keep-alive': 'timeout=10, max=47',
+442 silly registry.get     connection: 'Keep-Alive' } ]
+443 verbose etag https://registry.npmjs.org/tough-cookie from cache
+444 http 304 https://registry.npmjs.org/aws-sign2
+445 silly registry.get cb [ 304,
+445 silly registry.get   { date: 'Mon, 01 Sep 2014 22:36:30 GMT',
+445 silly registry.get     server: 'Apache',
+445 silly registry.get     via: '1.1 varnish',
+445 silly registry.get     'last-modified': 'Mon, 01 Sep 2014 22:36:30 GMT',
+445 silly registry.get     'cache-control': 'max-age=60',
+445 silly registry.get     etag: '"CR2NL7RG57MED33DBI38QITC5"',
+445 silly registry.get     'x-served-by': 'cache-jfk1027-JFK',
+445 silly registry.get     'x-cache': 'HIT',
+445 silly registry.get     'x-cache-hits': '1',
+445 silly registry.get     'x-timer': 'S1409610990.888595,VS0,VE0',
+445 silly registry.get     vary: 'Accept',
+445 silly registry.get     'content-length': '0',
+445 silly registry.get     'keep-alive': 'timeout=10, max=45',
+445 silly registry.get     connection: 'Keep-Alive' } ]
+446 verbose etag https://registry.npmjs.org/aws-sign2 from cache
+447 http 304 https://registry.npmjs.org/async
+448 silly registry.get cb [ 304,
+448 silly registry.get   { date: 'Mon, 01 Sep 2014 22:36:30 GMT',
+448 silly registry.get     server: 'Apache',
+448 silly registry.get     via: '1.1 varnish',
+448 silly registry.get     'last-modified': 'Mon, 01 Sep 2014 22:35:50 GMT',
+448 silly registry.get     'cache-control': 'max-age=60',
+448 silly registry.get     etag: '"4TFMAZU4SX1MYB4NK95F5YCYR"',
+448 silly registry.get     'x-served-by': 'cache-jfk1029-JFK',
+448 silly registry.get     'x-cache': 'HIT',
+448 silly registry.get     'x-cache-hits': '5',
+448 silly registry.get     'x-timer': 'S1409610990.891530,VS0,VE0',
+448 silly registry.get     vary: 'Accept',
+448 silly registry.get     'content-length': '0',
+448 silly registry.get     'keep-alive': 'timeout=10, max=49',
+448 silly registry.get     connection: 'Keep-Alive' } ]
+449 verbose etag https://registry.npmjs.org/async from cache
+450 verbose mapToRegistry name punycode
+451 verbose mapToRegistry uri https://registry.npmjs.org/punycode
+452 verbose request where is /punycode
+453 verbose request registry https://registry.npmjs.org/
+454 verbose request url raw /punycode
+455 verbose request url resolving [ 'https://registry.npmjs.org/', './punycode' ]
+456 verbose request url resolved https://registry.npmjs.org/punycode
+457 verbose request where is https://registry.npmjs.org/punycode
+458 verbose request no basic auth needed
+459 info trying registry request attempt 1 at 18:36:30
+460 verbose etag "A4XQ0AXRXU9CCK3G67617SBIG"
+461 http GET https://registry.npmjs.org/punycode
+462 http 304 https://registry.npmjs.org/optimist
+463 silly registry.get cb [ 304,
+463 silly registry.get   { date: 'Mon, 01 Sep 2014 22:36:30 GMT',
+463 silly registry.get     server: 'Apache',
+463 silly registry.get     via: '1.1 varnish',
+463 silly registry.get     'last-modified': 'Mon, 01 Sep 2014 22:36:30 GMT',
+463 silly registry.get     'cache-control': 'max-age=60',
+463 silly registry.get     etag: '"9QRQZC93M0V9PREYLQ760PQ0X"',
+463 silly registry.get     'x-served-by': 'cache-jfk1024-JFK',
+463 silly registry.get     'x-cache': 'HIT',
+463 silly registry.get     'x-cache-hits': '1',
+463 silly registry.get     'x-timer': 'S1409610990.912317,VS0,VE0',
+463 silly registry.get     vary: 'Accept',
+463 silly registry.get     'content-length': '0',
+463 silly registry.get     'keep-alive': 'timeout=10, max=44',
+463 silly registry.get     connection: 'Keep-Alive' } ]
+464 verbose etag https://registry.npmjs.org/optimist from cache
+465 http 304 https://registry.npmjs.org/ini
+466 silly registry.get cb [ 304,
+466 silly registry.get   { date: 'Mon, 01 Sep 2014 22:36:30 GMT',
+466 silly registry.get     server: 'Apache',
+466 silly registry.get     via: '1.1 varnish',
+466 silly registry.get     'last-modified': 'Mon, 01 Sep 2014 22:36:30 GMT',
+466 silly registry.get     'cache-control': 'max-age=60',
+466 silly registry.get     etag: '"D6P1315UN4DUAKZ4CQ8X9YTC7"',
+466 silly registry.get     'x-served-by': 'cache-jfk1029-JFK',
+466 silly registry.get     'x-cache': 'HIT',
+466 silly registry.get     'x-cache-hits': '1',
+466 silly registry.get     'x-timer': 'S1409610990.910461,VS0,VE0',
+466 silly registry.get     vary: 'Accept',
+466 silly registry.get     'content-length': '0',
+466 silly registry.get     'keep-alive': 'timeout=10, max=46',
+466 silly registry.get     connection: 'Keep-Alive' } ]
+467 verbose etag https://registry.npmjs.org/ini from cache
+468 http 304 https://registry.npmjs.org/readable-stream
+469 silly registry.get cb [ 304,
+469 silly registry.get   { date: 'Mon, 01 Sep 2014 22:36:30 GMT',
+469 silly registry.get     server: 'Apache',
+469 silly registry.get     via: '1.1 varnish',
+469 silly registry.get     'last-modified': 'Mon, 01 Sep 2014 22:36:19 GMT',
+469 silly registry.get     'cache-control': 'max-age=60',
+469 silly registry.get     etag: '"CSOE4KF322MPG12B52NEY8JQ6"',
+469 silly registry.get     'x-served-by': 'cache-jfk1029-JFK',
+469 silly registry.get     'x-cache': 'HIT',
+469 silly registry.get     'x-cache-hits': '2',
+469 silly registry.get     'x-timer': 'S1409610990.911821,VS0,VE0',
+469 silly registry.get     vary: 'Accept',
+469 silly registry.get     'content-length': '0',
+469 silly registry.get     'keep-alive': 'timeout=10, max=48',
+469 silly registry.get     connection: 'Keep-Alive' } ]
+470 verbose etag https://registry.npmjs.org/readable-stream from cache
+471 http 304 https://registry.npmjs.org/kerberos
+472 silly registry.get cb [ 304,
+472 silly registry.get   { date: 'Mon, 01 Sep 2014 22:36:30 GMT',
+472 silly registry.get     server: 'Apache',
+472 silly registry.get     via: '1.1 varnish',
+472 silly registry.get     'last-modified': 'Mon, 01 Sep 2014 22:36:30 GMT',
+472 silly registry.get     'cache-control': 'max-age=60',
+472 silly registry.get     etag: '"CMCVRTUVBX7UC6666LXVL4WDF"',
+472 silly registry.get     'x-served-by': 'cache-jfk1027-JFK',
+472 silly registry.get     'x-cache': 'HIT',
+472 silly registry.get     'x-cache-hits': '1',
+472 silly registry.get     'x-timer': 'S1409610990.911034,VS0,VE0',
+472 silly registry.get     vary: 'Accept',
+472 silly registry.get     'content-length': '0',
+472 silly registry.get     'keep-alive': 'timeout=10, max=44',
+472 silly registry.get     connection: 'Keep-Alive' } ]
+473 verbose etag https://registry.npmjs.org/kerberos from cache
+474 verbose mapToRegistry name core-util-is
+475 verbose mapToRegistry uri https://registry.npmjs.org/core-util-is
+476 verbose mapToRegistry name isarray
+477 verbose mapToRegistry uri https://registry.npmjs.org/isarray
+478 verbose mapToRegistry name string_decoder
+479 verbose mapToRegistry uri https://registry.npmjs.org/string_decoder
+480 verbose mapToRegistry name inherits
+481 verbose mapToRegistry uri https://registry.npmjs.org/inherits
+482 verbose request where is /core-util-is
+483 verbose request registry https://registry.npmjs.org/
+484 verbose request url raw /core-util-is
+485 verbose request url resolving [ 'https://registry.npmjs.org/', './core-util-is' ]
+486 verbose request url resolved https://registry.npmjs.org/core-util-is
+487 verbose request where is https://registry.npmjs.org/core-util-is
+488 verbose request no basic auth needed
+489 info trying registry request attempt 1 at 18:36:30
+490 verbose etag "5DIOGNW27G1NZR76WWBS7H9N1"
+491 http GET https://registry.npmjs.org/core-util-is
+492 verbose request where is /isarray
+493 verbose request registry https://registry.npmjs.org/
+494 verbose request url raw /isarray
+495 verbose request url resolving [ 'https://registry.npmjs.org/', './isarray' ]
+496 verbose request url resolved https://registry.npmjs.org/isarray
+497 verbose request where is https://registry.npmjs.org/isarray
+498 verbose request no basic auth needed
+499 info trying registry request attempt 1 at 18:36:30
+500 verbose etag "48NFEUPZGFSFZSXSIBYLJCEOZ"
+501 http GET https://registry.npmjs.org/isarray
+502 verbose request where is /string_decoder
+503 verbose request registry https://registry.npmjs.org/
+504 verbose request url raw /string_decoder
+505 verbose request url resolving [ 'https://registry.npmjs.org/', './string_decoder' ]
+506 verbose request url resolved https://registry.npmjs.org/string_decoder
+507 verbose request where is https://registry.npmjs.org/string_decoder
+508 verbose request no basic auth needed
+509 info trying registry request attempt 1 at 18:36:30
+510 verbose etag "8HH58YARZR5IO6QUW7DEFT8D4"
+511 http GET https://registry.npmjs.org/string_decoder
+512 verbose request where is /inherits
+513 verbose request registry https://registry.npmjs.org/
+514 verbose request url raw /inherits
+515 verbose request url resolving [ 'https://registry.npmjs.org/', './inherits' ]
+516 verbose request url resolved https://registry.npmjs.org/inherits
+517 verbose request where is https://registry.npmjs.org/inherits
+518 verbose request no basic auth needed
+519 info trying registry request attempt 1 at 18:36:30
+520 verbose etag "7QT3SHOKA6S3CXON3RRL70KOH"
+521 http GET https://registry.npmjs.org/inherits
+522 http 304 https://registry.npmjs.org/bson
+523 silly registry.get cb [ 304,
+523 silly registry.get   { date: 'Mon, 01 Sep 2014 22:36:30 GMT',
+523 silly registry.get     server: 'Apache',
+523 silly registry.get     via: '1.1 varnish',
+523 silly registry.get     'last-modified': 'Mon, 01 Sep 2014 22:36:30 GMT',
+523 silly registry.get     'cache-control': 'max-age=60',
+523 silly registry.get     etag: '"E8AHK7Y1FGR0A5LQ6J9KYU6EC"',
+523 silly registry.get     'x-served-by': 'cache-jfk1024-JFK',
+523 silly registry.get     'x-cache': 'HIT',
+523 silly registry.get     'x-cache-hits': '1',
+523 silly registry.get     'x-timer': 'S1409610990.934683,VS0,VE0',
+523 silly registry.get     vary: 'Accept',
+523 silly registry.get     'content-length': '0',
+523 silly registry.get     'keep-alive': 'timeout=10, max=43',
+523 silly registry.get     connection: 'Keep-Alive' } ]
+524 verbose etag https://registry.npmjs.org/bson from cache
+525 http 304 https://registry.npmjs.org/assert-plus
+526 silly registry.get cb [ 304,
+526 silly registry.get   { date: 'Mon, 01 Sep 2014 22:36:30 GMT',
+526 silly registry.get     server: 'Apache',
+526 silly registry.get     via: '1.1 varnish',
+526 silly registry.get     'last-modified': 'Mon, 01 Sep 2014 22:36:07 GMT',
+526 silly registry.get     'cache-control': 'max-age=60',
+526 silly registry.get     etag: '"3B48SFWN5JGMRYAJOWQG0EH1V"',
+526 silly registry.get     'x-served-by': 'cache-jfk1029-JFK',
+526 silly registry.get     'x-cache': 'HIT',
+526 silly registry.get     'x-cache-hits': '2',
+526 silly registry.get     'x-timer': 'S1409610990.932444,VS0,VE0',
+526 silly registry.get     vary: 'Accept',
+526 silly registry.get     'content-length': '0',
+526 silly registry.get     'keep-alive': 'timeout=10, max=47',
+526 silly registry.get     connection: 'Keep-Alive' } ]
+527 verbose etag https://registry.npmjs.org/assert-plus from cache
+528 http 304 https://registry.npmjs.org/asn1
+529 silly registry.get cb [ 304,
+529 silly registry.get   { date: 'Mon, 01 Sep 2014 22:36:30 GMT',
+529 silly registry.get     server: 'Apache',
+529 silly registry.get     via: '1.1 varnish',
+529 silly registry.get     'last-modified': 'Mon, 01 Sep 2014 22:28:26 GMT',
+529 silly registry.get     'cache-control': 'max-age=60',
+529 silly registry.get     etag: '"1C30QIUE3FQ1K5OM03CKS0HHS"',
+529 silly registry.get     'x-served-by': 'cache-jfk1029-JFK',
+529 silly registry.get     'x-cache': 'HIT',
+529 silly registry.get     'x-cache-hits': '48',
+529 silly registry.get     'x-timer': 'S1409610990.932839,VS0,VE0',
+529 silly registry.get     vary: 'Accept',
+529 silly registry.get     'content-length': '0',
+529 silly registry.get     'keep-alive': 'timeout=10, max=45',
+529 silly registry.get     connection: 'Keep-Alive' } ]
+530 verbose etag https://registry.npmjs.org/asn1 from cache
+531 http 304 https://registry.npmjs.org/ctype
+532 silly registry.get cb [ 304,
+532 silly registry.get   { date: 'Mon, 01 Sep 2014 22:36:30 GMT',
+532 silly registry.get     server: 'Apache',
+532 silly registry.get     via: '1.1 varnish',
+532 silly registry.get     'last-modified': 'Mon, 01 Sep 2014 22:36:22 GMT',
+532 silly registry.get     'cache-control': 'max-age=60',
+532 silly registry.get     etag: '"EUXP05EGRSXQUWO3GNL9YHO4V"',
+532 silly registry.get     'x-served-by': 'cache-jfk1027-JFK',
+532 silly registry.get     'x-cache': 'HIT',
+532 silly registry.get     'x-cache-hits': '2',
+532 silly registry.get     'x-timer': 'S1409610990.933584,VS0,VE0',
+532 silly registry.get     vary: 'Accept',
+532 silly registry.get     'content-length': '0',
+532 silly registry.get     'keep-alive': 'timeout=10, max=43',
+532 silly registry.get     connection: 'Keep-Alive' } ]
+533 verbose etag https://registry.npmjs.org/ctype from cache
+534 verbose mapToRegistry name nan
+535 verbose mapToRegistry uri https://registry.npmjs.org/nan
+536 verbose request where is /nan
+537 verbose request registry https://registry.npmjs.org/
+538 verbose request url raw /nan
+539 verbose request url resolving [ 'https://registry.npmjs.org/', './nan' ]
+540 verbose request url resolved https://registry.npmjs.org/nan
+541 verbose request where is https://registry.npmjs.org/nan
+542 verbose request no basic auth needed
+543 info trying registry request attempt 1 at 18:36:30
+544 verbose etag "EHSGUSL5485V42YB6X3SJ857Q"
+545 http GET https://registry.npmjs.org/nan
+546 http 304 https://registry.npmjs.org/async
+547 silly registry.get cb [ 304,
+547 silly registry.get   { date: 'Mon, 01 Sep 2014 22:36:30 GMT',
+547 silly registry.get     server: 'Apache',
+547 silly registry.get     via: '1.1 varnish',
+547 silly registry.get     'last-modified': 'Mon, 01 Sep 2014 22:35:49 GMT',
+547 silly registry.get     'cache-control': 'max-age=60',
+547 silly registry.get     etag: '"4TFMAZU4SX1MYB4NK95F5YCYR"',
+547 silly registry.get     'x-served-by': 'cache-jfk1024-JFK',
+547 silly registry.get     'x-cache': 'HIT',
+547 silly registry.get     'x-cache-hits': '3',
+547 silly registry.get     'x-timer': 'S1409610990.957061,VS0,VE0',
+547 silly registry.get     vary: 'Accept',
+547 silly registry.get     'content-length': '0',
+547 silly registry.get     'keep-alive': 'timeout=10, max=42',
+547 silly registry.get     connection: 'Keep-Alive' } ]
+548 verbose etag https://registry.npmjs.org/async from cache
+549 http 304 https://registry.npmjs.org/mime
+550 silly registry.get cb [ 304,
+550 silly registry.get   { date: 'Mon, 01 Sep 2014 22:36:30 GMT',
+550 silly registry.get     server: 'Apache',
+550 silly registry.get     via: '1.1 varnish',
+550 silly registry.get     'last-modified': 'Mon, 01 Sep 2014 22:36:30 GMT',
+550 silly registry.get     'cache-control': 'max-age=60',
+550 silly registry.get     etag: '"C9HHYWT8MPT3M00UWH0JNR89Z"',
+550 silly registry.get     'x-served-by': 'cache-jfk1029-JFK',
+550 silly registry.get     'x-cache': 'HIT',
+550 silly registry.get     'x-cache-hits': '1',
+550 silly registry.get     'x-timer': 'S1409610990.959869,VS0,VE0',
+550 silly registry.get     vary: 'Accept',
+550 silly registry.get     'content-length': '0',
+550 silly registry.get     'keep-alive': 'timeout=10, max=44',
+550 silly registry.get     connection: 'Keep-Alive' } ]
+551 verbose etag https://registry.npmjs.org/mime from cache
+552 http 304 https://registry.npmjs.org/punycode
+553 silly registry.get cb [ 304,
+553 silly registry.get   { date: 'Mon, 01 Sep 2014 22:36:30 GMT',
+553 silly registry.get     server: 'Apache',
+553 silly registry.get     via: '1.1 varnish',
+553 silly registry.get     'last-modified': 'Mon, 01 Sep 2014 22:36:30 GMT',
+553 silly registry.get     'cache-control': 'max-age=60',
+553 silly registry.get     etag: '"A4XQ0AXRXU9CCK3G67617SBIG"',
+553 silly registry.get     'x-served-by': 'cache-jfk1027-JFK',
+553 silly registry.get     'x-cache': 'HIT',
+553 silly registry.get     'x-cache-hits': '1',
+553 silly registry.get     'x-timer': 'S1409610990.959020,VS0,VE0',
+553 silly registry.get     vary: 'Accept',
+553 silly registry.get     'content-length': '0',
+553 silly registry.get     'keep-alive': 'timeout=10, max=42',
+553 silly registry.get     connection: 'Keep-Alive' } ]
+554 verbose etag https://registry.npmjs.org/punycode from cache
+555 http 304 https://registry.npmjs.org/core-util-is
+556 silly registry.get cb [ 304,
+556 silly registry.get   { date: 'Mon, 01 Sep 2014 22:36:30 GMT',
+556 silly registry.get     server: 'Apache',
+556 silly registry.get     via: '1.1 varnish',
+556 silly registry.get     'last-modified': 'Mon, 01 Sep 2014 22:36:30 GMT',
+556 silly registry.get     'cache-control': 'max-age=60',
+556 silly registry.get     etag: '"5DIOGNW27G1NZR76WWBS7H9N1"',
+556 silly registry.get     'x-served-by': 'cache-jfk1024-JFK',
+556 silly registry.get     'x-cache': 'HIT',
+556 silly registry.get     'x-cache-hits': '1',
+556 silly registry.get     'x-timer': 'S1409610990.977023,VS0,VE0',
+556 silly registry.get     vary: 'Accept',
+556 silly registry.get     'content-length': '0',
+556 silly registry.get     'keep-alive': 'timeout=10, max=41',
+556 silly registry.get     connection: 'Keep-Alive' } ]
+557 verbose etag https://registry.npmjs.org/core-util-is from cache
+558 http 304 https://registry.npmjs.org/isarray
+559 silly registry.get cb [ 304,
+559 silly registry.get   { date: 'Mon, 01 Sep 2014 22:36:30 GMT',
+559 silly registry.get     server: 'Apache',
+559 silly registry.get     via: '1.1 varnish',
+559 silly registry.get     'last-modified': 'Mon, 01 Sep 2014 22:36:30 GMT',
+559 silly registry.get     'cache-control': 'max-age=60',
+559 silly registry.get     etag: '"48NFEUPZGFSFZSXSIBYLJCEOZ"',
+559 silly registry.get     'x-served-by': 'cache-jfk1029-JFK',
+559 silly registry.get     'x-cache': 'HIT',
+559 silly registry.get     'x-cache-hits': '1',
+559 silly registry.get     'x-timer': 'S1409610990.982311,VS0,VE0',
+559 silly registry.get     vary: 'Accept',
+559 silly registry.get     'content-length': '0',
+559 silly registry.get     'keep-alive': 'timeout=10, max=43',
+559 silly registry.get     connection: 'Keep-Alive' } ]
+560 verbose etag https://registry.npmjs.org/isarray from cache
+561 http 304 https://registry.npmjs.org/string_decoder
+562 silly registry.get cb [ 304,
+562 silly registry.get   { date: 'Mon, 01 Sep 2014 22:36:30 GMT',
+562 silly registry.get     server: 'Apache',
+562 silly registry.get     via: '1.1 varnish',
+562 silly registry.get     'last-modified': 'Mon, 01 Sep 2014 22:36:06 GMT',
+562 silly registry.get     'cache-control': 'max-age=60',
+562 silly registry.get     etag: '"8HH58YARZR5IO6QUW7DEFT8D4"',
+562 silly registry.get     'x-served-by': 'cache-jfk1027-JFK',
+562 silly registry.get     'x-cache': 'HIT',
+562 silly registry.get     'x-cache-hits': '2',
+562 silly registry.get     'x-timer': 'S1409610990.981383,VS0,VE0',
+562 silly registry.get     vary: 'Accept',
+562 silly registry.get     'content-length': '0',
+562 silly registry.get     'keep-alive': 'timeout=10, max=41',
+562 silly registry.get     connection: 'Keep-Alive' } ]
+563 verbose etag https://registry.npmjs.org/string_decoder from cache
+564 http 304 https://registry.npmjs.org/inherits
+565 silly registry.get cb [ 304,
+565 silly registry.get   { date: 'Mon, 01 Sep 2014 22:36:30 GMT',
+565 silly registry.get     server: 'Apache',
+565 silly registry.get     via: '1.1 varnish',
+565 silly registry.get     'last-modified': 'Mon, 01 Sep 2014 22:35:58 GMT',
+565 silly registry.get     'cache-control': 'max-age=60',
+565 silly registry.get     etag: '"7QT3SHOKA6S3CXON3RRL70KOH"',
+565 silly registry.get     'x-served-by': 'cache-jfk1024-JFK',
+565 silly registry.get     'x-cache': 'HIT',
+565 silly registry.get     'x-cache-hits': '2',
+565 silly registry.get     'x-timer': 'S1409610990.997019,VS0,VE0',
+565 silly registry.get     vary: 'Accept',
+565 silly registry.get     'content-length': '0',
+565 silly registry.get     'keep-alive': 'timeout=10, max=40',
+565 silly registry.get     connection: 'Keep-Alive' } ]
+566 verbose etag https://registry.npmjs.org/inherits from cache
+567 http 304 https://registry.npmjs.org/nan
+568 silly registry.get cb [ 304,
+568 silly registry.get   { date: 'Mon, 01 Sep 2014 22:36:31 GMT',
+568 silly registry.get     server: 'Apache',
+568 silly registry.get     via: '1.1 varnish',
+568 silly registry.get     'last-modified': 'Mon, 01 Sep 2014 22:36:31 GMT',
+568 silly registry.get     'cache-control': 'max-age=60',
+568 silly registry.get     etag: '"EHSGUSL5485V42YB6X3SJ857Q"',
+568 silly registry.get     'x-served-by': 'cache-jfk1029-JFK',
+568 silly registry.get     'x-cache': 'HIT',
+568 silly registry.get     'x-cache-hits': '1',
+568 silly registry.get     'x-timer': 'S1409610991.002199,VS0,VE0',
+568 silly registry.get     vary: 'Accept',
+568 silly registry.get     'content-length': '0',
+568 silly registry.get     'keep-alive': 'timeout=10, max=42',
+568 silly registry.get     connection: 'Keep-Alive' } ]
+569 verbose etag https://registry.npmjs.org/nan from cache
+570 http 304 https://registry.npmjs.org/mongoose
+571 silly registry.get cb [ 304,
+571 silly registry.get   { date: 'Mon, 01 Sep 2014 22:36:30 GMT',
+571 silly registry.get     server: 'Apache',
+571 silly registry.get     via: '1.1 varnish',
+571 silly registry.get     'last-modified': 'Mon, 01 Sep 2014 22:36:31 GMT',
+571 silly registry.get     'cache-control': 'max-age=60',
+571 silly registry.get     etag: '"4IVHMRD9VUUPMT4TWKIC016CS"',
+571 silly registry.get     'x-served-by': 'cache-jfk1034-JFK',
+571 silly registry.get     'x-cache': 'HIT',
+571 silly registry.get     'x-cache-hits': '1',
+571 silly registry.get     'x-timer': 'S1409610990.683066,VS0,VE353',
+571 silly registry.get     vary: 'Accept',
+571 silly registry.get     'content-length': '0',
+571 silly registry.get     'keep-alive': 'timeout=10, max=50',
+571 silly registry.get     connection: 'Keep-Alive' } ]
+572 verbose etag https://registry.npmjs.org/mongoose from cache
+573 http 304 https://registry.npmjs.org/combined-stream
+574 silly registry.get cb [ 304,
+574 silly registry.get   { date: 'Mon, 01 Sep 2014 22:36:31 GMT',
+574 silly registry.get     server: 'Apache',
+574 silly registry.get     via: '1.1 varnish',
+574 silly registry.get     'last-modified': 'Mon, 01 Sep 2014 22:36:31 GMT',
+574 silly registry.get     'cache-control': 'max-age=60',
+574 silly registry.get     etag: '"6KMNQZJ8X6ACM44IK4K2SZ1BZ"',
+574 silly registry.get     'x-served-by': 'cache-jfk1029-JFK',
+574 silly registry.get     'x-cache': 'HIT',
+574 silly registry.get     'x-cache-hits': '1',
+574 silly registry.get     'x-timer': 'S1409610991.268092,VS0,VE0',
+574 silly registry.get     vary: 'Accept',
+574 silly registry.get     'content-length': '0',
+574 silly registry.get     'keep-alive': 'timeout=10, max=46',
+574 silly registry.get     connection: 'Keep-Alive' } ]
+575 verbose etag https://registry.npmjs.org/combined-stream from cache
+576 verbose mapToRegistry name delayed-stream
+577 verbose mapToRegistry uri https://registry.npmjs.org/delayed-stream
+578 verbose request where is /delayed-stream
+579 verbose request registry https://registry.npmjs.org/
+580 verbose request url raw /delayed-stream
+581 verbose request url resolving [ 'https://registry.npmjs.org/', './delayed-stream' ]
+582 verbose request url resolved https://registry.npmjs.org/delayed-stream
+583 verbose request where is https://registry.npmjs.org/delayed-stream
+584 verbose request no basic auth needed
+585 info trying registry request attempt 1 at 18:36:30
+586 verbose etag "B70VIU5OAVYWCHK21TJATOJ21"
+587 http GET https://registry.npmjs.org/delayed-stream
+588 http 304 https://registry.npmjs.org/delayed-stream
+589 silly registry.get cb [ 304,
+589 silly registry.get   { date: 'Mon, 01 Sep 2014 22:36:31 GMT',
+589 silly registry.get     server: 'Apache',
+589 silly registry.get     via: '1.1 varnish',
+589 silly registry.get     'last-modified': 'Mon, 01 Sep 2014 22:36:08 GMT',
+589 silly registry.get     'cache-control': 'max-age=60',
+589 silly registry.get     etag: '"B70VIU5OAVYWCHK21TJATOJ21"',
+589 silly registry.get     'x-served-by': 'cache-jfk1030-JFK',
+589 silly registry.get     'x-cache': 'HIT',
+589 silly registry.get     'x-cache-hits': '3',
+589 silly registry.get     'x-timer': 'S1409610991.384992,VS0,VE0',
+589 silly registry.get     vary: 'Accept',
+589 silly registry.get     'content-length': '0',
+589 silly registry.get     'keep-alive': 'timeout=10, max=50',
+589 silly registry.get     connection: 'Keep-Alive' } ]
+590 verbose etag https://registry.npmjs.org/delayed-stream from cache
+591 info outdated updating [ [ '/Users/sleung/Desktop/side-projects/callback-newsfeed',
+591 info outdated     'jade',
+591 info outdated     '1.5.0',
+591 info outdated     '1.6.0',
+591 info outdated     '1.6.0',
+591 info outdated     '^1.5.0' ],
+591 info outdated   [ '/Users/sleung/Desktop/side-projects/callback-newsfeed',
+591 info outdated     'express',
+591 info outdated     '3.0.0',
+591 info outdated     '3.16.9',
+591 info outdated     '4.8.7',
+591 info outdated     '^3.0.0' ],
+591 info outdated   [ '/Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/nconf',
+591 info outdated     'async',
+591 info outdated     '0.2.9',
+591 info outdated     '0.2.9',
+591 info outdated     '0.9.0',
+591 info outdated     '0.2.9' ],
+591 info outdated   [ '/Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/nconf',
+591 info outdated     'optimist',
+591 info outdated     '0.6.0',
+591 info outdated     '0.6.0',
+591 info outdated     '0.6.1',
+591 info outdated     '0.6.0' ],
+591 info outdated   [ '/Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/mongodb',
+591 info outdated     'kerberos',
+591 info outdated     '0.0.3',
+591 info outdated     '0.0.3',
+591 info outdated     '0.0.4',
+591 info outdated     '0.0.3' ],
+591 info outdated   [ '/Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/mongodb/node_modules/bson',
+591 info outdated     'nan',
+591 info outdated     '1.2.0',
+591 info outdated     '1.2.0',
+591 info outdated     '1.3.0',
+591 info outdated     '1.2.0' ],
+591 info outdated   [ '/Users/sleung/Desktop/side-projects/callback-newsfeed',
+591 info outdated     'mongoose',
+591 info outdated     '3.8.15',
+591 info outdated     '3.9.1',
+591 info outdated     '3.8.15',
+591 info outdated     '^3.8.15' ],
+591 info outdated   [ '/Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/request',
+591 info outdated     'oauth-sign',
+591 info outdated     '0.3.0',
+591 info outdated     '0.3.0',
+591 info outdated     '0.4.0',
+591 info outdated     '~0.3.0' ],
+591 info outdated   [ '/Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/request',
+591 info outdated     'hawk',
+591 info outdated     '1.1.1',
+591 info outdated     '1.1.1',
+591 info outdated     '2.2.3',
+591 info outdated     '1.1.1' ],
+591 info outdated   [ '/Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/request',
+591 info outdated     'qs',
+591 info outdated     '1.0.2',
+591 info outdated     '1.0.2',
+591 info outdated     '2.2.2',
+591 info outdated     '~1.0.0' ],
+591 info outdated   [ '/Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/request/node_modules/http-signature',
+591 info outdated     'assert-plus',
+591 info outdated     '0.1.2',
+591 info outdated     '0.1.2',
+591 info outdated     '0.1.5',
+591 info outdated     '0.1.2' ],
+591 info outdated   [ '/Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/request/node_modules/http-signature',
+591 info outdated     'ctype',
+591 info outdated     '0.5.2',
+591 info outdated     '0.5.2',
+591 info outdated     '0.5.3',
+591 info outdated     '0.5.2' ],
+591 info outdated   [ '/Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/request/node_modules/http-signature',
+591 info outdated     'asn1',
+591 info outdated     '0.1.11',
+591 info outdated     '0.1.11',
+591 info outdated     '0.2.1',
+591 info outdated     '0.1.11' ] ]
+592 verbose install where,what [ '/Users/sleung/Desktop/side-projects/callback-newsfeed',
+592 verbose install   [ 'jade@1.6.0' ] ]
+593 verbose install where,what [ '/Users/sleung/Desktop/side-projects/callback-newsfeed',
+593 verbose install   [ 'express@3.16.9' ] ]
+594 verbose install where,what [ '/Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/nconf',
+594 verbose install   [ 'async@0.2.9' ] ]
+595 verbose install where,what [ '/Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/nconf',
+595 verbose install   [ 'optimist@0.6.0' ] ]
+596 verbose install where,what [ '/Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/mongodb',
+596 verbose install   [ 'kerberos@0.0.3' ] ]
+597 verbose install where,what [ '/Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/mongodb/node_modules/bson',
+597 verbose install   [ 'nan@1.2.0' ] ]
+598 verbose install where,what [ '/Users/sleung/Desktop/side-projects/callback-newsfeed',
+598 verbose install   [ 'mongoose@3.9.1' ] ]
+599 verbose install where,what [ '/Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/request',
+599 verbose install   [ 'oauth-sign@0.3.0' ] ]
+600 verbose install where,what [ '/Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/request',
+600 verbose install   [ 'hawk@1.1.1' ] ]
+601 verbose install where,what [ '/Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/request',
+601 verbose install   [ 'qs@1.0.2' ] ]
+602 verbose install where,what [ '/Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/request/node_modules/http-signature',
+602 verbose install   [ 'assert-plus@0.1.2' ] ]
+603 verbose install where,what [ '/Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/request/node_modules/http-signature',
+603 verbose install   [ 'ctype@0.5.2' ] ]
+604 verbose install where,what [ '/Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/request/node_modules/http-signature',
+604 verbose install   [ 'asn1@0.1.11' ] ]
+605 verbose readDependencies using package.json deps
+606 verbose cache add [ 'jade@1.6.0', null ]
+607 verbose cache add spec="jade@1.6.0" args=["jade@1.6.0",null]
+608 verbose readDependencies using package.json deps
+609 verbose cache add [ 'express@3.16.9', null ]
+610 verbose cache add spec="express@3.16.9" args=["express@3.16.9",null]
+611 verbose readDependencies using package.json deps
+612 verbose cache add [ 'async@0.2.9', null ]
+613 verbose cache add spec="async@0.2.9" args=["async@0.2.9",null]
+614 verbose readDependencies using package.json deps
+615 verbose cache add [ 'optimist@0.6.0', null ]
+616 verbose cache add spec="optimist@0.6.0" args=["optimist@0.6.0",null]
+617 verbose readDependencies using package.json deps
+618 verbose cache add [ 'kerberos@0.0.3', null ]
+619 verbose cache add spec="kerberos@0.0.3" args=["kerberos@0.0.3",null]
+620 verbose readDependencies using package.json deps
+621 verbose cache add [ 'nan@1.2.0', null ]
+622 verbose cache add spec="nan@1.2.0" args=["nan@1.2.0",null]
+623 verbose readDependencies using package.json deps
+624 verbose cache add [ 'mongoose@3.9.1', null ]
+625 verbose cache add spec="mongoose@3.9.1" args=["mongoose@3.9.1",null]
+626 verbose readDependencies using package.json deps
+627 verbose cache add [ 'oauth-sign@0.3.0', null ]
+628 verbose cache add spec="oauth-sign@0.3.0" args=["oauth-sign@0.3.0",null]
+629 verbose readDependencies using package.json deps
+630 verbose cache add [ 'hawk@1.1.1', null ]
+631 verbose cache add spec="hawk@1.1.1" args=["hawk@1.1.1",null]
+632 verbose readDependencies using package.json deps
+633 verbose cache add [ 'qs@1.0.2', null ]
+634 verbose cache add spec="qs@1.0.2" args=["qs@1.0.2",null]
+635 verbose readDependencies using package.json deps
+636 verbose cache add [ 'assert-plus@0.1.2', null ]
+637 verbose cache add spec="assert-plus@0.1.2" args=["assert-plus@0.1.2",null]
+638 verbose readDependencies using package.json deps
+639 verbose cache add [ 'ctype@0.5.2', null ]
+640 verbose cache add spec="ctype@0.5.2" args=["ctype@0.5.2",null]
+641 verbose readDependencies using package.json deps
+642 verbose cache add [ 'asn1@0.1.11', null ]
+643 verbose cache add spec="asn1@0.1.11" args=["asn1@0.1.11",null]
+644 verbose parsed spec { raw: 'jade@1.6.0',
+644 verbose parsed spec   scope: null,
+644 verbose parsed spec   name: 'jade',
+644 verbose parsed spec   rawSpec: '1.6.0',
+644 verbose parsed spec   spec: '1.6.0',
+644 verbose parsed spec   type: 'version' }
+645 verbose addNamed [ 'jade', '1.6.0' ]
+646 verbose addNamed [ '1.6.0', '1.6.0' ]
+647 verbose parsed spec { raw: 'express@3.16.9',
+647 verbose parsed spec   scope: null,
+647 verbose parsed spec   name: 'express',
+647 verbose parsed spec   rawSpec: '3.16.9',
+647 verbose parsed spec   spec: '3.16.9',
+647 verbose parsed spec   type: 'version' }
+648 verbose addNamed [ 'express', '3.16.9' ]
+649 verbose addNamed [ '3.16.9', '3.16.9' ]
+650 verbose parsed spec { raw: 'async@0.2.9',
+650 verbose parsed spec   scope: null,
+650 verbose parsed spec   name: 'async',
+650 verbose parsed spec   rawSpec: '0.2.9',
+650 verbose parsed spec   spec: '0.2.9',
+650 verbose parsed spec   type: 'version' }
+651 verbose addNamed [ 'async', '0.2.9' ]
+652 verbose addNamed [ '0.2.9', '0.2.9' ]
+653 verbose parsed spec { raw: 'optimist@0.6.0',
+653 verbose parsed spec   scope: null,
+653 verbose parsed spec   name: 'optimist',
+653 verbose parsed spec   rawSpec: '0.6.0',
+653 verbose parsed spec   spec: '0.6.0',
+653 verbose parsed spec   type: 'version' }
+654 verbose addNamed [ 'optimist', '0.6.0' ]
+655 verbose addNamed [ '0.6.0', '0.6.0' ]
+656 verbose parsed spec { raw: 'kerberos@0.0.3',
+656 verbose parsed spec   scope: null,
+656 verbose parsed spec   name: 'kerberos',
+656 verbose parsed spec   rawSpec: '0.0.3',
+656 verbose parsed spec   spec: '0.0.3',
+656 verbose parsed spec   type: 'version' }
+657 verbose addNamed [ 'kerberos', '0.0.3' ]
+658 verbose addNamed [ '0.0.3', '0.0.3' ]
+659 verbose parsed spec { raw: 'nan@1.2.0',
+659 verbose parsed spec   scope: null,
+659 verbose parsed spec   name: 'nan',
+659 verbose parsed spec   rawSpec: '1.2.0',
+659 verbose parsed spec   spec: '1.2.0',
+659 verbose parsed spec   type: 'version' }
+660 verbose addNamed [ 'nan', '1.2.0' ]
+661 verbose addNamed [ '1.2.0', '1.2.0' ]
+662 verbose parsed spec { raw: 'mongoose@3.9.1',
+662 verbose parsed spec   scope: null,
+662 verbose parsed spec   name: 'mongoose',
+662 verbose parsed spec   rawSpec: '3.9.1',
+662 verbose parsed spec   spec: '3.9.1',
+662 verbose parsed spec   type: 'version' }
+663 verbose addNamed [ 'mongoose', '3.9.1' ]
+664 verbose addNamed [ '3.9.1', '3.9.1' ]
+665 verbose parsed spec { raw: 'oauth-sign@0.3.0',
+665 verbose parsed spec   scope: null,
+665 verbose parsed spec   name: 'oauth-sign',
+665 verbose parsed spec   rawSpec: '0.3.0',
+665 verbose parsed spec   spec: '0.3.0',
+665 verbose parsed spec   type: 'version' }
+666 verbose addNamed [ 'oauth-sign', '0.3.0' ]
+667 verbose addNamed [ '0.3.0', '0.3.0' ]
+668 verbose parsed spec { raw: 'hawk@1.1.1',
+668 verbose parsed spec   scope: null,
+668 verbose parsed spec   name: 'hawk',
+668 verbose parsed spec   rawSpec: '1.1.1',
+668 verbose parsed spec   spec: '1.1.1',
+668 verbose parsed spec   type: 'version' }
+669 verbose addNamed [ 'hawk', '1.1.1' ]
+670 verbose addNamed [ '1.1.1', '1.1.1' ]
+671 verbose parsed spec { raw: 'qs@1.0.2',
+671 verbose parsed spec   scope: null,
+671 verbose parsed spec   name: 'qs',
+671 verbose parsed spec   rawSpec: '1.0.2',
+671 verbose parsed spec   spec: '1.0.2',
+671 verbose parsed spec   type: 'version' }
+672 verbose addNamed [ 'qs', '1.0.2' ]
+673 verbose addNamed [ '1.0.2', '1.0.2' ]
+674 verbose parsed spec { raw: 'assert-plus@0.1.2',
+674 verbose parsed spec   scope: null,
+674 verbose parsed spec   name: 'assert-plus',
+674 verbose parsed spec   rawSpec: '0.1.2',
+674 verbose parsed spec   spec: '0.1.2',
+674 verbose parsed spec   type: 'version' }
+675 verbose addNamed [ 'assert-plus', '0.1.2' ]
+676 verbose addNamed [ '0.1.2', '0.1.2' ]
+677 verbose parsed spec { raw: 'ctype@0.5.2',
+677 verbose parsed spec   scope: null,
+677 verbose parsed spec   name: 'ctype',
+677 verbose parsed spec   rawSpec: '0.5.2',
+677 verbose parsed spec   spec: '0.5.2',
+677 verbose parsed spec   type: 'version' }
+678 verbose addNamed [ 'ctype', '0.5.2' ]
+679 verbose addNamed [ '0.5.2', '0.5.2' ]
+680 verbose parsed spec { raw: 'asn1@0.1.11',
+680 verbose parsed spec   scope: null,
+680 verbose parsed spec   name: 'asn1',
+680 verbose parsed spec   rawSpec: '0.1.11',
+680 verbose parsed spec   spec: '0.1.11',
+680 verbose parsed spec   type: 'version' }
+681 verbose addNamed [ 'asn1', '0.1.11' ]
+682 verbose addNamed [ '0.1.11', '0.1.11' ]
+683 silly lockFile c06071bd-jade-1-6-0 jade@1.6.0
+684 verbose lock jade@1.6.0 /Users/sleung/.npm/c06071bd-jade-1-6-0.lock
+685 silly lockFile c755c145-express-3-16-9 express@3.16.9
+686 verbose lock express@3.16.9 /Users/sleung/.npm/c755c145-express-3-16-9.lock
+687 silly lockFile be62480b-async-0-2-9 async@0.2.9
+688 verbose lock async@0.2.9 /Users/sleung/.npm/be62480b-async-0-2-9.lock
+689 silly lockFile 6403b4d6-optimist-0-6-0 optimist@0.6.0
+690 verbose lock optimist@0.6.0 /Users/sleung/.npm/6403b4d6-optimist-0-6-0.lock
+691 silly lockFile fba4e7a6-kerberos-0-0-3 kerberos@0.0.3
+692 verbose lock kerberos@0.0.3 /Users/sleung/.npm/fba4e7a6-kerberos-0-0-3.lock
+693 silly lockFile 859d0f28-nan-1-2-0 nan@1.2.0
+694 verbose lock nan@1.2.0 /Users/sleung/.npm/859d0f28-nan-1-2-0.lock
+695 silly lockFile 4f1861bf-mongoose-3-9-1 mongoose@3.9.1
+696 verbose lock mongoose@3.9.1 /Users/sleung/.npm/4f1861bf-mongoose-3-9-1.lock
+697 silly lockFile ae61e7c5-oauth-sign-0-3-0 oauth-sign@0.3.0
+698 verbose lock oauth-sign@0.3.0 /Users/sleung/.npm/ae61e7c5-oauth-sign-0-3-0.lock
+699 silly lockFile 61c917cf-hawk-1-1-1 hawk@1.1.1
+700 verbose lock hawk@1.1.1 /Users/sleung/.npm/61c917cf-hawk-1-1-1.lock
+701 silly lockFile e0ffc50b-qs-1-0-2 qs@1.0.2
+702 verbose lock qs@1.0.2 /Users/sleung/.npm/e0ffc50b-qs-1-0-2.lock
+703 silly lockFile 46222085-assert-plus-0-1-2 assert-plus@0.1.2
+704 verbose lock assert-plus@0.1.2 /Users/sleung/.npm/46222085-assert-plus-0-1-2.lock
+705 silly lockFile c556016e-ctype-0-5-2 ctype@0.5.2
+706 verbose lock ctype@0.5.2 /Users/sleung/.npm/c556016e-ctype-0-5-2.lock
+707 silly lockFile 41ecb821-asn1-0-1-11 asn1@0.1.11
+708 verbose lock asn1@0.1.11 /Users/sleung/.npm/41ecb821-asn1-0-1-11.lock
+709 verbose mapToRegistry name jade
+710 verbose mapToRegistry uri https://registry.npmjs.org/jade
+711 verbose mapToRegistry name express
+712 verbose mapToRegistry uri https://registry.npmjs.org/express
+713 verbose mapToRegistry name optimist
+714 verbose mapToRegistry uri https://registry.npmjs.org/optimist
+715 verbose mapToRegistry name async
+716 verbose mapToRegistry uri https://registry.npmjs.org/async
+717 verbose mapToRegistry name mongoose
+718 verbose mapToRegistry uri https://registry.npmjs.org/mongoose
+719 verbose mapToRegistry name nan
+720 verbose mapToRegistry uri https://registry.npmjs.org/nan
+721 verbose mapToRegistry name hawk
+722 verbose mapToRegistry uri https://registry.npmjs.org/hawk
+723 verbose mapToRegistry name kerberos
+724 verbose mapToRegistry uri https://registry.npmjs.org/kerberos
+725 verbose mapToRegistry name oauth-sign
+726 verbose mapToRegistry uri https://registry.npmjs.org/oauth-sign
+727 verbose mapToRegistry name qs
+728 verbose mapToRegistry uri https://registry.npmjs.org/qs
+729 verbose mapToRegistry name ctype
+730 verbose mapToRegistry uri https://registry.npmjs.org/ctype
+731 verbose mapToRegistry name assert-plus
+732 verbose mapToRegistry uri https://registry.npmjs.org/assert-plus
+733 verbose mapToRegistry name asn1
+734 verbose mapToRegistry uri https://registry.npmjs.org/asn1
+735 verbose registry.get https://registry.npmjs.org/jade not expired, no request
+736 verbose registry.get https://registry.npmjs.org/optimist not expired, no request
+737 verbose registry.get https://registry.npmjs.org/async not expired, no request
+738 verbose registry.get https://registry.npmjs.org/express not expired, no request
+739 verbose registry.get https://registry.npmjs.org/nan not expired, no request
+740 verbose registry.get https://registry.npmjs.org/kerberos not expired, no request
+741 verbose registry.get https://registry.npmjs.org/oauth-sign not expired, no request
+742 verbose registry.get https://registry.npmjs.org/mongoose not expired, no request
+743 verbose registry.get https://registry.npmjs.org/hawk not expired, no request
+744 verbose registry.get https://registry.npmjs.org/qs not expired, no request
+745 verbose registry.get https://registry.npmjs.org/ctype not expired, no request
+746 verbose registry.get https://registry.npmjs.org/assert-plus not expired, no request
+747 verbose registry.get https://registry.npmjs.org/asn1 not expired, no request
+748 silly lockFile 6403b4d6-optimist-0-6-0 optimist@0.6.0
+749 silly lockFile 6403b4d6-optimist-0-6-0 optimist@0.6.0
+750 silly lockFile be62480b-async-0-2-9 async@0.2.9
+751 silly lockFile be62480b-async-0-2-9 async@0.2.9
+752 silly lockFile c06071bd-jade-1-6-0 jade@1.6.0
+753 silly lockFile c06071bd-jade-1-6-0 jade@1.6.0
+754 silly lockFile c755c145-express-3-16-9 express@3.16.9
+755 silly lockFile c755c145-express-3-16-9 express@3.16.9
+756 silly lockFile fba4e7a6-kerberos-0-0-3 kerberos@0.0.3
+757 silly lockFile fba4e7a6-kerberos-0-0-3 kerberos@0.0.3
+758 silly lockFile 859d0f28-nan-1-2-0 nan@1.2.0
+759 silly lockFile 859d0f28-nan-1-2-0 nan@1.2.0
+760 silly lockFile ae61e7c5-oauth-sign-0-3-0 oauth-sign@0.3.0
+761 silly lockFile ae61e7c5-oauth-sign-0-3-0 oauth-sign@0.3.0
+762 silly lockFile 4f1861bf-mongoose-3-9-1 mongoose@3.9.1
+763 silly lockFile 4f1861bf-mongoose-3-9-1 mongoose@3.9.1
+764 silly lockFile 61c917cf-hawk-1-1-1 hawk@1.1.1
+765 silly lockFile 61c917cf-hawk-1-1-1 hawk@1.1.1
+766 silly lockFile c556016e-ctype-0-5-2 ctype@0.5.2
+767 silly lockFile c556016e-ctype-0-5-2 ctype@0.5.2
+768 silly lockFile e0ffc50b-qs-1-0-2 qs@1.0.2
+769 silly lockFile e0ffc50b-qs-1-0-2 qs@1.0.2
+770 silly lockFile 41ecb821-asn1-0-1-11 asn1@0.1.11
+771 silly lockFile 41ecb821-asn1-0-1-11 asn1@0.1.11
+772 silly lockFile 46222085-assert-plus-0-1-2 assert-plus@0.1.2
+773 silly lockFile 46222085-assert-plus-0-1-2 assert-plus@0.1.2
+774 silly resolved [ { name: 'jade',
+774 silly resolved     description: 'Jade template engine',
+774 silly resolved     version: '1.6.0',
+774 silly resolved     author: { name: 'TJ Holowaychuk', email: 'tj@vision-media.ca' },
+774 silly resolved     maintainers: [ [Object], [Object], [Object], [Object] ],
+774 silly resolved     license: 'MIT',
+774 silly resolved     repository: { type: 'git', url: 'git://github.com/visionmedia/jade' },
+774 silly resolved     main: './index.js',
+774 silly resolved     bin: { jade: './bin/jade.js' },
+774 silly resolved     dependencies:
+774 silly resolved      { 'character-parser': '1.2.0',
+774 silly resolved        commander: '2.1.0',
+774 silly resolved        constantinople: '~2.0.0',
+774 silly resolved        mkdirp: '~0.5.0',
+774 silly resolved        monocle: '1.1.51',
+774 silly resolved        transformers: '2.1.0',
+774 silly resolved        'void-elements': '~1.0.0',
+774 silly resolved        with: '~3.0.0' },
+774 silly resolved     devDependencies:
+774 silly resolved      { 'coffee-script': '*',
+774 silly resolved        mocha: '*',
+774 silly resolved        istanbul: '*',
+774 silly resolved        markdown: '*',
+774 silly resolved        stylus: '*',
+774 silly resolved        should: '*',
+774 silly resolved        less: '*',
+774 silly resolved        'uglify-js': '*',
+774 silly resolved        browserify: '*',
+774 silly resolved        linify: '*',
+774 silly resolved        'less-file': '0.0.8',
+774 silly resolved        express: '~3.4.8',
+774 silly resolved        'browserify-middleware': '~2.4.0',
+774 silly resolved        twbs: '0.0.6',
+774 silly resolved        'highlight-codemirror': '~3.20.0',
+774 silly resolved        inconsolata: '0.0.2',
+774 silly resolved        'jade-code-mirror': '~1.0.5',
+774 silly resolved        'code-mirror': '~3.22.0',
+774 silly resolved        handle: '~1.0.0',
+774 silly resolved        'jade-highlighter': '~1.0.5',
+774 silly resolved        marked: '~0.3.2',
+774 silly resolved        stop: '^3.0.0-rc1',
+774 silly resolved        opener: '^1.3.0',
+774 silly resolved        'github-basic': '^3.0.0',
+774 silly resolved        'pull-request': '^3.0.0',
+774 silly resolved        lsr: '^1.0.0',
+774 silly resolved        rimraf: '^2.2.8' },
+774 silly resolved     component: { scripts: [Object] },
+774 silly resolved     scripts:
+774 silly resolved      { test: 'mocha -R spec && npm run coverage',
+774 silly resolved        coverage: 'istanbul cover node_modules/mocha/bin/_mocha',
+774 silly resolved        prepublish: 'npm prune && linify transform bin && npm run build',
+774 silly resolved        build: 'npm run compile',
+774 silly resolved        compile: 'npm run compile-full && npm run compile-runtime',
+774 silly resolved        'compile-full': 'browserify ./lib/jade.js --standalone jade -x ./node_modules/transformers > jade.js',
+774 silly resolved        'compile-runtime': 'browserify ./lib/runtime.js --standalone jade > runtime.js' },
+774 silly resolved     browser: { './lib/filters.js': './lib/filters-client.js' },
+774 silly resolved     gitHead: '44f4d6e6ae6d19b927956e19124e1926618e93ca',
+774 silly resolved     bugs: { url: 'https://github.com/visionmedia/jade/issues' },
+774 silly resolved     homepage: 'https://github.com/visionmedia/jade',
+774 silly resolved     _id: 'jade@1.6.0',
+774 silly resolved     _shasum: 'c02540cd97b1014db3c15743746bc3dcd54170f9',
+774 silly resolved     _from: 'jade@1.6.0',
+774 silly resolved     _npmVersion: '1.5.0-alpha-4',
+774 silly resolved     _npmUser: { name: 'forbeslindesay', email: 'forbes@lindesay.co.uk' },
+774 silly resolved     dist:
+774 silly resolved      { shasum: 'c02540cd97b1014db3c15743746bc3dcd54170f9',
+774 silly resolved        tarball: 'http://registry.npmjs.org/jade/-/jade-1.6.0.tgz' },
+774 silly resolved     directories: {},
+774 silly resolved     _resolved: 'https://registry.npmjs.org/jade/-/jade-1.6.0.tgz',
+774 silly resolved     readme: 'ERROR: No README data found!' } ]
+775 info install jade@1.6.0 into /Users/sleung/Desktop/side-projects/callback-newsfeed
+776 info installOne jade@1.6.0
+777 silly resolved [ { name: 'optimist',
+777 silly resolved     version: '0.6.0',
+777 silly resolved     description: 'Light-weight option parsing with an argv hash. No optstrings attached.',
+777 silly resolved     main: './index.js',
+777 silly resolved     dependencies: { wordwrap: '~0.0.2', minimist: '~0.0.1' },
+777 silly resolved     devDependencies: { hashish: '~0.0.4', tap: '~0.4.0' },
+777 silly resolved     scripts: { test: 'tap ./test/*.js' },
+777 silly resolved     repository:
+777 silly resolved      { type: 'git',
+777 silly resolved        url: 'http://github.com/substack/node-optimist.git' },
+777 silly resolved     keywords:
+777 silly resolved      [ 'argument',
+777 silly resolved        'args',
+777 silly resolved        'option',
+777 silly resolved        'parser',
+777 silly resolved        'parsing',
+777 silly resolved        'cli',
+777 silly resolved        'command' ],
+777 silly resolved     author:
+777 silly resolved      { name: 'James Halliday',
+777 silly resolved        email: 'mail@substack.net',
+777 silly resolved        url: 'http://substack.net' },
+777 silly resolved     license: 'MIT/X11',
+777 silly resolved     engine: { node: '>=0.4' },
+777 silly resolved     bugs: { url: 'https://github.com/substack/node-optimist/issues' },
+777 silly resolved     _id: 'optimist@0.6.0',
+777 silly resolved     dist:
+777 silly resolved      { shasum: '69424826f3405f79f142e6fc3d9ae58d4dbb9200',
+777 silly resolved        tarball: 'http://registry.npmjs.org/optimist/-/optimist-0.6.0.tgz' },
+777 silly resolved     _from: 'optimist@0.6.0',
+777 silly resolved     _npmVersion: '1.3.0',
+777 silly resolved     _npmUser: { name: 'substack', email: 'mail@substack.net' },
+777 silly resolved     maintainers: [ [Object] ],
+777 silly resolved     directories: {},
+777 silly resolved     _shasum: '69424826f3405f79f142e6fc3d9ae58d4dbb9200',
+777 silly resolved     _resolved: 'https://registry.npmjs.org/optimist/-/optimist-0.6.0.tgz',
+777 silly resolved     readme: 'ERROR: No README data found!',
+777 silly resolved     homepage: 'https://github.com/substack/node-optimist' } ]
+778 info install optimist@0.6.0 into /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/nconf
+779 info installOne optimist@0.6.0
+780 silly resolved [ { name: 'async',
+780 silly resolved     description: 'Higher-order functions and common patterns for asynchronous code',
+780 silly resolved     main: './lib/async',
+780 silly resolved     author: { name: 'Caolan McMahon' },
+780 silly resolved     version: '0.2.9',
+780 silly resolved     repository: { type: 'git', url: 'https://github.com/caolan/async.git' },
+780 silly resolved     bugs: { url: 'https://github.com/caolan/async/issues' },
+780 silly resolved     licenses: [ [Object] ],
+780 silly resolved     devDependencies: { nodeunit: '>0.0.0', 'uglify-js': '1.2.x', nodelint: '>0.0.0' },
+780 silly resolved     jam: { main: 'lib/async.js', include: [Object] },
+780 silly resolved     scripts: { test: 'nodeunit test/test-async.js' },
+780 silly resolved     _id: 'async@0.2.9',
+780 silly resolved     dist:
+780 silly resolved      { shasum: 'df63060fbf3d33286a76aaf6d55a2986d9ff8619',
+780 silly resolved        tarball: 'http://registry.npmjs.org/async/-/async-0.2.9.tgz' },
+780 silly resolved     _from: 'async@0.2.9',
+780 silly resolved     _npmVersion: '1.2.23',
+780 silly resolved     _npmUser: { name: 'caolan', email: 'caolan.mcmahon@gmail.com' },
+780 silly resolved     maintainers: [ [Object] ],
+780 silly resolved     directories: {},
+780 silly resolved     _shasum: 'df63060fbf3d33286a76aaf6d55a2986d9ff8619',
+780 silly resolved     _resolved: 'https://registry.npmjs.org/async/-/async-0.2.9.tgz',
+780 silly resolved     readme: 'ERROR: No README data found!',
+780 silly resolved     homepage: 'https://github.com/caolan/async' } ]
+781 info install async@0.2.9 into /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/nconf
+782 info installOne async@0.2.9
+783 silly resolved [ { name: 'express',
+783 silly resolved     description: 'Sinatra inspired web development framework',
+783 silly resolved     version: '3.16.9',
+783 silly resolved     author: { name: 'TJ Holowaychuk', email: 'tj@vision-media.ca' },
+783 silly resolved     contributors: [ [Object], [Object], [Object], [Object], [Object], [Object] ],
+783 silly resolved     keywords:
+783 silly resolved      [ 'express',
+783 silly resolved        'framework',
+783 silly resolved        'sinatra',
+783 silly resolved        'web',
+783 silly resolved        'rest',
+783 silly resolved        'restful',
+783 silly resolved        'router',
+783 silly resolved        'app',
+783 silly resolved        'api' ],
+783 silly resolved     repository: { type: 'git', url: 'https://github.com/strongloop/express' },
+783 silly resolved     license: 'MIT',
+783 silly resolved     homepage: 'http://expressjs.com/',
+783 silly resolved     dependencies:
+783 silly resolved      { 'basic-auth': '1.0.0',
+783 silly resolved        'buffer-crc32': '0.2.3',
+783 silly resolved        connect: '2.25.9',
+783 silly resolved        commander: '1.3.2',
+783 silly resolved        debug: '1.0.4',
+783 silly resolved        depd: '0.4.4',
+783 silly resolved        'escape-html': '1.0.1',
+783 silly resolved        'media-typer': '0.2.0',
+783 silly resolved        methods: '1.1.0',
+783 silly resolved        mkdirp: '0.5.0',
+783 silly resolved        parseurl: '~1.3.0',
+783 silly resolved        'proxy-addr': '1.0.1',
+783 silly resolved        'range-parser': '1.0.0',
+783 silly resolved        send: '0.8.3',
+783 silly resolved        vary: '0.1.0',
+783 silly resolved        cookie: '0.1.2',
+783 silly resolved        fresh: '0.2.2',
+783 silly resolved        'cookie-signature': '1.0.4',
+783 silly resolved        'merge-descriptors': '0.0.2' },
+783 silly resolved     devDependencies:
+783 silly resolved      { 'connect-redis': '~1.5.0',
+783 silly resolved        istanbul: '0.3.0',
+783 silly resolved        mocha: '~1.21.4',
+783 silly resolved        should: '~4.0.0',
+783 silly resolved        ejs: '~1.0.0',
+783 silly resolved        jade: '~1.5.0',
+783 silly resolved        hjs: '~0.0.6',
+783 silly resolved        marked: '0.3.2',
+783 silly resolved        supertest: '~0.13.0' },
+783 silly resolved     engines: { node: '>= 0.8.0' },
+783 silly resolved     bin: { express: './bin/express' },
+783 silly resolved     scripts:
+783 silly resolved      { prepublish: 'npm prune',
+783 silly resolved        test: 'mocha --require test/support/env --reporter dot --check-leaks test/ test/acceptance/',
+783 silly resolved        'test-cov': 'istanbul cover node_modules/mocha/bin/_mocha -- --require test/support/env --reporter dot --check-leaks test/ test/acceptance/',
+783 silly resolved        'test-travis': 'istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --require test/support/env --reporter spec --check-leaks test/ test/acceptance/' },
+783 silly resolved     gitHead: '4d032cda058596e1ae89924ff69e80c3849ef4ff',
+783 silly resolved     bugs: { url: 'https://github.com/strongloop/express/issues' },
+783 silly resolved     _id: 'express@3.16.9',
+783 silly resolved     _shasum: '993747be5669700280d9682cb61ad138939847fc',
+783 silly resolved     _from: 'express@3.16.9',
+783 silly resolved     _npmVersion: '1.4.21',
+783 silly resolved     _npmUser: { name: 'dougwilson', email: 'doug@somethingdoug.com' },
+783 silly resolved     maintainers:
+783 silly resolved      [ [Object],
+783 silly resolved        [Object],
+783 silly resolved        [Object],
+783 silly resolved        [Object],
+783 silly resolved        [Object],
+783 silly resolved        [Object],
+783 silly resolved        [Object] ],
+783 silly resolved     dist:
+783 silly resolved      { shasum: '993747be5669700280d9682cb61ad138939847fc',
+783 silly resolved        tarball: 'http://registry.npmjs.org/express/-/express-3.16.9.tgz' },
+783 silly resolved     directories: {},
+783 silly resolved     _resolved: 'https://registry.npmjs.org/express/-/express-3.16.9.tgz',
+783 silly resolved     readme: 'ERROR: No README data found!' } ]
+784 info install express@3.16.9 into /Users/sleung/Desktop/side-projects/callback-newsfeed
+785 info installOne express@3.16.9
+786 silly resolved [ { name: 'kerberos',
+786 silly resolved     version: '0.0.3',
+786 silly resolved     description: 'Kerberos library for Node.js',
+786 silly resolved     main: 'index.js',
+786 silly resolved     scripts:
+786 silly resolved      { install: '(node-gyp rebuild 2> builderror.log) || (exit 0)',
+786 silly resolved        test: 'nodeunit ./test' },
+786 silly resolved     repository: { type: 'git', url: 'https://github.com/christkv/kerberos.git' },
+786 silly resolved     keywords: [ 'kerberos', 'security', 'authentication' ],
+786 silly resolved     devDependencies: { nodeunit: 'latest' },
+786 silly resolved     author: { name: 'Christian Amor Kvalheim' },
+786 silly resolved     license: 'Apache 2.0',
+786 silly resolved     gitHead: 'bb01d4fe322e022999aca19da564e7d9db59a8ed',
+786 silly resolved     bugs: { url: 'https://github.com/christkv/kerberos/issues' },
+786 silly resolved     _id: 'kerberos@0.0.3',
+786 silly resolved     dist:
+786 silly resolved      { shasum: '4285d92a0748db2784062f5adcec9f5956cb818a',
+786 silly resolved        tarball: 'http://registry.npmjs.org/kerberos/-/kerberos-0.0.3.tgz' },
+786 silly resolved     _from: 'kerberos@0.0.3',
+786 silly resolved     _npmVersion: '1.3.5',
+786 silly resolved     _npmUser: { name: 'christkv', email: 'christkv@gmail.com' },
+786 silly resolved     maintainers: [ [Object] ],
+786 silly resolved     directories: {},
+786 silly resolved     _shasum: '4285d92a0748db2784062f5adcec9f5956cb818a',
+786 silly resolved     _resolved: 'https://registry.npmjs.org/kerberos/-/kerberos-0.0.3.tgz',
+786 silly resolved     readme: 'ERROR: No README data found!',
+786 silly resolved     homepage: 'https://github.com/christkv/kerberos' } ]
+787 info install kerberos@0.0.3 into /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/mongodb
+788 info installOne kerberos@0.0.3
+789 silly resolved [ { author:
+789 silly resolved      { name: 'Mikeal Rogers',
+789 silly resolved        email: 'mikeal.rogers@gmail.com',
+789 silly resolved        url: 'http://www.futurealoof.com' },
+789 silly resolved     name: 'oauth-sign',
+789 silly resolved     description: 'OAuth 1 signing. Formerly a vendor lib in mikeal/request, now a standalone module.',
+789 silly resolved     version: '0.3.0',
+789 silly resolved     repository: { url: 'https://github.com/mikeal/oauth-sign' },
+789 silly resolved     main: 'index.js',
+789 silly resolved     dependencies: {},
+789 silly resolved     devDependencies: {},
+789 silly resolved     optionalDependencies: {},
+789 silly resolved     engines: { node: '*' },
+789 silly resolved     scripts: { test: 'node test.js' },
+789 silly resolved     readme: 'oauth-sign\n==========\n\nOAuth 1 signing. Formerly a vendor lib in mikeal/request, now a standalone module. \n',
+789 silly resolved     readmeFilename: 'README.md',
+789 silly resolved     _id: 'oauth-sign@0.3.0',
+789 silly resolved     dist:
+789 silly resolved      { shasum: 'cb540f93bb2b22a7d5941691a288d60e8ea9386e',
+789 silly resolved        tarball: 'http://registry.npmjs.org/oauth-sign/-/oauth-sign-0.3.0.tgz' },
+789 silly resolved     _from: 'oauth-sign@0.3.0',
+789 silly resolved     _npmVersion: '1.2.14',
+789 silly resolved     _npmUser: { name: 'mikeal', email: 'mikeal.rogers@gmail.com' },
+789 silly resolved     maintainers: [ [Object] ],
+789 silly resolved     directories: {},
+789 silly resolved     _shasum: 'cb540f93bb2b22a7d5941691a288d60e8ea9386e',
+789 silly resolved     _resolved: 'https://registry.npmjs.org/oauth-sign/-/oauth-sign-0.3.0.tgz',
+789 silly resolved     bugs: { url: 'https://github.com/mikeal/oauth-sign/issues' },
+789 silly resolved     homepage: 'https://github.com/mikeal/oauth-sign' } ]
+790 info install oauth-sign@0.3.0 into /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/request
+791 info installOne oauth-sign@0.3.0
+792 silly resolved [ { name: 'nan',
+792 silly resolved     version: '1.2.0',
+792 silly resolved     description: 'Native Abstractions for Node.js: C++ header for Node 0.8->0.12 compatibility',
+792 silly resolved     main: 'include_dirs.js',
+792 silly resolved     repository: { type: 'git', url: 'git://github.com/rvagg/nan.git' },
+792 silly resolved     contributors: [ [Object], [Object], [Object], [Object], [Object], [Object] ],
+792 silly resolved     license: 'MIT',
+792 silly resolved     bugs: { url: 'https://github.com/rvagg/nan/issues' },
+792 silly resolved     homepage: 'https://github.com/rvagg/nan',
+792 silly resolved     _id: 'nan@1.2.0',
+792 silly resolved     dist:
+792 silly resolved      { shasum: '9c4d63ce9e4f8e95de2d574e18f7925554a8a8ef',
+792 silly resolved        tarball: 'http://registry.npmjs.org/nan/-/nan-1.2.0.tgz' },
+792 silly resolved     _from: 'nan@1.2.0',
+792 silly resolved     _npmVersion: '1.4.3',
+792 silly resolved     _npmUser: { name: 'rvagg', email: 'rod@vagg.org' },
+792 silly resolved     maintainers: [ [Object] ],
+792 silly resolved     directories: {},
+792 silly resolved     _shasum: '9c4d63ce9e4f8e95de2d574e18f7925554a8a8ef',
+792 silly resolved     _resolved: 'https://registry.npmjs.org/nan/-/nan-1.2.0.tgz',
+792 silly resolved     readme: 'ERROR: No README data found!' } ]
+793 info install nan@1.2.0 into /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/mongodb/node_modules/bson
+794 info installOne nan@1.2.0
+795 silly resolved [ { name: 'mongoose',
+795 silly resolved     description: 'Mongoose MongoDB ODM',
+795 silly resolved     version: '3.9.1',
+795 silly resolved     author: { name: 'Guillermo Rauch', email: 'guillermo@learnboost.com' },
+795 silly resolved     keywords:
+795 silly resolved      [ 'mongodb',
+795 silly resolved        'document',
+795 silly resolved        'model',
+795 silly resolved        'schema',
+795 silly resolved        'database',
+795 silly resolved        'odm',
+795 silly resolved        'data',
+795 silly resolved        'datastore',
+795 silly resolved        'query',
+795 silly resolved        'nosql',
+795 silly resolved        'orm',
+795 silly resolved        'db' ],
+795 silly resolved     dependencies:
+795 silly resolved      { hooks: '0.3.2',
+795 silly resolved        mongodb: '1.4.7',
+795 silly resolved        ms: '0.1.0',
+795 silly resolved        sliced: '0.0.5',
+795 silly resolved        muri: '0.3.1',
+795 silly resolved        mpromise: '0.5.0',
+795 silly resolved        mpath: '0.1.1',
+795 silly resolved        'regexp-clone': '0.0.1',
+795 silly resolved        mquery: '0.8.0' },
+795 silly resolved     devDependencies:
+795 silly resolved      { async: '0.2.5',
+795 silly resolved        benchmark: '1.0.0',
+795 silly resolved        browserify: '4.1',
+795 silly resolved        dox: '0.3.1',
+795 silly resolved        'highlight.js': '7.0.1',
+795 silly resolved        jade: '0.26.3',
+795 silly resolved        karma: '0.12.16',
+795 silly resolved        'karma-chai': '0.1.0',
+795 silly resolved        'karma-mocha': '0.1.4',
+795 silly resolved        'karma-chrome-launcher': '0.1.4',
+795 silly resolved        'karma-sauce-launcher': '0.2.8',
+795 silly resolved        markdown: '0.3.1',
+795 silly resolved        mocha: '1.20.0',
+795 silly resolved        'node-static': '0.5.9',
+795 silly resolved        open: '0.0.3',
+795 silly resolved        tbd: '0.6.4',
+795 silly resolved        underscore: '1.5.2' },
+795 silly resolved     directories: { lib: './lib/mongoose' },
+795 silly resolved     scripts: { test: 'set MONGOOSE_DISABLE_STABILITY_WARNING=1 && mocha --async-only test/*.test.js' },
+795 silly resolved     main: './index.js',
+795 silly resolved     engines: { node: '>=0.6.19' },
+795 silly resolved     bugs:
+795 silly resolved      { url: 'https://github.com/learnboost/mongoose/issues/new',
+795 silly resolved        email: 'mongoose-orm@googlegroups.com' },
+795 silly resolved     repository: { type: 'git', url: 'git://github.com/LearnBoost/mongoose.git' },
+795 silly resolved     publishConfig: { tag: 'unstable' },
+795 silly resolved     homepage: 'http://mongoosejs.com',
+795 silly resolved     browser: 'lib/browser.js',
+795 silly resolved     _id: 'mongoose@3.9.1',
+795 silly resolved     _shasum: '53fd4658344d93f157665f1365bd8a2bf914a56e',
+795 silly resolved     _from: 'mongoose@3.9.1',
+795 silly resolved     _npmVersion: '1.4.7',
+795 silly resolved     _npmUser: { name: 'vkarpov15', email: 'valkar207@gmail.com' },
+795 silly resolved     maintainers: [ [Object], [Object], [Object], [Object], [Object] ],
+795 silly resolved     dist:
+795 silly resolved      { shasum: '53fd4658344d93f157665f1365bd8a2bf914a56e',
+795 silly resolved        tarball: 'http://registry.npmjs.org/mongoose/-/mongoose-3.9.1.tgz' },
+795 silly resolved     _resolved: 'https://registry.npmjs.org/mongoose/-/mongoose-3.9.1.tgz',
+795 silly resolved     readme: 'ERROR: No README data found!' } ]
+796 info install mongoose@3.9.1 into /Users/sleung/Desktop/side-projects/callback-newsfeed
+797 info installOne mongoose@3.9.1
+798 silly resolved [ { name: 'hawk',
+798 silly resolved     description: 'HTTP Hawk Authentication Scheme',
+798 silly resolved     version: '1.1.1',
+798 silly resolved     author:
+798 silly resolved      { name: 'Eran Hammer',
+798 silly resolved        email: 'eran@hueniverse.com',
+798 silly resolved        url: 'http://hueniverse.com' },
+798 silly resolved     contributors: [],
+798 silly resolved     repository: { type: 'git', url: 'git://github.com/hueniverse/hawk' },
+798 silly resolved     main: 'index',
+798 silly resolved     keywords: [ 'http', 'authentication', 'scheme', 'hawk' ],
+798 silly resolved     engines: { node: '>=0.8.0' },
+798 silly resolved     dependencies:
+798 silly resolved      { hoek: '0.9.x',
+798 silly resolved        boom: '0.4.x',
+798 silly resolved        cryptiles: '0.2.x',
+798 silly resolved        sntp: '0.2.x' },
+798 silly resolved     devDependencies:
+798 silly resolved      { lab: '0.1.x',
+798 silly resolved        'complexity-report': '0.x.x',
+798 silly resolved        localStorage: '1.0.x' },
+798 silly resolved     scripts: { test: 'make test-cov' },
+798 silly resolved     licenses: [ [Object] ],
+798 silly resolved     bugs: { url: 'https://github.com/hueniverse/hawk/issues' },
+798 silly resolved     _id: 'hawk@1.1.1',
+798 silly resolved     dist:
+798 silly resolved      { shasum: '87cd491f9b46e4e2aeaca335416766885d2d1ed9',
+798 silly resolved        tarball: 'http://registry.npmjs.org/hawk/-/hawk-1.1.1.tgz' },
+798 silly resolved     _from: 'hawk@1.1.1',
+798 silly resolved     _npmVersion: '1.3.8',
+798 silly resolved     _npmUser: { name: 'hueniverse', email: 'eran@hueniverse.com' },
+798 silly resolved     maintainers: [ [Object] ],
+798 silly resolved     directories: {},
+798 silly resolved     _shasum: '87cd491f9b46e4e2aeaca335416766885d2d1ed9',
+798 silly resolved     _resolved: 'https://registry.npmjs.org/hawk/-/hawk-1.1.1.tgz',
+798 silly resolved     readme: 'ERROR: No README data found!',
+798 silly resolved     homepage: 'https://github.com/hueniverse/hawk' } ]
+799 info install hawk@1.1.1 into /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/request
+800 info installOne hawk@1.1.1
+801 silly resolved [ { name: 'qs',
+801 silly resolved     version: '1.0.2',
+801 silly resolved     description: 'A querystring parser that supports nesting and arrays, with a depth limit',
+801 silly resolved     homepage: 'https://github.com/hapijs/qs',
+801 silly resolved     main: 'index.js',
+801 silly resolved     dependencies: {},
+801 silly resolved     devDependencies: { lab: '3.x.x' },
+801 silly resolved     scripts: { test: 'make test-cov' },
+801 silly resolved     repository: { type: 'git', url: 'https://github.com/hapijs/qs.git' },
+801 silly resolved     keywords: [ 'querystring', 'qs' ],
+801 silly resolved     author: { name: 'Nathan LaFreniere', email: 'quitlahok@gmail.com' },
+801 silly resolved     licenses: [ [Object] ],
+801 silly resolved     gitHead: 'b7af068a898c8456a99613e474c8765dea7f41dc',
+801 silly resolved     bugs: { url: 'https://github.com/hapijs/qs/issues' },
+801 silly resolved     _id: 'qs@1.0.2',
+801 silly resolved     _shasum: '50a93e2b5af6691c31bcea5dae78ee6ea1903768',
+801 silly resolved     _from: 'qs@1.0.2',
+801 silly resolved     _npmVersion: '1.4.21',
+801 silly resolved     _npmUser: { name: 'nlf', email: 'quitlahok@gmail.com' },
+801 silly resolved     maintainers: [ [Object], [Object] ],
+801 silly resolved     dist:
+801 silly resolved      { shasum: '50a93e2b5af6691c31bcea5dae78ee6ea1903768',
+801 silly resolved        tarball: 'http://registry.npmjs.org/qs/-/qs-1.0.2.tgz' },
+801 silly resolved     directories: {},
+801 silly resolved     _resolved: 'https://registry.npmjs.org/qs/-/qs-1.0.2.tgz',
+801 silly resolved     readme: 'ERROR: No README data found!' } ]
+802 info install qs@1.0.2 into /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/request
+803 info installOne qs@1.0.2
+804 silly resolved [ { author: { name: 'Mark Cavage', email: 'mcavage@gmail.com' },
+804 silly resolved     name: 'assert-plus',
+804 silly resolved     description: 'Extra assertions on top of node\'s assert module',
+804 silly resolved     version: '0.1.2',
+804 silly resolved     main: './assert.js',
+804 silly resolved     dependencies: {},
+804 silly resolved     devDependencies: {},
+804 silly resolved     optionalDependencies: {},
+804 silly resolved     engines: { node: '>=0.6' },
+804 silly resolved     readme: '# node-assert-plus\n\nThis library is a super small wrapper over node\'s assert module that has two\nthings: (1) the ability to disable assertions with the environment variable\nNODE_NDEBUG, and (2) some API wrappers for argument testing.  Like\n`assert.string(myArg, \'myArg\')`.  As a simple example, most of my code looks\nlike this:\n\n    var assert = require(\'assert-plus\');\n\n    function fooAccount(options, callback) {\n\t    assert.object(options, \'options\');\n\t\tassert.number(options.id, \'options.id);\n\t\tassert.bool(options.isManager, \'options.isManager\');\n\t\tassert.string(options.name, \'options.name\');\n\t\tassert.arrayOfString(options.email, \'options.email\');\n\t\tassert.func(callback, \'callback\');\n\n        // Do stuff\n\t\tcallback(null, {});\n    }\n\n# API\n\nAll methods that *aren\'t* part of node\'s core assert API are simply assumed to\ntake an argument, and then a string \'name\' that\'s not a message; `AssertionError`\nwill be thrown if the assertion fails with a message like:\n\n    AssertionError: foo (string) is required\n\tat test (/home/mark/work/foo/foo.js:3:9)\n\tat Object.<anonymous> (/home/mark/work/foo/foo.js:15:1)\n\tat Module._compile (module.js:446:26)\n\tat Object..js (module.js:464:10)\n\tat Module.load (module.js:353:31)\n\tat Function._load (module.js:311:12)\n\tat Array.0 (module.js:484:10)\n\tat EventEmitter._tickCallback (node.js:190:38)\n\nfrom:\n\n    function test(foo) {\n\t    assert.string(foo, \'foo\');\n    }\n\nThere you go.  You can check that arrays are of a homogenous type with `Arrayof$Type`:\n\n    function test(foo) {\n\t    assert.arrayOfString(foo, \'foo\');\n    }\n\nYou can assert IFF an argument is not `undefined` (i.e., an optional arg):\n\n    assert.optionalString(foo, \'foo\');\n\nLastly, you can opt-out of assertion checking altogether by setting the\nenvironment variable `NODE_NDEBUG=1`.  This is pseudo-useful if you have\nlots of assertions, and don\'t want to pay `typeof ()` taxes to v8 in\nproduction.\n\nThe complete list of APIs is:\n\n* assert.bool\n* assert.buffer\n* assert.func\n* assert.number\n* assert.object\n* assert.string\n* assert.arrayOfBool\n* assert.arrayOfFunc\n* assert.arrayOfNumber\n* assert.arrayOfObject\n* assert.arrayOfString\n* assert.optionalBool\n* assert.optionalBuffer\n* assert.optionalFunc\n* assert.optionalNumber\n* assert.optionalObject\n* assert.optionalString\n* assert.optionalArrayOfBool\n* assert.optionalArrayOfFunc\n* assert.optionalArrayOfNumber\n* assert.optionalArrayOfObject\n* assert.optionalArrayOfString\n* assert.AssertionError\n* assert.fail\n* assert.ok\n* assert.equal\n* assert.notEqual\n* assert.deepEqual\n* assert.notDeepEqual\n* assert.strictEqual\n* assert.notStrictEqual\n* assert.throws\n* assert.doesNotThrow\n* assert.ifError\n\n# Installation\n\n    npm install assert-plus\n\n## License\n\nThe MIT License (MIT)\nCopyright (c) 2012 Mark Cavage\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of\nthis software and associated documentation files (the "Software"), to deal in\nthe Software without restriction, including without limitation the rights to\nuse, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of\nthe Software, and to permit persons to whom the Software is furnished to do so,\nsubject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n\n## Bugs\n\nSee <https://github.com/mcavage/node-assert-plus/issues>.\n',
+804 silly resolved     _id: 'assert-plus@0.1.2',
+804 silly resolved     dist:
+804 silly resolved      { shasum: 'd93ffdbb67ac5507779be316a7d65146417beef8',
+804 silly resolved        tarball: 'http://registry.npmjs.org/assert-plus/-/assert-plus-0.1.2.tgz' },
+804 silly resolved     _npmVersion: '1.1.59',
+804 silly resolved     _npmUser: { name: 'mcavage', email: 'mcavage@gmail.com' },
+804 silly resolved     maintainers: [ [Object] ],
+804 silly resolved     directories: {},
+804 silly resolved     _shasum: 'd93ffdbb67ac5507779be316a7d65146417beef8',
+804 silly resolved     _from: 'assert-plus@0.1.2',
+804 silly resolved     _resolved: 'https://registry.npmjs.org/assert-plus/-/assert-plus-0.1.2.tgz' } ]
+805 info install assert-plus@0.1.2 into /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/request/node_modules/http-signature
+806 info installOne assert-plus@0.1.2
+807 silly resolved [ { name: 'ctype',
+807 silly resolved     version: '0.5.2',
+807 silly resolved     description: 'read and write binary structures and data types',
+807 silly resolved     homepage: 'https://github.com/rmustacc/node-ctype',
+807 silly resolved     author: { name: 'Robert Mustacchi', email: 'rm@fingolfin.org' },
+807 silly resolved     engines: { node: '>= 0.4' },
+807 silly resolved     main: 'ctype.js',
+807 silly resolved     _id: 'ctype@0.5.2',
+807 silly resolved     dist:
+807 silly resolved      { shasum: 'fe8091d468a373a0b0c9ff8bbfb3425c00973a1d',
+807 silly resolved        tarball: 'http://registry.npmjs.org/ctype/-/ctype-0.5.2.tgz' },
+807 silly resolved     _npmVersion: '1.1.59',
+807 silly resolved     _npmUser: { name: 'rm', email: 'rm@fingolfin.org' },
+807 silly resolved     maintainers: [ [Object] ],
+807 silly resolved     directories: {},
+807 silly resolved     _shasum: 'fe8091d468a373a0b0c9ff8bbfb3425c00973a1d',
+807 silly resolved     _from: 'ctype@0.5.2',
+807 silly resolved     _resolved: 'https://registry.npmjs.org/ctype/-/ctype-0.5.2.tgz',
+807 silly resolved     readme: 'ERROR: No README data found!' } ]
+808 info install ctype@0.5.2 into /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/request/node_modules/http-signature
+809 info installOne ctype@0.5.2
+810 silly resolved [ { author: { name: 'Mark Cavage', email: 'mcavage@gmail.com' },
+810 silly resolved     contributors: [ [Object], [Object] ],
+810 silly resolved     name: 'asn1',
+810 silly resolved     description: 'Contains parsers and serializers for ASN.1 (currently BER only)',
+810 silly resolved     version: '0.1.11',
+810 silly resolved     repository: { type: 'git', url: 'git://github.com/mcavage/node-asn1.git' },
+810 silly resolved     main: 'lib/index.js',
+810 silly resolved     engines: { node: '>=0.4.9' },
+810 silly resolved     dependencies: {},
+810 silly resolved     devDependencies: { tap: '0.1.4' },
+810 silly resolved     scripts:
+810 silly resolved      { pretest: 'which gjslint; if [[ "$?" = 0 ]] ; then  gjslint --nojsdoc -r lib -r tst; else echo "Missing gjslint. Skipping lint"; fi',
+810 silly resolved        test: 'tap ./tst' },
+810 silly resolved     _npmUser: { name: 'mcavage', email: 'mcavage@gmail.com' },
+810 silly resolved     _id: 'asn1@0.1.11',
+810 silly resolved     _engineSupported: true,
+810 silly resolved     _npmVersion: '1.1.0-beta-4',
+810 silly resolved     _nodeVersion: 'v0.6.6',
+810 silly resolved     _defaultsLoaded: true,
+810 silly resolved     dist:
+810 silly resolved      { shasum: '559be18376d08a4ec4dbe80877d27818639b2df7',
+810 silly resolved        tarball: 'http://registry.npmjs.org/asn1/-/asn1-0.1.11.tgz' },
+810 silly resolved     maintainers: [ [Object] ],
+810 silly resolved     directories: {},
+810 silly resolved     _shasum: '559be18376d08a4ec4dbe80877d27818639b2df7',
+810 silly resolved     _from: 'asn1@0.1.11',
+810 silly resolved     _resolved: 'https://registry.npmjs.org/asn1/-/asn1-0.1.11.tgz',
+810 silly resolved     bugs: { url: 'https://github.com/mcavage/node-asn1/issues' },
+810 silly resolved     readme: 'ERROR: No README data found!',
+810 silly resolved     homepage: 'https://github.com/mcavage/node-asn1' } ]
+811 info install asn1@0.1.11 into /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/request/node_modules/http-signature
+812 info installOne asn1@0.1.11
+813 verbose node_modules/jade unbuild
+814 info preuninstall jade@1.5.0
+815 verbose node_modules/nconf/node_modules/optimist unbuild
+816 info preuninstall optimist@0.6.0
+817 verbose node_modules/nconf/node_modules/async unbuild
+818 info preuninstall async@0.2.9
+819 verbose node_modules/express unbuild
+820 info preuninstall express@3.0.0
+821 verbose node_modules/mongodb/node_modules/kerberos unbuild
+822 info preuninstall kerberos@0.0.3
+823 verbose node_modules/request/node_modules/oauth-sign unbuild
+824 info preuninstall oauth-sign@0.3.0
+825 verbose node_modules/mongodb/node_modules/bson/node_modules/nan unbuild
+826 info preuninstall nan@1.2.0
+827 verbose node_modules/mongoose unbuild
+828 info preuninstall mongoose@3.8.15
+829 verbose node_modules/request/node_modules/hawk unbuild
+830 info preuninstall hawk@1.1.1
+831 verbose node_modules/request/node_modules/qs unbuild
+832 info preuninstall qs@1.0.2
+833 verbose node_modules/request/node_modules/http-signature/node_modules/assert-plus unbuild
+834 info preuninstall assert-plus@0.1.2
+835 verbose node_modules/request/node_modules/http-signature/node_modules/ctype unbuild
+836 info preuninstall ctype@0.5.2
+837 verbose node_modules/request/node_modules/http-signature/node_modules/asn1 unbuild
+838 info preuninstall asn1@0.1.11
+839 info uninstall jade@1.5.0
+840 info uninstall optimist@0.6.0
+841 info uninstall async@0.2.9
+842 info uninstall express@3.0.0
+843 info uninstall kerberos@0.0.3
+844 info uninstall oauth-sign@0.3.0
+845 info uninstall nan@1.2.0
+846 info uninstall mongoose@3.8.15
+847 info uninstall hawk@1.1.1
+848 info uninstall qs@1.0.2
+849 info uninstall assert-plus@0.1.2
+850 info uninstall ctype@0.5.2
+851 info uninstall asn1@0.1.11
+852 verbose true,/Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules,/Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules unbuild jade@1.5.0
+853 verbose /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/.bin,[object Object] binRoot
+854 verbose gentlyRm verifying that /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/jade is managed by npm
+855 verbose false,/Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules,/Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/nconf/node_modules unbuild optimist@0.6.0
+856 info postuninstall optimist@0.6.0
+857 verbose false,/Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules,/Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/nconf/node_modules unbuild async@0.2.9
+858 info postuninstall async@0.2.9
+859 verbose true,/Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules,/Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules unbuild express@3.0.0
+860 verbose /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/.bin,[object Object] binRoot
+861 verbose gentlyRm verifying that /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/express is managed by npm
+862 verbose false,/Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules,/Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/mongodb/node_modules unbuild kerberos@0.0.3
+863 info postuninstall kerberos@0.0.3
+864 verbose false,/Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules,/Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/request/node_modules unbuild oauth-sign@0.3.0
+865 info postuninstall oauth-sign@0.3.0
+866 verbose false,/Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules,/Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/mongodb/node_modules/bson/node_modules unbuild nan@1.2.0
+867 info postuninstall nan@1.2.0
+868 silly cacheAndTest /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/jade is inside /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules
+869 silly gentlyRm /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/jade is managed by npm
+870 silly gentlyRm /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/.bin/jade is not under /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/jade
+871 silly gentlyRm checking to see if /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/.bin/jade is a link
+872 verbose true,/Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules,/Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules unbuild mongoose@3.8.15
+873 info postuninstall mongoose@3.8.15
+874 verbose false,/Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules,/Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/request/node_modules unbuild hawk@1.1.1
+875 info postuninstall hawk@1.1.1
+876 silly cacheAndTest /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/express is inside /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules
+877 silly gentlyRm /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/express is managed by npm
+878 silly gentlyRm /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/.bin/express is not under /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/express
+879 silly gentlyRm checking to see if /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/.bin/express is a link
+880 verbose false,/Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules,/Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/request/node_modules unbuild qs@1.0.2
+881 info postuninstall qs@1.0.2
+882 verbose false,/Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules,/Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/request/node_modules/http-signature/node_modules unbuild assert-plus@0.1.2
+883 info postuninstall assert-plus@0.1.2
+884 verbose false,/Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules,/Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/request/node_modules/http-signature/node_modules unbuild ctype@0.5.2
+885 info postuninstall ctype@0.5.2
+886 verbose false,/Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules,/Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/request/node_modules/http-signature/node_modules unbuild asn1@0.1.11
+887 info postuninstall asn1@0.1.11
+888 verbose gentlyRm /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/.bin/jade is outside /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/jade and not a link
+889 verbose node_modules/jade unbuild
+890 verbose gentlyRm vacuuming /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/nconf/node_modules/optimist
+891 verbose gentlyRm vacuuming /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/nconf/node_modules/async
+892 verbose gentlyRm /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/.bin/express is outside /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/express and not a link
+893 verbose node_modules/express unbuild
+894 verbose gentlyRm vacuuming /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/mongodb/node_modules/kerberos
+895 verbose gentlyRm vacuuming /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/request/node_modules/oauth-sign
+896 verbose gentlyRm vacuuming /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/mongodb/node_modules/bson/node_modules/nan
+897 silly gentlyRm purging /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/nconf/node_modules/optimist
+898 verbose gentlyRm vacuuming /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/mongoose
+899 silly gentlyRm purging /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/nconf/node_modules/async
+900 verbose gentlyRm vacuuming /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/request/node_modules/hawk
+901 verbose gentlyRm vacuuming /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/request/node_modules/qs
+902 silly gentlyRm purging /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/mongodb/node_modules/kerberos
+903 verbose gentlyRm vacuuming /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/request/node_modules/http-signature/node_modules/assert-plus
+904 verbose gentlyRm vacuuming /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/request/node_modules/http-signature/node_modules/ctype
+905 verbose gentlyRm vacuuming /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/request/node_modules/http-signature/node_modules/asn1
+906 silly gentlyRm purging /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/request/node_modules/oauth-sign
+907 silly gentlyRm purging /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/mongodb/node_modules/bson/node_modules/nan
+908 silly gentlyRm purging /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/mongoose
+909 silly gentlyRm purging /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/request/node_modules/hawk
+910 silly gentlyRm purging /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/request/node_modules/qs
+911 silly gentlyRm purging /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/request/node_modules/http-signature/node_modules/assert-plus
+912 silly gentlyRm purging /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/request/node_modules/http-signature/node_modules/ctype
+913 silly gentlyRm purging /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/request/node_modules/http-signature/node_modules/asn1
+914 info preuninstall jade@1.5.0
+915 info preuninstall express@3.0.0
+916 info uninstall jade@1.5.0
+917 info uninstall express@3.0.0
+918 silly gentlyRm quitting because other entries in /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/request/node_modules
+919 verbose tar unpack /Users/sleung/.npm/oauth-sign/0.3.0/package.tgz
+920 silly lockFile 6241be57--request-node-modules-oauth-sign tar:///Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/request/node_modules/oauth-sign
+921 verbose lock tar:///Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/request/node_modules/oauth-sign /Users/sleung/.npm/6241be57--request-node-modules-oauth-sign.lock
+922 silly lockFile 2ca33a6e-npm-oauth-sign-0-3-0-package-tgz tar:///Users/sleung/.npm/oauth-sign/0.3.0/package.tgz
+923 verbose lock tar:///Users/sleung/.npm/oauth-sign/0.3.0/package.tgz /Users/sleung/.npm/2ca33a6e-npm-oauth-sign-0-3-0-package-tgz.lock
+924 silly gentlyRm quitting because other entries in /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/request/node_modules/http-signature/node_modules
+925 verbose tar unpack /Users/sleung/.npm/assert-plus/0.1.2/package.tgz
+926 silly lockFile 5a9ab7b0-gnature-node-modules-assert-plus tar:///Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/request/node_modules/http-signature/node_modules/assert-plus
+927 verbose lock tar:///Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/request/node_modules/http-signature/node_modules/assert-plus /Users/sleung/.npm/5a9ab7b0-gnature-node-modules-assert-plus.lock
+928 silly lockFile 8318b4b5-pm-assert-plus-0-1-2-package-tgz tar:///Users/sleung/.npm/assert-plus/0.1.2/package.tgz
+929 verbose lock tar:///Users/sleung/.npm/assert-plus/0.1.2/package.tgz /Users/sleung/.npm/8318b4b5-pm-assert-plus-0-1-2-package-tgz.lock
+930 verbose true,/Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules,/Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules unbuild jade@1.5.0
+931 verbose /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/.bin,[object Object] binRoot
+932 verbose gentlyRm verifying that /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/jade is managed by npm
+933 silly isManaged /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/jade is inside /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules
+934 silly gentlyRm /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/jade is managed by npm
+935 silly gentlyRm /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/.bin/jade is not under /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/jade
+936 silly gentlyRm checking to see if /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/.bin/jade is a link
+937 verbose true,/Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules,/Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules unbuild express@3.0.0
+938 verbose /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/.bin,[object Object] binRoot
+939 verbose gentlyRm verifying that /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/express is managed by npm
+940 silly isManaged /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/express is inside /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules
+941 silly gentlyRm /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/express is managed by npm
+942 silly gentlyRm /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/.bin/express is not under /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/express
+943 silly gentlyRm checking to see if /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/.bin/express is a link
+944 verbose gentlyRm vacuuming /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/request/node_modules/oauth-sign
+945 verbose gentlyRm /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/.bin/jade is outside /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/jade and not a link
+946 error error rolling back Error: Refusing to delete: /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/.bin/jade not in /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/jade
+946 error error rolling back     at clobberFail (/usr/local/lib/node_modules/npm/lib/utils/gently-rm.js:162:12)
+946 error error rolling back     at /usr/local/lib/node_modules/npm/lib/utils/gently-rm.js:73:16
+946 error error rolling back     at Object.oncomplete (evalmachine.<anonymous>:107:15)
+946 error error rolling back  jade@1.6.0 { [Error: Refusing to delete: /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/.bin/jade not in /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/jade]
+946 error error rolling back   code: 'EEXIST',
+946 error error rolling back   path: '/Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/.bin/jade' }
+947 error Refusing to delete: /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/.bin/jade not in /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/jade
+File exists: /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/.bin/jade
+Move it away, and try again.
+948 error System Darwin 13.3.0
+949 error command "node" "/usr/local/bin/npm" "update"
+950 error cwd /Users/sleung/Desktop/side-projects/callback-newsfeed
+951 error node -v v0.10.30
+952 error npm -v 2.0.0-alpha-5
+953 error path /Users/sleung/Desktop/side-projects/callback-newsfeed/node_modules/.bin/jade
+954 error code EEXIST
+955 verbose exit [ 1, true ]

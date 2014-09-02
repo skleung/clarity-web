@@ -22,7 +22,7 @@ function displaySoundCloudPlayer(searchResults) {
   searchResults = JSON.parse(searchResults);
   if (searchResults[0]) {
     var srcURL = searchResults[0].src;
-    $spotifyResult.html(generateIframe(srcURL));
+    $soundcloudResult.html(generateIframe(srcURL));
   } else {
     $soundcloudResult.html("No results found.");
   }

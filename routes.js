@@ -62,7 +62,13 @@ module.exports = function(app, nconf) {
     console.log('Posting content for "%s"', req.body.src);
     var postContent = new Post({ src: req.body.src });
     postContent.save(function(err, postContent) {
-      if (err) console.log(err);
+      if (err) {
+        console.log(err);
+        throw err;
+      } else {
+        //dummy content to make sure a response is sent back!
+        res.send(200, "Post finished");
+      }
     });
   });
 
