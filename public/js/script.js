@@ -5,6 +5,7 @@ function generateIframe(embedURL) {
 
 function generateFeed(responseText) {
   var feeds = JSON.parse(responseText);
+  $("ul.newsfeed-list").empty();
   for (var i=0; i<feeds.length; i++) {
     var srcURL = feeds[i].src;
     var newPost = $("<li>", {id:"feed-"+i});
