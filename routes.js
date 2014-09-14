@@ -7,7 +7,7 @@ var spotify    = require('./lib/spotify')
 var Post = require('./models/post.js');
 
 //  By default upon authentication, the access_token is saved, but you can add it like
-module.exports = function(app, nconf) {
+module.exports = function(app) {
   app.get('/', function(req, res) {
     res.render('index');
   });
@@ -44,7 +44,7 @@ module.exports = function(app, nconf) {
       }
     },
     // callback
-    function(err, searchResults) {
+    function(error, searchResults) {
       var body = [];
       var YouTube = JSON.parse(searchResults.YouTube);
       var SoundCloud = JSON.parse(searchResults.SoundCloud);
@@ -61,19 +61,17 @@ module.exports = function(app, nconf) {
   app.post('/postContent', function(req, res) {
     console.log('Posting content for "%s"', req.body.src);
     var postContent = new Post({ src: req.body.src });
-    postContent.save(function(err, postContent) {
-      if (err) {
-        console.log(err);
-        throw err;
+    postContent.save(function(error, postContent) {
+      if (error) {
+        throw error;
       } else {
-        //dummy content to make sure a response is sent back!
-        res.send(200, "Post finished");
+        res.send(204);
       }
     });
   });
 
   app.get('/getContent', function(req, res) {
-    Post.find(function(err, posts) {
+    Post.find(function(error, posts) {
       res.send(posts);
     });
   });

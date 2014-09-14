@@ -1,6 +1,7 @@
 {
-  "name": "express-foundation",
+  "name": "callback-newsfeed",
   "version": "0.0.1",
+  "description": "Application to search for music",
   "engines": {
     "node": ">= 0.6.19",
     "npm": ">= 1.1.x"

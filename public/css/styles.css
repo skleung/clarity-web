@@ -68,6 +68,4 @@ header {
 .active, .active:hover {
   background-color: #3c763d;
 }
-.select-wrapper{
-  display: none;
-}
+
