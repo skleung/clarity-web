@@ -1,8 +1,8 @@
 var async = require('async');
 
 var soundCloud = require('./lib/soundcloud');
-var youTube    = require('./lib/youtube')
-var spotify    = require('./lib/spotify')
+var youTube = require('./lib/youtube')
+var spotify = require('./lib/spotify')
 
 var Post = require('./models/post.js');
 
@@ -58,7 +58,7 @@ module.exports = function(app) {
     });
   });
 
-  app.post('/postContent', function(req, res) {
+  app.post('/newsfeed', function(req, res) {
     console.log('Posting content for "%s"', req.body.src);
     var postContent = new Post({ src: req.body.src });
     postContent.save(function(error, postContent) {
@@ -70,7 +70,7 @@ module.exports = function(app) {
     });
   });
 
-  app.get('/getContent', function(req, res) {
+  app.get('/newsfeed', function(req, res) {
     Post.find(function(error, posts) {
       res.send(posts);
     });

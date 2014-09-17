@@ -1,4 +1,74 @@
 body {
+  margin: 0;
+}
+
+header {
+  padding: 10px 0;
+  background-color: #3b5998;
+  color: white;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+#search-wrapper {
+  width: 600px;
+  padding: 10px;
+  margin: 40px auto;
+}
+
+#newsfeed-wrapper {
+  width: 480px;
+  padding: 10px;
+  margin: 40px auto;
+}
+
+
+#search-dropdown {
+  position: absolute;
+  width: 540px;
+  background-color: white;
+  border: 1px solid gray;
+  display: none;
+}
+
+#search-form input[type='text'] {
+  width: 540px;
+  height: 40px;
+  font-size: 20px;
+  padding: 8px;
+  outline: 0px;
+  margin: 0px;
+}
+
+#search-form input[type='submit'] {
+  background: url('/img/magnifying-glass-icon.png');
+  border: 0px;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  padding: 0px;
+  vertical-align: bottom;
+}
+
+div.result {
+  padding: 5px;
+}
+
+div.result:hover {
+  background-color: #dff0d8;
+  cursor: pointer;
+}
+
+p.result-label {
+  margin: 0px;
+}
+
+.btn-primary {
+  background-color: #3b5998;
+  outline: 0px;
+}
+
+/*body {
   font: 14px/1.5 Tahoma, Helvetica, Sans-Serif;
   margin: 0;
   background-color: #e9eaed;
@@ -69,3 +139,4 @@ header {
   background-color: #3c763d;
 }
 
+*/

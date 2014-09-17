@@ -19,7 +19,7 @@ function updateFeed() {
   searchRequest.addEventListener("load", function() {
     generateFeed(searchRequest.response);
   });
-  searchRequest.open('GET', "/getContent", true);
+  searchRequest.open('GET', "/newsfeed", true);
   searchRequest.send();
 }
 
@@ -40,7 +40,7 @@ $("#post-button").click(function() {
   postContentRequest.addEventListener("load", function() {
     updateFeed();
   });
-  postContentRequest.open('POST', "/postContent", true);
+  postContentRequest.open('POST', "/newsfeed", true);
   postContentRequest.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
   postContentRequest.send(JSON.stringify({src: url}));
 });

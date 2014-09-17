@@ -2,29 +2,37 @@ doctype html
 html
   head
     title Callback Newsfeed
-    link(rel='stylesheet', href='/css/bootstrap.min.css')
-
-    //- shermz layout
-    link(rel='stylesheet', href='/css/styles.css')
-    //- end shermz layout
-
-    //- //- deng layout
-    //- link(rel='stylesheet', href='/css/autocomplete.css')
-    //- //- end deng layout
+    link(rel='stylesheet', href='css/bootstrap.min.css')
+    link(rel='stylesheet', href='css/styles.css')
 
     script(src="/js/lib/jquery.min.js")
   body
-    //- shermz layout
     header
       div.container
-        | callbackNewsfeed
-    //- shermz layout
+        | Callback Newsfeed
 
     block content
-    script(src="/js/lib/bootstrap.min.js")
-    script(src="/js/search.js")
-    script(src="/js/script.js")
 
-    //- //- deng layout
-    //- script(src='/js/autocomplete.js')
-    //- //- end deng layout
+    //- Libraries
+    script(src='js/lib/bootstrap.min.js')
+    script(src='js/lib/handlebars.js')
+
+    //- Utilities
+    script(src='js/util.js')
+
+    //- Models
+    script(src='js/newsfeed-model.js')
+    script(src='js/search-model.js')
+
+    //- Views
+    script(src='js/main-view.js')
+    script(src='js/newsfeed-view.js')
+    script(src='js/search-view.js')
+
+    //- Main
+    script(src='js/main.js')
+
+
+
+    //- script(src="/js/search.js")
+    //- script(src="/js/script.js")
