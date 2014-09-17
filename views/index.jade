@@ -8,19 +8,25 @@ block content
     div(id='search-dropdown')
 
   div(id='newsfeed-wrapper')
+    div(id='pending-post')
     div(id='newsfeed')
 
   script(type='text/x-handlebars-template' id='search-results-template')
     {{#each results}}
-    div.result
-      p.result-label {{api}} {{title}}
-      button.btn-primary Post
+    div.result(api='{{api}}', title='{{title}}', src='{{src}}')
+      img(class='icon' src='img/{{api}}-icon.png')
+      p.result-label {{title}}
+      //- button.btn-primary Post
       //- iframe(type='text/html' width='100%' height='80px' frameborder='0' src='{{src}}')
     {{/each}}
 
   script(type='text/x-handlebars-template' id='newsfeed-template')
     {{#each posts}}
-    div
+    div.newsfeed-post
       p(id='{{id}}')
       iframe(type='text/html' width='100%' height='80px' frameborder='0' src='{{src}}')
     {{/each}}
+
+  script(type='text/x-handlebars-template' id='pending-post-template')
+    p {{post.title}}
+    button.post-btn Post

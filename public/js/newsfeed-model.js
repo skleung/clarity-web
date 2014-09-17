@@ -36,8 +36,8 @@
     var request = new XMLHttpRequest();
     request.addEventListener('load', function() {
       if (request.status === STATUS_OK) {
-        var post = JSON.parse(request.responseText);
-        callback(null, post);
+        var newsfeedPostAdded = JSON.parse(request.responseText);
+        callback(null, newsfeedPostAdded);
       } else {
         callback(request.responseText);
       }

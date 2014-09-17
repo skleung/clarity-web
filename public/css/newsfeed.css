@@ -1,0 +1,19 @@
+#newsfeed-wrapper {
+  width: 480px;
+  padding: 10px;
+  margin: 40px auto;
+}
+
+.newsfeed-post {
+  width: 400px;
+  margin: 20px auto;
+}
+
+#pending-post {
+  margin: 20px auto;
+  border: 1px solid gray;
+  padding: 10px;
+  display: none;
+}
+
+
