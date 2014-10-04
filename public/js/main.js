@@ -1,4 +1,5 @@
 (function(window, document, undefined) {
+
   /*
    * MainView handles all the logic.
    */

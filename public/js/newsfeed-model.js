@@ -11,6 +11,7 @@
    *  error -- the error that occurred or NULL if no error occurred
    *  newsfeedPosts -- an array of newsfeed posts
    */
+
   NewsfeedModel.loadAllPosts = function(callback) {
     var request = new XMLHttpRequest();
     request.addEventListener('load', function() {
@@ -32,6 +33,7 @@
    *  error -- the error that occurred or NULL if no error occurred
    *  post -- the post added, with an id attribute
    */
+
   NewsfeedModel.addPost = function(post, callback) {
     var request = new XMLHttpRequest();
     request.addEventListener('load', function() {
@@ -52,6 +54,7 @@
    * Calls: callback(error)
    *  error -- the error that occurred or NULL if no error occurred
    */
+
   NewsfeedModel.removePost = function(id, callback) {
     var request = new XMLHttpRequest();
     request.addEventListener('load', function() {

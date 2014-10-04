@@ -1,5 +1,3 @@
-var async = require('async');
-
 var soundCloud = require('./lib/soundcloud');
 var youTube = require('./lib/youtube')
 var spotify = require('./lib/spotify')
@@ -13,9 +11,8 @@ module.exports = function(app) {
   });
 
   app.get('/search', function(req, res) {
-    console.log('Searching YouTube and Spotify [not SoundCloud] for %s', req.query.q);
-    async.parallel({
-      YouTube: function(callback) {
+    fns = [
+      function(callback) {
         youTube.search(req.query.q, function(error, body) {
           if (error) {
             throw error;
@@ -24,7 +21,7 @@ module.exports = function(app) {
           }
         });
       },
-      SoundCloud: function(callback) {
+      function(callback) {
         soundCloud.search(req.query.q, function(error, body) {
           if (error) {
             throw error;
@@ -33,7 +30,7 @@ module.exports = function(app) {
           }
         });
       },
-      Spotify: function(callback) {
+      function(callback) {
         spotify.search(req.query.q, function(error, body) {
           if (error) {
             throw error;
@@ -42,19 +39,18 @@ module.exports = function(app) {
           }
         });
       }
-    },
-    // callback
-    function(error, searchResults) {
-      var body = [];
-      var YouTube = JSON.parse(searchResults.YouTube);
-      var SoundCloud = JSON.parse(searchResults.SoundCloud);
-      var Spotify = JSON.parse(searchResults.Spotify);
+    ];
 
-      // rank options here
-      body.push(YouTube[0]);
-      body.push(Spotify[0]);
-      body.push(SoundCloud[0]);
-      res.send(200, JSON.stringify(body));
+    counter = 0;
+    results = []
+    fns.forEach(function(fn) {
+      fn(function(error, searchResults) {
+        counter += 1;
+        results.push(JSON.parse(searchResults)[0]);
+        if (counter == fns.length) {
+          res.send(200, JSON.stringify(results));
+        }
+      });
     });
   });
 
@@ -73,40 +69,6 @@ module.exports = function(app) {
   app.get('/newsfeed', function(req, res) {
     Post.find(function(error, posts) {
       res.send(posts);
-    });
-  });
-
-
-  app.get('/searchSoundCloud', function(req, res) {
-    console.log('Searching SoundCloud for "%s"', req.query.q);
-    soundCloud.search(req.query.q, function(error, body) {
-      if (error) {
-        throw error;
-      } else {
-        res.send(200, body);
-      }
-    });
-  });
-
-  app.get('/searchYouTube', function(req, res) {
-    console.log('Searching YouTube for "%s"',  req.query.q);
-    youTube.search(req.query.q, function(error, body) {
-      if (error) {
-        throw error;
-      } else {
-        res.send(200, body);
-      }
-    });
-  });
-
-  app.get('/searchSpotify', function(req, res) {
-    console.log('Searching Spotify for "%s"', req.query.q);
-    spotify.search(req.query.q, function(error, body) {
-      if (error) {
-        throw error;
-      } else {
-        res.send(200, body);
-      }
     });
   });
 };

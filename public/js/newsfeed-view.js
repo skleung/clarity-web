@@ -1,13 +1,15 @@
 (function(window, document, undefined) {
   var NewsfeedView = {};
 
-  NewsfeedView.render = function($newsfeed) {
+  NewsfeedView.render = function($body) {
+    $newsfeed = $body.find('#newsfeed');
     NewsfeedModel.loadAllPosts(function(error, newsfeedPosts) {
       if (error) {
-        // Util.displayError('Failed loading posts.');
+        Util.displayError('Failed loading posts.');
       } else {
-        $newsfeed.html(Util.renderNewsfeed({ posts: newsfeedPosts }));
-        $newsfeed.find('.post');
+        newsfeedPosts.forEach(function(post) {
+          $newsfeed.prepend(Util.renderNewsfeedPost({ post: post, pending: false }));
+        });
       }
     });
   }

@@ -10,81 +10,13 @@ header {
   font-size: 24px;
 }
 
-
-
-
-
-
-
-/*body {
-  font: 14px/1.5 Tahoma, Helvetica, Sans-Serif;
-  margin: 0;
-  background-color: #e9eaed;
-}
-header {
-  padding: 10px 0;
-  background-color: #3b5998;
+.error {
+  font: 14px Arial, Sans-serif;
+  background-color: red;
   color: white;
-  font-weight: 700;
-  font-size: 24px;
-}
-
-.newsfeed-wrapper {
-  margin: auto;
-  width: 60%;
-}
-.newsfeed-wrapper ul {
-  list-style-type: none;
-}
-.newsfeed-wrapper li {
-  border-radius: 3px;
-  background-color: white;
-  border: 1px solid #ccc;
-  padding: 15px;
-  margin: 15px 0;
-}
-.newsfeed-wrapper li.form-wrapper {
-  padding: 15px 0 0 0;
-}
-.submit-wrapper, .post-wrapper{
-  padding: 10px 0;
-  height: 60px;
-  position: relative;
-}
-.submit-wrapper {
-  background-color: #eaeaea;
-}
-.btn-primary {
-  background-color: #3b5998;
-  position: absolute;
-  top: 50%;
-  right: 15px;
-  height: 40px;
-  margin-top: -20px;
-}
-
-#search-form input[type='text'] {
-  width: 90%;
-  font-size: 20px;
-  border: 0;
-  outline: none;
-  margin: 15px auto;
-}
-
-.result {
-  display: none;
-  width: 100%;
-  padding: 20px;
-  color: black;
-  border-radius: 5px;
+  text-transform: none;
+  width: 400px;
+  margin: 40px auto;
+  padding: 10px;
   text-align: center;
 }
-.result:hover {
-  background-color: #dff0d8;
-  cursor: pointer;
-}
-.active, .active:hover {
-  background-color: #3c763d;
-}
-
-*/
