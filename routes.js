@@ -55,12 +55,12 @@ module.exports = function(app) {
   });
 
   app.post('/newsfeed', function(req, res) {
-    var postContent = new Post({ src: req.body.src });
-    postContent.save(function(error, postContent) {
+    var post = new Post({ src: req.body.src });
+    post.save(function(error, post) {
       if (error) {
         throw error;
       } else {
-        res.send(204);
+        res.send(post);
       }
     });
   });

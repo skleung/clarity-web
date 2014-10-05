@@ -9,11 +9,12 @@
     $pendingPost.bind('submit', function(event) {
       event.preventDefault();
       NewsfeedModel.addPost(post, function(error, content) {
+        console.log(content);
         if (error) {
           Util.displayError('Failed to add post.');
         } else {
           $newsfeed.find('#pending-form').remove();
-          $newsfeed.prepend(Util.renderNewsfeedPost({ post: post, pending: false }));
+          NewsfeedView.renderPost(content, false);
         }
       });
     });
