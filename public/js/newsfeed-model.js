@@ -49,7 +49,7 @@
     request.send(JSON.stringify(post));
   };
 
-  /* Deletes the post with the given id.
+  /* Removes the post with the given id.
    *
    * Calls: callback(error)
    *  error -- the error that occurred or NULL if no error occurred
@@ -64,9 +64,11 @@
         callback(request.responseText);
       }
     });
-    request.open('POST', NEWSFEED_URL + '/' + id + '/delete', true);
-    request.setRequestHeader('Content-type', 'application/json');
+    request.open('POST', 'newsfeed/' + id + '/remove', true);
     request.send();
+    // request.open('POST', NEWSFEED_URL + '/remove', true);
+    // request.setRequestHeader('Content-type', 'application/json');
+    // request.send(JSON.stringify(id));
   };
 
   window.NewsfeedModel = NewsfeedModel;

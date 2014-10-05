@@ -36,7 +36,6 @@
               title: $result.attr('title')
             }
             $searchMenu.hide();
-            console.log(postContent);
             callback($body, postContent);
           });
         });

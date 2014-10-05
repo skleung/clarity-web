@@ -9,11 +9,8 @@
   margin: 20px auto;
 }
 
-#pending-post {
-  margin: 20px auto;
-  border: 1px solid gray;
-  padding: 10px;
-  display: none;
+.pending-post {
+
 }
 
 

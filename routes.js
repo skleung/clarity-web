@@ -55,7 +55,6 @@ module.exports = function(app) {
   });
 
   app.post('/newsfeed', function(req, res) {
-    console.log('Posting content for "%s"', req.body.src);
     var postContent = new Post({ src: req.body.src });
     postContent.save(function(error, postContent) {
       if (error) {
@@ -68,7 +67,26 @@ module.exports = function(app) {
 
   app.get('/newsfeed', function(req, res) {
     Post.find(function(error, posts) {
-      res.send(posts);
+      if (error) {
+        throw error;
+      } else {
+        res.send(posts);
+      }
     });
+  });
+
+  app.post('/newsfeed/:id/remove', function(req, res) {
+    Post.remove({'_id': req.params.id}, function(error, post) {
+      if (error) {
+        throw error;
+      } else {
+        res.send(204);
+      }
+    })
+  });
+
+  app.post('/newsfeed/:id/upvote', function(req, res) {
+    console.log('upvote!');
+    res.send(204);
   });
 };

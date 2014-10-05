@@ -3,9 +3,10 @@
 
   PendingPostView.render = function($body, post) {
     $newsfeed = $body.find('#newsfeed');
-    $newsfeed.prepend(Util.renderNewsfeedPost({ post: post, pending: true }));
+    $pendingPost = $(Util.renderNewsfeedPost({ post: post, pending: true })).prependTo($newsfeed);
 
-    $newsfeed.find('#pending-form').bind('submit', function(event) {
+    // Event listener for Submit
+    $pendingPost.bind('submit', function(event) {
       event.preventDefault();
       NewsfeedModel.addPost(post, function(error, content) {
         if (error) {
@@ -15,6 +16,11 @@
           $newsfeed.prepend(Util.renderNewsfeedPost({ post: post, pending: false }));
         }
       });
+    });
+
+    $pendingPost.find('input[name="cancel"]').bind('click', function(event) {
+      event.preventDefault();
+      $pendingPost.remove();
     });
   }
 
