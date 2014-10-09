@@ -2,19 +2,19 @@
   var PendingPostView = {};
 
   PendingPostView.render = function($body, post) {
-    $newsfeed = $body.find('#newsfeed');
-    $pendingPost = $(Util.renderNewsfeedPost({ post: post, pending: true })).prependTo($newsfeed);
+    var $newsfeed = $body.find('#newsfeed');
+    var $pendingNewsfeed = $body.find('#pending-newsfeed');
+    var $pendingPost = $(Util.renderNewsfeedPost({ post: post, pending: true })).prependTo($pendingNewsfeed);
 
     // Event listener for Submit
     $pendingPost.bind('submit', function(event) {
       event.preventDefault();
       NewsfeedModel.addPost(post, function(error, content) {
-        console.log(content);
         if (error) {
           Util.displayError('Failed to add post.');
         } else {
-          $newsfeed.find('#pending-form').remove();
-          NewsfeedView.renderPost(content, false);
+          $(event.target).closest('.pending-post')[0].remove()
+          NewsfeedView.renderPost($newsfeed, content, false);
         }
       });
     });

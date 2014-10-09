@@ -2,19 +2,19 @@
   var NewsfeedView = {};
 
   NewsfeedView.render = function($body) {
-    $newsfeed = $body.find('#newsfeed');
+    var $newsfeed = $body.find('#newsfeed');
     NewsfeedModel.loadAllPosts(function(error, newsfeedPosts) {
       if (error) {
         Util.displayError('Failed loading posts.');
       } else {
         newsfeedPosts.forEach(function(post) {
-          NewsfeedView.renderPost(post, false);
+          NewsfeedView.renderPost($newsfeed, post, false);
         });
       }
     });
   }
 
-  NewsfeedView.renderPost = function(post, pending) {
+  NewsfeedView.renderPost = function($newsfeed, post, pending) {
     var $newsfeedPost = $(Util.renderNewsfeedPost({ post: post, pending: pending })).prependTo($newsfeed);
     $newsfeedPost.find('input[name="upvote"]').bind('click', function(event) {
       event.preventDefault();

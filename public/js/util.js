@@ -2,7 +2,7 @@
   var Util = {};
 
   var $searchResultsTemplate = $('#search-results-template');
-  Util.renderSearchResults = Handlebars.compile($searchResultsTemplate.html());
+  Util.renderSearchPanel = Handlebars.compile($searchResultsTemplate.html());
 
   var $newsfeedPostTemplate = $('#newsfeed-post-template');
   Util.renderNewsfeedPost = Handlebars.compile($newsfeedPostTemplate.html());

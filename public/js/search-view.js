@@ -5,23 +5,22 @@
     $('#search-form').bind('submit', function(event) {
       event.preventDefault();
       var query = $('#search-form input[name="query"]').val();
-      SearchView.renderSearchMenu($body, query, function($body, post) {
+      SearchView.renderSearchResults($body, query, function($body, post) {
+        $('#search-form input[name="query"]').val('');
         PendingPostView.render($body, post);
       });
     });
   }
 
-  SearchView.renderSearchMenu = function($body, query, callback) {
-    $searchMenu = $body.find('#search-menu');
+  SearchView.renderSearchResults = function($body, query, callback) {
+    var $searchMenu = $body.find('#search-menu');
 
     SearchModel.search(query, function(error, searchResults) {
       if (error) {
         Util.displayError('Failed to load search results.');
       } else {
-
         // if (searchResults.length === 0) // No search results available.
-
-        $searchMenu.html(Util.renderSearchResults({ results: searchResults }));
+        $searchMenu.html(Util.renderSearchPanel({ results: searchResults }));
 
         // Iterates through the results (identified by elements with the class
         // name '.result') and binds a click event to each result to 1) enqueue
@@ -41,7 +40,7 @@
         });
 
         // Binds a click event to hide search menu
-        $(document.body).bind('click', function(event) {
+        $(window).bind('click', function(event) {
           if ($(event.target).closest('.result').length === 0) {
             $searchMenu.hide();
           }

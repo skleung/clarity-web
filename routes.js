@@ -46,7 +46,10 @@ module.exports = function(app) {
     fns.forEach(function(fn) {
       fn(function(error, searchResults) {
         counter += 1;
-        results.push(JSON.parse(searchResults)[0]);
+        var parsedSearchResults = JSON.parse(searchResults);
+        if (parsedSearchResults[0]) {
+          results.push(parsedSearchResults[0]);
+        }
         if (counter == fns.length) {
           res.send(200, JSON.stringify(results));
         }
