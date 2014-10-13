@@ -7,7 +7,7 @@ var Post = require('./models/post.js');
 //  By default upon authentication, the access_token is saved, but you can add it like
 module.exports = function(app) {
   app.get('/', function(req, res) {
-    res.render('index');
+    res.render('index.ejs');
   });
 
   app.get('/search', function(req, res) {

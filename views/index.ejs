@@ -1,0 +1,49 @@
+<div id="search-wrapper">
+  <form id='search-form'>
+    <input name='query' type='text' autofocus autocomplete='off' placeholder='Search for music'>
+    <input type='submit' value=''>
+  </form>
+  <div id='search-menu'></div>
+</div>
+
+<div id='newsfeed-wrapper'></div>
+  <div id='pending-newsfeed'></div>
+  <div id='newsfeed'></div>
+
+<script type='text/x-handlebars-template' id='search-results-template'>
+  {{#unless results}}
+  <div class="no-result">
+    <p class="no-result-label"> 
+      No Results found.
+    </p>
+  </div>
+  {{else}}
+  {{#each results}}
+  <div class="result" api='{{api}}' title='{{title}}' src='{{src}}'>
+    <img class='icon' src='img/{{api}}-icon.png'>
+    <p class="result-label">
+     {{title}}
+    </p>
+  </div> 
+  {{/each}}
+  {{/unless}}
+</script>
+
+<script type='text/x-handlebars-template' id='newsfeed-post-template'>
+  {{#if pending}}
+  <div class="newsfeed-post pending-post">
+    <form>
+      <iframe type='text/html' width='100%' height='80px' frameborder='0' src='{{post.src}}'>
+      <input type='submit' name='submit' value='Submit'>
+      <input type='button' name='cancel' value='Cancel'>
+    </form>
+  </div>
+  {{else}}
+  <div class="newsfeed-post">
+    <p id='{{post.id}}'>
+    <iframe type='text/html' width='100%' height='80px' frameborder='0' src='{{post.src}}'>
+    <input type='button' name='upvote' value='Upvote'>
+    <input type='button' name='remove' value='Remove'>
+  </div>
+  {{/if}}
+</script>
