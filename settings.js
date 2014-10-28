@@ -1,6 +1,8 @@
 var utils = require('./lib/utils.js');
+var ejs = require('ejs-locals');
 
 module.exports = function(app, express) {
+  app.engine('ejs', ejs);
   app.set('views', __dirname + '/views');
   app.set('view engine', 'ejs');
   app.set('view options', { layout: false });

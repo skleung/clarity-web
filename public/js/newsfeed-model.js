@@ -17,6 +17,7 @@
     request.addEventListener('load', function() {
       if (request.status === STATUS_OK) {
         var newsfeedPosts = JSON.parse(request.responseText);
+        console.log(newsfeedPosts);
         callback(null, newsfeedPosts);
       } else {
         callback(request.responseText);
@@ -66,9 +67,25 @@
     });
     request.open('POST', 'newsfeed/' + id + '/remove', true);
     request.send();
-    // request.open('POST', NEWSFEED_URL + '/remove', true);
-    // request.setRequestHeader('Content-type', 'application/json');
-    // request.send(JSON.stringify(id));
+  };
+
+  /* Upvotes the post with the given id.
+   *
+   * Calls: callback(error)
+   *  error -- the error that occurred or NULL if no error occurred
+   */
+
+  NewsfeedModel.upvotePost = function(id, callback) {
+    var request = new XMLHttpRequest();
+    request.addEventListener('load', function() {
+      if (request.status === STATUS_OK) {
+        callback(JSON.parse(request.responseText));
+      } else {
+        callback(request.responseText);
+      }
+    });
+    request.open('POST', 'newsfeed/' + id + '/upvote', true);
+    request.send();
   };
 
   window.NewsfeedModel = NewsfeedModel;

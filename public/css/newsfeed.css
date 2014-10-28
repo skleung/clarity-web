@@ -6,11 +6,40 @@
 
 .newsfeed-post {
   width: 400px;
-  margin: 20px auto;
+  margin: 0px auto;
+  padding: 10px;
 }
 
 .pending-post {
-
+  background-color: #ff7878;
+  /*cursor: pointer;*/
 }
 
+button {
+  border: 0px;
+  background-color: transparent;
+}
 
+button:focus {
+  outline: 0;
+}
+
+button[name='post'],
+button[name='cancel'],
+button[name='upvote'],
+button[name='remove'] {
+  padding: 3px 5px 0px 5px;
+}
+
+button[name='post']:hover,
+button[name='cancel']:hover,
+button[name='upvote']:hover,
+button[name='remove']:hover {
+  background-color: #ddd;
+}
+
+.upvotes {
+  display: inline-block;
+  font-weight: bold;
+  margin-right: 3px;
+}

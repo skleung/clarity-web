@@ -19,9 +19,15 @@
       });
     });
 
-    $pendingPost.find('input[name="cancel"]').bind('click', function(event) {
+    $pendingPost.find('button[name="cancel"]').bind('click', function(event) {
       event.preventDefault();
-      $pendingPost.remove();
+      // $pendingPost.remove();
+      $pendingPost.animate({
+        height: 'toggle',
+        opacity: 'toggle'
+      }, 'slow', function() {
+        $pendingPost.remove();
+      });
     });
   }
 

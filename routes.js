@@ -2,6 +2,8 @@ var soundCloud = require('./lib/soundcloud');
 var youTube = require('./lib/youtube')
 var spotify = require('./lib/spotify')
 
+var mongoose = require('mongoose');
+
 var Post = require('./models/post.js');
 
 //  By default upon authentication, the access_token is saved, but you can add it like
@@ -58,7 +60,10 @@ module.exports = function(app) {
   });
 
   app.post('/newsfeed', function(req, res) {
-    var post = new Post({ src: req.body.src });
+    var post = new Post({
+      src: req.body.src,
+      upvotes: 0
+    });
     post.save(function(error, post) {
       if (error) {
         throw error;
@@ -79,7 +84,7 @@ module.exports = function(app) {
   });
 
   app.post('/newsfeed/:id/remove', function(req, res) {
-    Post.remove({'_id': req.params.id}, function(error, post) {
+    Post.remove({ _id: req.params.id }, function(error, post) {
       if (error) {
         throw error;
       } else {
@@ -89,7 +94,13 @@ module.exports = function(app) {
   });
 
   app.post('/newsfeed/:id/upvote', function(req, res) {
-    console.log('upvote!');
-    res.send(204);
+    var postId = mongoose.Types.ObjectId(req.params.id);
+    var result = Post.findOneAndUpdate(
+      { _id: postId },
+      { '$inc': { upvotes: 1 } },
+      function(error, post) {
+        res.send(post);
+      }
+    );
   });
 };
