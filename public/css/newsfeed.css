@@ -11,7 +11,7 @@
 }
 
 .pending-post {
-  background-color: #ff7878;
+  opacity: 0.3;
   /*cursor: pointer;*/
 }
 
