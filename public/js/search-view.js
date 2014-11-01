@@ -5,14 +5,22 @@
     $('#search-form').bind('submit', function(event) {
       event.preventDefault();
       var query = $('#search-form input[name="query"]').val();
-      SearchView.renderSearchResults($body, query, function($body, post) {
-        $('#search-form input[name="query"]').val('');
-        PendingPostView.render($body, post);
-      });
+      SearchView.renderSearchResults($body, query);
     });
   }
 
-  SearchView.renderSearchResults = function($body, query, callback) {
+  SearchView.selectSearchResult = function($body, $result) {
+    var postContent = {
+      api: $result.attr('api'),
+      src: $result.attr('src'),
+      title: $result.attr('title')
+    }
+    $body.find('#search-menu').hide();
+    $('#search-form input[name="query"]').val('');
+    PendingPostView.render($body, postContent);
+  }
+
+  SearchView.renderSearchResults = function($body, query) {
     var $searchMenu = $body.find('#search-menu');
 
     SearchModel.search(query, function(error, searchResults) {
@@ -29,18 +37,12 @@
         $searchMenu.find('.result').each(function(index, value) {
           var $result = $(value);
           $result.bind('click', function(event) {
-            var postContent = {
-              api: $result.attr('api'),
-              src: $result.attr('src'),
-              title: $result.attr('title')
-            }
-            $searchMenu.hide();
-            callback($body, postContent);
+            SearchView.selectSearchResult($result, $body);
           });
         });
 
         // Binds a click event to hide search menu
-        $(window).bind('click', function(event) {
+        $(window).one('click', function(event) {
           if ($(event.target).closest('.result').length === 0) {
             $searchMenu.hide();
           }

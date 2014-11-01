@@ -34,7 +34,6 @@
         $newsfeedPost.find('p.upvotes').eq(0).html(post.upvotes);
       });
     });
-
   }
 
   window.NewsfeedView = NewsfeedView;
