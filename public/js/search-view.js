@@ -9,13 +9,14 @@
     });
   }
 
-  SearchView.selectSearchResult = function($body, $result) {
+  SearchView.selectSearchResult = function($result, $body) {
     var postContent = {
       api: $result.attr('api'),
       src: $result.attr('src'),
       title: $result.attr('title')
     }
-    $body.find('#search-menu').hide();
+    var $searchMenu = $body.find('#search-menu');
+    $searchMenu.hide();
     $('#search-form input[name="query"]').val('');
     PendingPostView.render($body, postContent);
   }

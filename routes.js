@@ -60,6 +60,16 @@ module.exports = function(app) {
     });
   });
 
+  app.get('/flickr', function(req, res) {
+    flickr.search(req.query.q, function(error, body) {
+      if (error) {
+        throw error;
+      } else {
+        callback(null, body);
+      }
+    });
+  });
+
   app.post('/newsfeed', function(req, res) {
     var post = new Post({
       src: req.body.src,
