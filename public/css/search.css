@@ -51,6 +51,7 @@ div.result:hover {
 p.result-label {
   margin: 0px 0px 0px 5px;
   display: inline-block;
+  width: 90%;
 }
 
 p.no-result-label {
