@@ -33,15 +33,15 @@ module.exports = function(app) {
           }
         });
       },
-      // function(callback) {
-      //   flickr.search(req.query.q, function(error, body) {
-      //     if (error) {
-      //       throw error;
-      //     } else {
-      //       callback(null, body);
-      //     }
-      //   });
-      // }
+      function(callback) {
+        flickr.search(req.query.q, function(error, body) {
+          if (error) {
+            throw error;
+          } else {
+            callback(null, body);
+          }
+        });
+      }
     ];
 
     counter = 0;
@@ -57,16 +57,6 @@ module.exports = function(app) {
           res.send(200, JSON.stringify(results));
         }
       });
-    });
-  });
-
-  app.get('/flickr', function(req, res) {
-    flickr.search(req.query.q, function(error, body) {
-      if (error) {
-        throw error;
-      } else {
-        res.send(200, body);
-      }
     });
   });
 
