@@ -65,7 +65,7 @@ module.exports = function(app) {
       if (error) {
         throw error;
       } else {
-        callback(null, body);
+        res.send(200, body);
       }
     });
   });
