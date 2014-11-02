@@ -8,6 +8,7 @@
   width: 400px;
   margin: 0px auto;
   padding: 10px;
+  background-color: white;
 }
 
 .pending-post {
@@ -42,4 +43,5 @@ button[name='remove']:hover {
   display: inline-block;
   font-weight: bold;
   margin-right: 3px;
+  margin-bottom: 0px;
 }
