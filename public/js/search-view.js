@@ -20,7 +20,7 @@
     $(window).on('click', function(event) {
       var $target = $(event.target);
       if ($target.closest('.result').size() === 0) {
-        $('#search-results').hide();
+        $search.find('#search-results').hide();
       }
     });
   };

@@ -23,6 +23,5 @@ module.exports = function(app, express) {
 
   app.use(app.router);
 
-  // last handler, assume 404 at this point
   app.use(utils.render404);
 };
