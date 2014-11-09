@@ -14,7 +14,7 @@ module.exports = function(app) {
 
   /*
    * Calls each of the APIs in parallel, aggregates the results, and
-   * sends it back to the client.
+   * sends the results back to the client.
    */
   app.get('/search', function(request, response) {
     var results = [];
