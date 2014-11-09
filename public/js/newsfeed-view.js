@@ -1,37 +1,41 @@
 (function(window, document, undefined) {
+  // Retrieve and compile the Handlebars template for rendering posts
+  var $postTemplate = $('#newsfeed-post-template');
+  var templates = {
+    renderPost: Handlebars.compile($postTemplate.html())
+  };
+
   var NewsfeedView = {};
 
-  NewsfeedView.render = function($body) {
-    var $newsfeed = $body.find('#newsfeed');
-    NewsfeedModel.loadAllPosts(function(error, newsfeedPosts) {
+  // TODO: comment the render
+  NewsfeedView.render = function($newsfeed) {
+    Post.loadAll(function(error, posts) {
       if (error) {
-        Util.displayError('Failed loading posts.');
+        $('.error').text('Failed loading posts.');
       } else {
-        newsfeedPosts.forEach(function(post) {
-          NewsfeedView.renderPost($newsfeed, post, false);
+        posts.forEach(function(post) {
+          renderPost($newsfeed, post);
         });
       }
     });
-  }
+  };
 
-  NewsfeedView.renderPost = function($newsfeed, post, pending) {
-    var $newsfeedPost = $(Util.renderNewsfeedPost({ post: post, pending: pending })).prependTo($newsfeed);
-    $newsfeedPost.find('button[name="remove"]').bind('click', function(event) {
+  function renderPost($newsfeed, post) {
+    $newsfeed.html(templates.renderPost(post) + $newsfeed.html());
+
+    // Delete post when the remove button is clicked
+    $post.find('.remove').click(function(event) {
       event.preventDefault();
-      NewsfeedModel.removePost(post._id, function() {
-        // $newsfeedPost.remove();
-        $newsfeedPost.animate({
-          height: 'toggle',
-          opacity: 'toggle'
-        }, 'slow', function() {
-          $newsfeedPost.remove();
-        });
+      Post.remove(post._id, function() {
+        $post.remove();
       });
     });
-    $newsfeedPost.find('button[name="upvote"]').bind('click', function(event) {
+
+    // Vote up the post when the remove button is upvoted
+    $post.find('.upvote').click(function(event) {
       event.preventDefault();
-      NewsfeedModel.upvotePost(post._id, function(post) {
-        $newsfeedPost.find('p.upvotes').eq(0).html(post.upvotes);
+      Post.upvote(post._id, function(post) {
+        $post.find('.upvotes').html(post.upvotes);
       });
     });
   }

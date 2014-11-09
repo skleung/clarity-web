@@ -1,7 +1,7 @@
 (function(window, document, undefined) {
-  var NewsfeedModel = {};
+  var Post = {};
 
-  var NEWSFEED_URL = '/newsfeed';
+  var POST_URL= '/posts';
   var STATUS_OK = 200;
 
   /**
@@ -12,17 +12,16 @@
    *  newsfeedPosts -- an array of newsfeed posts
    */
 
-  NewsfeedModel.loadAllPosts = function(callback) {
+  Post.loadAll = function(callback) {
     var request = new XMLHttpRequest();
     request.addEventListener('load', function() {
       if (request.status === STATUS_OK) {
-        var newsfeedPosts = JSON.parse(request.responseText);
-        callback(null, newsfeedPosts);
+        callback(null, JSON.parse(request.responseText));
       } else {
         callback(request.responseText);
       }
     });
-    request.open('GET', NEWSFEED_URL, true);
+    request.open('GET', POST_URL, true);
     request.send();
   };
 
@@ -34,17 +33,16 @@
    *  post -- the post added, with an id attribute
    */
 
-  NewsfeedModel.addPost = function(post, callback) {
+  Post.add = function(post, callback) {
     var request = new XMLHttpRequest();
     request.addEventListener('load', function() {
       if (request.status === STATUS_OK) {
-        var newsfeedPostAdded = JSON.parse(request.responseText);
-        callback(null, newsfeedPostAdded);
+        callback(null, JSON.parse(request.responseText));
       } else {
         callback(request.responseText);
       }
     });
-    request.open('POST', NEWSFEED_URL, true);
+    request.open('POST', POST_URL, true);
     request.setRequestHeader('Content-type', 'application/json');
     request.send(JSON.stringify(post));
   };
@@ -55,7 +53,7 @@
    *  error -- the error that occurred or NULL if no error occurred
    */
 
-  NewsfeedModel.removePost = function(id, callback) {
+  Post.remove = function(id, callback) {
     var request = new XMLHttpRequest();
     request.addEventListener('load', function() {
       if (request.status === STATUS_OK) {
@@ -64,8 +62,8 @@
         callback(request.responseText);
       }
     });
-    request.open('POST', 'newsfeed/' + id + '/remove', true);
-    request.send();
+    request.open('POST', POST_URL + '/delete', true);
+    request.send({ id: id });
   };
 
   /* Upvotes the post with the given id.
@@ -74,7 +72,7 @@
    *  error -- the error that occurred or NULL if no error occurred
    */
 
-  NewsfeedModel.upvotePost = function(id, callback) {
+  Post.upvote = function(id, callback) {
     var request = new XMLHttpRequest();
     request.addEventListener('load', function() {
       if (request.status === STATUS_OK) {
@@ -83,9 +81,9 @@
         callback(request.responseText);
       }
     });
-    request.open('POST', 'newsfeed/' + id + '/upvote', true);
-    request.send();
+    request.open('POST', POST_URL  + '/upvote', true);
+    request.send({ id: id });
   };
 
-  window.NewsfeedModel = NewsfeedModel;
+  window.Post = Post;
 })(this, this.document);

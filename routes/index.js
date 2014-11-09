@@ -1,107 +1,131 @@
 var flickr = require('../lib/flickr');
-var soundCloud = require('../lib/soundcloud');
-var youTube = require('../lib/youtube');
-
+var soundcloud = require('../lib/soundcloud');
+var youtube = require('../lib/youtube');
 
 var mongoose = require('mongoose');
+var Post = require('../models/post');
 
-var Post = require('../models/post.js');
+var NUM_APIS = 3;
 
-//  By default upon authentication, the access_token is saved, but you can add it like
 module.exports = function(app) {
-  app.get('/', function(req, res) {
-    res.render('index.html');
+  app.get('/', function(request, response) {
+    response.render('index.html');
   });
 
-  app.get('/search', function(req, res) {
-    fns = [
-      function(callback) {
-        youTube.search(req.query.q, function(error, body) {
-          if (error) {
-            throw error;
-          } else {
-            callback(null, body);
-          }
-        });
-      },
-      function(callback) {
-        soundCloud.search(req.query.q, function(error, body) {
-          if (error) {
-            throw error;
-          } else {
-            callback(null, body);
-          }
-        });
-      },
-      function(callback) {
-        flickr.search(req.query.q, function(error, body) {
-          if (error) {
-            throw error;
-          } else {
-            callback(null, body);
-          }
-        });
-      }
-    ];
-
-    counter = 0;
+  /*
+   * Calls each of the APIs in parallel, aggregates the results, and
+   * sends it back to the client.
+   */
+  app.get('/search', function(request, response) {
     var results = [];
-    fns.forEach(function(fn) {
-      fn(function(error, searchResults) {
-        counter += 1;
-        var parsedSearchResults = JSON.parse(searchResults);
-        if (parsedSearchResults[0]) {
-          results.push(parsedSearchResults[0]);
-        }
-        if (counter == fns.length) {
-          res.send(200, JSON.stringify(results));
-        }
-      });
+    var apisProcessed = 0;
+
+    // TODO: make the parameter `q` more well-defined
+    youTube.search(request.query.q, function(error, localResults) {
+      if (error) {
+        throw error;
+      } else {
+        var firstResult = localResults[0];
+        firstResult.api = 'youtube';
+        aggregateResults(firstResult);
+      }
     });
+
+    soundCloud.search(request.query.q, function(error, localResults) {
+      if (error) {
+        throw error;
+      } else {
+        var firstResult = localResults[0];
+        firstResult.api = 'soundcloud';
+        aggregateResults(firstResult);
+      }
+    });
+
+    flickr.search(request.query.q, function(error, localResults) {
+      if (error) {
+        throw error;
+      } else {
+        var firstResult = localResults[0];
+        firstResult.api = 'flickr';
+        aggregateResults(firstResult);
+      }
+    });
+
+    function aggregateResults(firstResult) {
+      apisProcessed += 1;
+
+      if (firstResult) {
+        results.push(firstResult);
+      }
+
+      if (apisProcessed === NUM_APIS) {
+        response.json(200, results);
+      }
+    }
   });
 
-  app.post('/newsfeed', function(req, res) {
+
+  /*
+   * Creates a new post by saving the informaton to MongoDB
+   */
+  app.post('/posts', function(request, res) {
     var post = new Post({
-      src: req.body.src,
+      source: request.body.source,
       upvotes: 0
     });
     post.save(function(error, post) {
       if (error) {
         throw error;
       } else {
-        res.send(post);
+        response.json(post);
       }
     });
   });
 
-  app.get('/newsfeed', function(req, res) {
+  /*
+   * Loads all the posts from MongoDB
+   */
+  app.get('/posts', function(request, response) {
     Post.find(function(error, posts) {
       if (error) {
         throw error;
       } else {
-        res.send(posts);
+        response.json(posts);
       }
     });
   });
 
-  app.post('/newsfeed/:id/remove', function(req, res) {
-    Post.remove({ _id: req.params.id }, function(error, post) {
+  /*
+   * Deletes an existing post by removing the informaton from MongoDB
+   */
+  app.post('/posts/:id/delete', function(request, response) {
+    Post.findByIdAndRemove(request.params.id, function(error, post) {
       if (error) {
         throw error;
       } else {
-        res.send(204);
+        response.send(200);
       }
-    })
+    });
   });
 
-  app.post('/newsfeed/:id/upvote', function(req, res) {
-    var postId = mongoose.Types.ObjectId(req.params.id);
-    var result = Post.findOneAndUpdate(
-      { _id: postId },
-      { '$inc': { upvotes: 1 } },
-      function(error, post) {
-        res.send(post);
+  /*
+   * Upvotes an existing post by retrieving the post, incrementing the vote count,
+   * and re-saving the information to MongoDB
+   */
+  app.post('/posts/:id/upvote', function(request, response) {
+    Post.findById(request.params.id, function(error, post) {
+      if (error) {
+        throw error;
+      } else {
+        post.upvotes += 1;
+        post.save(function(error) {
+          if (error) {
+            throw error;
+          }
+
+          response.json(post);
+        });
       }
-    );
+    });
   });
 };

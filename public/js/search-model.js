@@ -14,9 +14,9 @@
         callback(request.responseText);
       }
     });
-    request.open('GET', SEARCH_URL + '?q=' + encodeURIComponent(query), true);
+    request.open('GET', SEARCH_URL + '?query=' + encodeURIComponent(query), true);
     request.send();
-  }
+  };
 
   window.SearchModel = SearchModel;
 })(this, this.document);
