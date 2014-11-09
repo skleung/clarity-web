@@ -20,8 +20,7 @@ module.exports = function(app) {
     var results = [];
     var apisProcessed = 0;
 
-    // TODO: make the parameter `q` more well-defined
-    youTube.search(request.query.q, function(error, localResults) {
+    youtube.search(request.query.query, function(error, localResults) {
       if (error) {
         throw error;
       } else {
@@ -31,7 +30,7 @@ module.exports = function(app) {
       }
     });
 
-    soundCloud.search(request.query.q, function(error, localResults) {
+    soundcloud.search(request.query.query, function(error, localResults) {
       if (error) {
         throw error;
       } else {
@@ -41,7 +40,7 @@ module.exports = function(app) {
       }
     });
 
-    flickr.search(request.query.q, function(error, localResults) {
+    flickr.search(request.query.query, function(error, localResults) {
       if (error) {
         throw error;
       } else {
@@ -68,8 +67,9 @@ module.exports = function(app) {
   /*
    * Creates a new post by saving the informaton to MongoDB
    */
-  app.post('/posts', function(request, res) {
+  app.post('/posts', function(request, response) {
     var post = new Post({
+      title: request.body.title,
       source: request.body.source,
       upvotes: 0
     });
@@ -98,8 +98,8 @@ module.exports = function(app) {
   /*
    * Deletes an existing post by removing the informaton from MongoDB
    */
-  app.post('/posts/:id/delete', function(request, response) {
-    Post.findByIdAndRemove(request.params.id, function(error, post) {
+  app.post('/posts/delete', function(request, response) {
+    Post.findByIdAndRemove(request.body.id, function(error, post) {
       if (error) {
         throw error;
       } else {
@@ -112,8 +112,8 @@ module.exports = function(app) {
    * Upvotes an existing post by retrieving the post, incrementing the vote count,
    * and re-saving the information to MongoDB
    */
-  app.post('/posts/:id/upvote', function(request, response) {
-    Post.findById(request.params.id, function(error, post) {
+  app.post('/posts/upvote', function(request, response) {
+    Post.findById(request.body.id, function(error, post) {
       if (error) {
         throw error;
       } else {

@@ -34,6 +34,7 @@
    */
 
   Post.add = function(post, callback) {
+    console.log('some post', post);
     var request = new XMLHttpRequest();
     request.addEventListener('load', function() {
       if (request.status === STATUS_OK) {
@@ -63,7 +64,8 @@
       }
     });
     request.open('POST', POST_URL + '/delete', true);
-    request.send({ id: id });
+    request.setRequestHeader('Content-type', 'application/json');
+    request.send(JSON.stringify({ id: id }));
   };
 
   /* Upvotes the post with the given id.
@@ -82,7 +84,8 @@
       }
     });
     request.open('POST', POST_URL  + '/upvote', true);
-    request.send({ id: id });
+    request.setRequestHeader('Content-type', 'application/json');
+    request.send(JSON.stringify({ id: id }));
   };
 
   window.Post = Post;

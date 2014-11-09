@@ -18,7 +18,7 @@
       <form id="search-form">
         <input name="query" type="text" autocomplete="off" placeholder="Search for music">
       </form>
-      <div id="search-menu"></div>
+      <div id="search-results"></div>
     </div>
 
     <div id="sort-wrapper" class="text-center">
@@ -36,7 +36,7 @@
     <script type="text/x-handlebars-template" id="search-results-template">
       {{#if results}}
         {{#each results}}
-          <div class="result" data-api="{{ api }}" data-title="{{ title }}" data-source="{{ source }}">
+          <div class="result">
             <img class="icon" alt="API Icon" src="img/{{ api }}-icon.png">
             <p class="result-label">
              {{title}}
@@ -57,10 +57,10 @@
         <div id="{{ id }}" />
         <iframe type="text/html" width="100%" height="80px" frameborder="0" src="{{ source }}"/>
         <p class="upvotes">{{ upvotes }}</p>
-        <button type="button" name="upvote" value="Upvote">
+        <button type="button" class="upvote">
           <i class="glyphicon glyphicon-chevron-up"></i>
         </button>
-        <button type="button" name="remove" value="Remove">
+        <button type="button" class="remove">
           <i class="glyphicon glyphicon-remove"></i>
         </button>
       </div>
@@ -71,18 +71,14 @@
     <script src="js/lib/bootstrap.min.js"></script>
     <script src="js/lib/handlebars.js"></script>
 
-    <!-- Utilities -->
-    <script src="js/util.js"></script>
-
     <!-- Models -->
-    <script src="js/newsfeed-model.js"></script>
+    <script src="js/post-model.js"></script>
     <script src="js/search-model.js"></script>
 
     <!-- Views -->
     <script src="js/main-view.js"></script>
     <script src="js/newsfeed-view.js"></script>
     <script src="js/search-view.js"></script>
-    <script src="js/pending-post-view.js"></script>
 
     <!-- Main -->
     <script src="js/main.js"></script>

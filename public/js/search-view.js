@@ -7,56 +7,54 @@
 
   var SearchView = {};
 
+  /* Renders the search results into the given $search element. */
   SearchView.render = function($search) {
     $search.find('#search-form').submit(function(event) {
       event.preventDefault();
-      var query = $search.find('#search-form input[name="query"]').val();
-      renderResults($search, query);
+      var $searchInput = $search.find('#search-form input[name="query"]');
+      renderResults($search, $searchInput.val());
     });
 
     // If the search results are visible and the user clicks on something other than
-    // a search result, hide the search menu.
+    // a search result, hide the search results.
     $(window).on('click', function(event) {
       var $target = $(event.target);
       if ($target.closest('.result').size() === 0) {
-        $('#search-menu').hide();
+        $('#search-results').hide();
       }
     });
   };
 
+  /* Searches the different APIs with the provided query and renders the results */
   function renderResults($search, query) {
-    var $searchMenu = $search.find('#search-menu');
+    var $searchResults = $search.find('#search-results');
 
     SearchModel.search(query, function(error, results) {
       if (error) {
         $('.error').text('Failed to load search results.');
       } else {
-        $searchMenu.html(templates.renderSearch({ results: results }));
-        $searchMenu.find('.result').on('click', '.result', function(event) {
-          var $result = $(event.currentTarget);
-          selectSearchResult($search, $result);
+        $searchResults.html(templates.renderSearch({ results: results }));
+        $search.find('.result').each(function(index, resultElement) {
+            $(resultElement).click(function() {
+                selectSearchResult($search, results[index]);
+            });
         });
 
-        $searchMenu.show();
+        $searchResults.show();
       }
     });
   }
 
-  function selectSearchResult($search, $result) {
-    var newPost = {
-      api: $result.attr('data-api'),
-      source: $result.attr('data-source'),
-      title: $result.attr('data-title')
-    };
-    var $searchMenu = $search.find('#search-menu');
-    $searchMenu.hide();
+  /* Creates a new post in the newsfeed from the selected search result information */
+  function selectSearchResult($search, result) {
+    $search.find('#search-results').hide();
     $search.find('#search-form input[name="query"]').val('');
 
-    Post.add(newPost, function(error, post) {
+    Post.add(result, function(error, post) {
       if (error) {
-        $('.error').text('Failed to add post.');
+        $('.error').text('Failed to add the post.');
       } else {
-        NewsfeedView.renderPost($newsfeed, post);
+        NewsfeedView.renderPost($('#newsfeed'), post);
       }
     });
   }
