@@ -77,7 +77,7 @@ module.exports = function(app) {
       if (error) {
         throw error;
       } else {
-        response.json(post);
+        response.json(200, post);
       }
     });
   });
@@ -90,7 +90,7 @@ module.exports = function(app) {
       if (error) {
         throw error;
       } else {
-        response.json(posts);
+        response.json(200, posts);
       }
     });
   });
@@ -123,7 +123,7 @@ module.exports = function(app) {
             throw error;
           }
 
-          response.json(post);
+          response.json(200, post);
         });
       }
     });

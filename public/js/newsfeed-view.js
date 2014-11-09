@@ -22,7 +22,7 @@
 
   /* Given post information, renders a post element into the newsfeed. */
   NewsfeedView.renderPost = function($newsfeed, post) {
-    $post = $(templates.renderPost(post));
+    var $post = $(templates.renderPost(post));
     $post.prependTo($newsfeed);
 
     // Delete post when the remove button is clicked

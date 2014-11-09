@@ -7,11 +7,10 @@
   /**
    * Loads all newsfeed posts from the server.
    *
-   * Calls: callback(error, newsfeedPosts)
+   * Calls: callback(error, posts)
    *  error -- the error that occurred or NULL if no error occurred
-   *  newsfeedPosts -- an array of newsfeed posts
+   *  results -- an array of newsfeed posts
    */
-
   Post.loadAll = function(callback) {
     var request = new XMLHttpRequest();
     request.addEventListener('load', function() {
@@ -32,9 +31,7 @@
    *  error -- the error that occurred or NULL if no error occurred
    *  post -- the post added, with an id attribute
    */
-
   Post.add = function(post, callback) {
-    console.log('some post', post);
     var request = new XMLHttpRequest();
     request.addEventListener('load', function() {
       if (request.status === STATUS_OK) {
@@ -53,7 +50,6 @@
    * Calls: callback(error)
    *  error -- the error that occurred or NULL if no error occurred
    */
-
   Post.remove = function(id, callback) {
     var request = new XMLHttpRequest();
     request.addEventListener('load', function() {
@@ -73,7 +69,6 @@
    * Calls: callback(error)
    *  error -- the error that occurred or NULL if no error occurred
    */
-
   Post.upvote = function(id, callback) {
     var request = new XMLHttpRequest();
     request.addEventListener('load', function() {
