@@ -1,11 +1,13 @@
 var utils = require('./lib/utils.js');
-var ejs = require('ejs-locals');
+var ejs = require('ejs');
+var ejsLocals = require('ejs-locals');
 
 module.exports = function(app, express) {
-  app.engine('ejs', ejs);
+  app.engine('ejs', ejsLocals);
   app.set('views', __dirname + '/views');
   app.set('view engine', 'ejs');
   app.set('view options', { layout: false });
+  app.engine('html', ejs.renderFile);
 
   app.use(express.bodyParser());
   app.use(express.methodOverride());
@@ -24,4 +26,4 @@ module.exports = function(app, express) {
 
   // last handler, assume 404 at this point
   app.use(utils.render404);
-}
+};

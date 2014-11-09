@@ -1,16 +1,16 @@
-var flickr = require('./lib/flickr');
-var soundCloud = require('./lib/soundcloud');
-var youTube = require('./lib/youtube');
+var flickr = require('../lib/flickr');
+var soundCloud = require('../lib/soundcloud');
+var youTube = require('../lib/youtube');
 
 
 var mongoose = require('mongoose');
 
-var Post = require('./models/post.js');
+var Post = require('../models/post.js');
 
 //  By default upon authentication, the access_token is saved, but you can add it like
 module.exports = function(app) {
   app.get('/', function(req, res) {
-    res.render('index.ejs');
+    res.render('index.html');
   });
 
   app.get('/search', function(req, res) {
@@ -45,7 +45,7 @@ module.exports = function(app) {
     ];
 
     counter = 0;
-    results = []
+    var results = [];
     fns.forEach(function(fn) {
       fn(function(error, searchResults) {
         counter += 1;

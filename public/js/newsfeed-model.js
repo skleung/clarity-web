@@ -17,7 +17,6 @@
     request.addEventListener('load', function() {
       if (request.status === STATUS_OK) {
         var newsfeedPosts = JSON.parse(request.responseText);
-        console.log(newsfeedPosts);
         callback(null, newsfeedPosts);
       } else {
         callback(request.responseText);
@@ -25,7 +24,7 @@
     });
     request.open('GET', NEWSFEED_URL, true);
     request.send();
-  }
+  };
 
   /* Adds the given post to the list of posts. The post must *not* have
    * an id associated with it.
