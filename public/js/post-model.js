@@ -20,6 +20,7 @@
         callback(request.responseText);
       }
     });
+
     request.open('GET', POST_URL, true);
     request.send();
   };
@@ -40,6 +41,7 @@
         callback(request.responseText);
       }
     });
+
     request.open('POST', POST_URL, true);
     request.setRequestHeader('Content-type', 'application/json');
     request.send(JSON.stringify(post));
@@ -59,6 +61,7 @@
         callback(request.responseText);
       }
     });
+
     request.open('POST', POST_URL + '/delete', true);
     request.setRequestHeader('Content-type', 'application/json');
     request.send(JSON.stringify({ id: id }));

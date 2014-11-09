@@ -9,9 +9,9 @@
 
   /* Renders the search results into the given $search element. */
   SearchView.render = function($search) {
-    $search.find('#search-form').submit(function(event) {
+    $search.submit(function(event) {
       event.preventDefault();
-      var $searchInput = $search.find('#search-form input[name="query"]');
+      var $searchInput = $search.find('input[name="query"]');
       renderResults($search, $searchInput.val());
     });
 
@@ -28,18 +28,20 @@
   /* Searches the different APIs with the provided query and renders the results */
   function renderResults($search, query) {
     var $searchResults = $search.find('#search-results');
+    $search.addClass('loading');
 
     SearchModel.search(query, function(error, results) {
       if (error) {
         $('.error').text('Failed to load search results.');
       } else {
         $searchResults.html(templates.renderSearch({ results: results }));
-        $search.find('.result').each(function(index, resultElement) {
+        $searchResults.find('.result').each(function(index, resultElement) {
             $(resultElement).click(function() {
                 selectSearchResult($search, results[index]);
             });
         });
 
+        $search.removeClass('loading');
         $searchResults.show();
       }
     });
@@ -48,13 +50,13 @@
   /* Creates a new post in the newsfeed from the selected search result information */
   function selectSearchResult($search, result) {
     $search.find('#search-results').hide();
-    $search.find('#search-form input[name="query"]').val('');
+    $search.find('input[name="query"]').val('');
 
     Post.add(result, function(error, post) {
       if (error) {
         $('.error').text('Failed to add the post.');
       } else {
-        NewsfeedView.renderPost($('#newsfeed'), post);
+        NewsfeedView.renderPost($('#newsfeed'), post, true);
       }
     });
   }

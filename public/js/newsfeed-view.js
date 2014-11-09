@@ -14,14 +14,21 @@
         $('.error').text('Failed loading posts.');
       } else {
         posts.forEach(function(post) {
-          NewsfeedView.renderPost($newsfeed, post);
+          NewsfeedView.renderPost($newsfeed, post, false);
+        });
+
+        $newsfeed.imagesLoaded(function() {
+          $newsfeed.masonry({
+            columnWidth: '.post',
+            itemSelector: '.post'
+          });
         });
       }
     });
   };
 
   /* Given post information, renders a post element into the newsfeed. */
-  NewsfeedView.renderPost = function($newsfeed, post) {
+  NewsfeedView.renderPost = function($newsfeed, post, updateMasonry) {
     var $post = $(templates.renderPost(post));
     $post.prependTo($newsfeed);
 
@@ -29,7 +36,8 @@
     $post.find('.remove').click(function(event) {
       event.preventDefault();
       Post.remove(post._id, function() {
-        $post.remove();
+        $newsfeed.masonry('remove', $post);
+        $newsfeed.masonry();
       });
     });
 
@@ -37,9 +45,15 @@
     $post.find('.upvote').click(function(event) {
       event.preventDefault();
       Post.upvote(post._id, function(post) {
-        $post.find('.upvotes').text(post.upvotes);
+        $post.find('.upvote-count').text(post.upvotes);
       });
     });
+
+    if (updateMasonry) {
+      $newsfeed.imagesLoaded(function() {
+        $newsfeed.masonry('prepended', $post);
+      });
+    }
   };
 
   window.NewsfeedView = NewsfeedView;

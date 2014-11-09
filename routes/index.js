@@ -69,6 +69,7 @@ module.exports = function(app) {
    */
   app.post('/posts', function(request, response) {
     var post = new Post({
+      api: request.body.api,
       title: request.body.title,
       source: request.body.source,
       upvotes: 0

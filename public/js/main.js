@@ -1,8 +1,6 @@
 (function(window, document, undefined) {
 
-  /*
-   * MainView handles all the logic.
-   */
+  /* Render the MainView, which handles application logic. */
   MainView.render($(document.body));
 
 })(this, this.document);
