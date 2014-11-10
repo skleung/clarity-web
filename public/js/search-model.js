@@ -20,6 +20,7 @@
         callback(request.responseText);
       }
     });
+
     request.open('GET', SEARCH_URL + '?query=' + encodeURIComponent(query), true);
     request.send();
   };

@@ -36,6 +36,10 @@ header h1 i.fa {
   overflow: hidden;
 }
 
+#search-bar {
+  overflow: hidden;
+}
+
 #search input {
   float: left;
   border: none;
@@ -47,9 +51,10 @@ header h1 i.fa {
   margin: 5px 0;
 }
 
-#search .title {
+#search span {
   margin: 0;
-  padding-top: 5px;
+  line-height: 32px;
+  font-size: 16px;
 }
 
 #search .loading-icon {

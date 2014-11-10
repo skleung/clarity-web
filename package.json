@@ -8,11 +8,9 @@
   },
   "dependencies": {
     "ejs": "~0.7.1",
-    "ejs-locals": "^1.0.2",
     "express": "^3.0.0",
     "mongodb": "^1.4.9",
     "mongoose": "^3.8.15",
-    "node-fs": "^0.1.7",
     "request": "^2.40.0"
   }
 }

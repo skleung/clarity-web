@@ -9,7 +9,7 @@
 
   /* Renders the newsfeed into the given $newsfeed element. */
   NewsfeedView.render = function($newsfeed) {
-    Post.loadAll(function(error, posts) {
+    PostModel.loadAll(function(error, posts) {
       if (error) {
         $('.error').text('Failed loading posts.');
       } else {
@@ -27,7 +27,7 @@
     });
   };
 
-  /* Given post information, renders a post element into the newsfeed. */
+  /* Given post information, renders a post element into $newsfeed. */
   NewsfeedView.renderPost = function($newsfeed, post, updateMasonry) {
     var $post = $(templates.renderPost(post));
     $post.prependTo($newsfeed);
@@ -35,16 +35,16 @@
     // Delete post when the remove button is clicked
     $post.find('.remove').click(function(event) {
       event.preventDefault();
-      Post.remove(post._id, function() {
+      PostModel.remove(post._id, function() {
         $newsfeed.masonry('remove', $post);
         $newsfeed.masonry();
       });
     });
 
-    // Vote up the post when the remove button is upvoted
+    // Vote up the post when the upvote button is clicked
     $post.find('.upvote').click(function(event) {
       event.preventDefault();
-      Post.upvote(post._id, function(post) {
+      PostModel.upvote(post._id, function(post) {
         $post.find('.upvote-count').text(post.upvotes);
       });
     });

@@ -7,26 +7,17 @@
 
   var SearchView = {};
 
-  /* Renders the search results into the given $search element. */
+  /* Renders the search, allowing the client to query and see results. */
   SearchView.render = function($search) {
     $search.submit(function(event) {
       event.preventDefault();
       var $searchInput = $search.find('input[name="query"]');
-      renderResults($search, $searchInput.val());
-    });
-
-    // If the search results are visible and the user clicks on something other than
-    // a search result, hide the search results.
-    $(window).on('click', function(event) {
-      var $target = $(event.target);
-      if ($target.closest('.result').size() === 0) {
-        $search.find('#search-results').hide();
-      }
+      searchAndRenderResults($search, $searchInput.val());
     });
   };
 
-  /* Searches the different APIs with the provided query and renders the results */
-  function renderResults($search, query) {
+  /* Searches the services with the provided query and renders the results. */
+  function searchAndRenderResults($search, query) {
     var $searchResults = $search.find('#search-results');
     $search.addClass('loading');
 
@@ -35,10 +26,10 @@
         $('.error').text('Failed to load search results.');
       } else {
         $searchResults.html(templates.renderSearch({ results: results }));
-        $searchResults.find('.result').each(function(index, resultElement) {
-            $(resultElement).click(function() {
-                selectSearchResult($search, results[index]);
-            });
+        $searchResults.find('.result').each(function(index, result) {
+          $(result).click(function() {
+            selectSearchResult($search, results[index]);
+          });
         });
 
         $search.removeClass('loading');
@@ -47,12 +38,12 @@
     });
   }
 
-  /* Creates a new post in the newsfeed from the selected search result information */
+  /* Creates a new post in the newsfeed based on the selected search result. */
   function selectSearchResult($search, result) {
     $search.find('#search-results').hide();
     $search.find('input[name="query"]').val('');
 
-    Post.add(result, function(error, post) {
+    PostModel.add(result, function(error, post) {
       if (error) {
         $('.error').text('Failed to add the post.');
       } else {
