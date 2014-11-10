@@ -119,11 +119,15 @@ header h1 i.fa {
   color: #666;
 }
 
+.post .meta {
+  overflow: hidden;
+  padding-bottom: 3px;
+}
+
 .post h2 {
   float: left;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  padding-bottom: 3px;
   font: 14px/1.2 "Cabin", "Helvetica Neue", Helvetica, Arial, Sans-serif;
 }
 
