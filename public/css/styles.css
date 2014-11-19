@@ -1,34 +1,37 @@
 body {
-  color: #fff;
-  font: 16px/1.5 "Cabin", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+  color: #5E388F;
+  font: 16px/1.5 "Open Sans", "Helvetica Neue", Helvetica, Arial, Sans-serif;
   background: #ecf0f1;
 }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-weight: normal;
-  font-family: "Parisienne", Cambria, Georgia, Serif;
+  font-family: "Raleway", Cambria, Georgia, Serif;
 }
 
 header {
   min-width: 960px;
-  background-color: #3776d1;
+  color: white;
+  background-color: #5E388F;
   padding: 20px 0 15px;
   overflow: hidden;
-}
-
-header h1 {
-  float: left;
-}
-
-header h1 i.fa {
-  font-size: 24px;
-  padding-right: 5px;
 }
 
 .container {
   width: 960px;
   margin: 0 auto;
+}
+
+.title {
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 30px;
+  font-weight: 100;
+  font-family: "Helvetica Neue", sans-serif;
 }
 
 #search {
@@ -120,7 +123,7 @@ header h1 i.fa {
   margin-bottom: 13px;
   padding: 0 10px;
 
-  font: 14px/1.2 "Cabin", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+  font: 14px/1.2 "Open Sans", "Helvetica Neue", Helvetica, Arial, Sans-serif;
   color: #666;
 }
 
@@ -133,7 +136,7 @@ header h1 i.fa {
   float: left;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  font: 14px/1.2 "Cabin", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+  font: 14px/1.2 "Open Sans", "Helvetica Neue", Helvetica, Arial, Sans-serif;
 }
 
 .post a {
