@@ -1,17 +1,17 @@
 (function(window, document, undefined) {
-  var PostModel = {};
+  var QuestionModel = {};
 
-  var POST_URL= '/posts';
+  var POST_URL= '/questions';
   var STATUS_OK = 200;
 
   /**
-   * Loads all newsfeed posts from the server.
+   * Loads all newsfeed questions from the server.
    *
-   * Calls: callback(error, posts)
+   * Calls: callback(error, questions)
    *  error -- the error that occurred or null if no error occurred
-   *  results -- an array of newsfeed posts
+   *  results -- an array of newsfeed questions
    */
-  PostModel.loadAll = function(callback) {
+  QuestionModel.loadAll = function(callback) {
     var request = new XMLHttpRequest();
     request.addEventListener('load', function() {
       if (request.status === STATUS_OK) {
@@ -25,14 +25,14 @@
     request.send();
   };
 
-  /* Adds the given post to the list of posts. The post must *not* have
+  /* Adds the given question to the list of questions. The question must *not* have
    * an _id associated with it.
    *
-   * Calls: callback(error, post)
+   * Calls: callback(error, question)
    *  error -- the error that occurred or null if no error occurred
-   *  post -- the post added, with an _id attribute
+   *  question -- the question added, with an _id attribute
    */
-  PostModel.add = function(post, callback) {
+  QuestionModel.add = function(question, callback) {
     var request = new XMLHttpRequest();
     request.addEventListener('load', function() {
       if (request.status === STATUS_OK) {
@@ -44,15 +44,15 @@
 
     request.open('POST', POST_URL, true);
     request.setRequestHeader('Content-type', 'application/json');
-    request.send(JSON.stringify(post));
+    request.send(JSON.stringify(question));
   };
 
-  /* Removes the post with the given id.
+  /* Removes the question with the given id.
    *
    * Calls: callback(error)
    *  error -- the error that occurred or null if no error occurred
    */
-  PostModel.remove = function(id, callback) {
+  QuestionModel.remove = function(id, callback) {
     var request = new XMLHttpRequest();
     request.addEventListener('load', function() {
       if (request.status === STATUS_OK) {
@@ -67,12 +67,12 @@
     request.send(JSON.stringify({ id: id }));
   };
 
-  /* Upvotes the post with the given id.
+  /* Upvotes the question with the given id.
    *
    * Calls: callback(error)
    *  error -- the error that occurred or null if no error occurred
    */
-  PostModel.upvote = function(id, callback) {
+  QuestionModel.upvote = function(id, callback) {
     var request = new XMLHttpRequest();
     request.addEventListener('load', function() {
       if (request.status === STATUS_OK) {
@@ -87,5 +87,5 @@
     request.send(JSON.stringify({ id: id }));
   };
 
-  window.PostModel = PostModel;
+  window.QuestionModel = QuestionModel;
 })(this, this.document);
