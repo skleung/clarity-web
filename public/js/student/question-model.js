@@ -61,5 +61,25 @@
     request.send(JSON.stringify({ id: id }));
   };
 
+  /* Downvotes the question with the given id.
+   *
+   * Calls: callback(error)
+   *  error -- the error that occurred or null if no error occurred
+   */
+  QuestionModel.downvote = function(id, callback) {
+    var request = new XMLHttpRequest();
+    request.addEventListener('load', function() {
+      if (request.status === STATUS_OK) {
+        callback(JSON.parse(request.responseText));
+      } else {
+        callback(request.responseText);
+      }
+    });
+
+    request.open('POST', QUESTION_URL  + '/downvote', true);
+    request.setRequestHeader('Content-type', 'application/json');
+    request.send(JSON.stringify({ id: id }));
+  };
+
   window.QuestionModel = QuestionModel;
 })(this, this.document);
