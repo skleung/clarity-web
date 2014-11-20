@@ -11,6 +11,11 @@
     <link rel="stylesheet" href="/css/styles.css">
   </head>
   <body>
+    <form id="question-form">
+      <input type="text" name="content"></input>
+      <input type="submit"></input>
+    </form>
+
 
     <!-- Libraries -->
     <script src="/js/lib/jquery.min.js"></script>
@@ -20,9 +25,13 @@
     <script src="/js/handlebars-helpers.js"></script>
 
     <!-- Models -->
-    <script src="/js/question-model.js"></script>
+    <script src="/js/student/question-model.js"></script>
+
+    <!-- Views -->
+    <script src="/js/student/student-view.js"></script>
+    <script src="/js/student/main-view.js"></script>
 
     <!-- Main -->
-    <script src="/js/main.js"></script>
+    <script src="/js/student/main.js"></script>
   </body>
 </html>

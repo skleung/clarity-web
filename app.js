@@ -3,7 +3,7 @@ var express = require('express');
 var app = express();
 
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/callback-newsfeed-db');
+mongoose.connect('mongodb://localhost:27017/clarity-db');
 
 var server = http.createServer(app);
 

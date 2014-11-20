@@ -36,7 +36,7 @@ module.exports = function(app) {
   });
 
   /* Handles student question content */
-  app.post('/student/questions', function() {
+  app.post('/student/questions', function(request, response) {
     if (!request.body.content) {
       response.send(422, 'Must provide content.');
     }
