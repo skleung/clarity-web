@@ -1,6 +1,10 @@
 var Question = require('../models/question');
 
-module.exports = function(app) {
+module.exports = function(app, io) {
+  io.on('connection', function(socket) {
+    console.log('a user connected');
+  });
+
   /* Renders the index and landing page. */
   app.get('/', function(request, response) {
     response.render('index.html');

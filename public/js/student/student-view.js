@@ -2,6 +2,11 @@
   var StudentView = {};
 
   StudentView.render = function($questionForm) {
+    console.log('here socket');
+    var socket = io();
+    console.log('there socket');
+
+
     $questionForm.submit(function(event) {
       event.preventDefault();
       QuestionModel.add({
