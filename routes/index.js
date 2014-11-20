@@ -20,6 +20,33 @@ module.exports = function(app) {
     response.render('teacher/teacher-dashboard.html');
   });
 
+  /* Loads all questions from MongoDB. */
+  app.get('/questions', function(request, response) {
+    Question.find(function(error, questions) {
+      if (error) {
+        throw error;
+      } else {
+        response.json(200, questions);
+      }
+    });
+  });
+
+  /* Archives an existing question by removing it from MongoDB. */
+  app.post('/questions/delete', function(request, response) {
+    if (!request.body.id) {
+      response.send(422, 'Must provide an id.');
+      return;
+    }
+
+    Question.findByIdAndRemove(request.body.id, function(error, question) {
+      if (error) {
+        throw error;
+      } else {
+        response.send(200);
+      }
+    });
+  });
+
   /* rendering start page */
   app.get('/start', function(request, response) {
     response.render('teacher/start.html');
