@@ -10,13 +10,13 @@ module.exports = function(app) {
   });
 
   /* rendering dashboard page */
-  app.get('/dashboard', function(request, response) {
-    response.render('dashboard.html');
+  app.get('/teacher/dashboard', function(request, response) {
+    response.render('teacher/teacher-dashboard.html');
   });
 
   /* Renders faux-student view */
-  app.get('/student', function(request, response) {
-    response.render('student.html');
+  app.get('/student/dashboard', function(request, response) {
+    response.render('student/student-dashboard.html');
   });
 
   /* Handles student post content */
@@ -49,6 +49,6 @@ module.exports = function(app) {
 
   /* rendering start page */
   app.get('/start', function(request, response) {
-    response.render('start.html');
+    response.render('teacher/start.html');
   });
 }
