@@ -46,4 +46,9 @@ module.exports = function(app) {
   app.post('/student/posts/archive', function() {
 
   });
+
+  /* rendering start page */
+  app.get('/start', function(request, response) {
+    response.render('start.html');
+  });
 }
