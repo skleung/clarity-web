@@ -42,7 +42,7 @@ section {
   font-family: "Helvetica Neue", sans-serif;
 }
 
-#signup {
+#signup, #question-form {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   color: #4c4c4c;
@@ -221,11 +221,9 @@ section {
   min-height: 600px;
 }
 
-.questions {
+#questions {
   width: 90%;
-  min-width: 960px;
-  max-width: 1500px;
-  margin: 50px auto;
+  margin-top: 50px;
 }
 
 .question {
@@ -233,15 +231,13 @@ section {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   overflow: hidden;
-  width: 33%;
-  margin-left: 10px;
   background-color: white;
 
   margin-bottom: 13px;
   padding: 0px 10px;
 
   font: 14px;
-  color: #666;
+  color: #444;
 }
 
 .question .meta {
@@ -250,8 +246,6 @@ section {
 }
 
 .question h2 {
-  float: left;
-  text-transform: uppercase;
   letter-spacing: 0.5px;
   font-size: 14px;
 }

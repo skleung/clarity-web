@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Clarity</title>
+    <title>clarity</title>
 
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans|Raleway">
     <link rel="stylesheet" href="/css/lib/normalize.css">
@@ -10,11 +10,36 @@
     <link rel="stylesheet" href="/css/lib/bootstrap.min.css">
     <link rel="stylesheet" href="/css/styles.css">
   </head>
+
   <body>
-    <form id="question-form">
-      <input type="text" name="content"></input>
-      <input type="submit"></input>
-    </form>
+    <header>
+      <div class="container">
+        <div class="row-fluid">
+          <div class="col-md-9">
+            <h1 class="title">
+              clarity
+            </h1>
+          </div>
+          <div class="col-md-3">
+            <a href="/logout" id="logout" class="btn btn-default">Logout</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+
+    <div class="container">
+      <div class="col-md-6">
+      </div>
+    </div>
+    <div class="form-container">
+      <form id="question-form">
+        <!-- TODO: have option to select from class that they teach -->
+        <label class="icon-block" for="content"><i class="fa fa-question"></i></label>
+        <input type="text" name="content" placeholder="(e.g. what did David just say?) " required/>
+        <input type="submit"></input>
+      </form>
+    </div>
 
 
     <!-- Libraries -->

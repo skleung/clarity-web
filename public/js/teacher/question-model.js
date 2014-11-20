@@ -11,7 +11,7 @@
    *  error -- the error that occurred or null if no error occurred
    *  question -- the question added, with an _id attribute
    */
-  QuestionModel.loadAll = function(question, callback) {
+  QuestionModel.loadAll = function(callback) {
     var request = new XMLHttpRequest();
     request.addEventListener('load', function() {
       if (request.status === STATUS_OK) {
@@ -22,8 +22,7 @@
     });
 
     request.open('GET', POST_URL, true);
-    request.setRequestHeader('Content-type', 'application/json');
-    request.send(JSON.stringify(question));
+    request.send();
   };
 
   /* Removes/archives the question with the given id.

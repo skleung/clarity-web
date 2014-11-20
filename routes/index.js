@@ -32,7 +32,7 @@ module.exports = function(app) {
   });
 
   /* Archives an existing question by removing it from MongoDB. */
-  app.post('/questions/delete', function(request, response) {
+  app.post('/teacher/questions/delete', function(request, response) {
     if (!request.body.id) {
       response.send(422, 'Must provide an id.');
       return;
