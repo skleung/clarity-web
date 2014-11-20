@@ -1,5 +1,3 @@
-var passport = require('passport');
-
 module.exports = function(app) {
   /* Renders the index and landing page. */
   app.get('/', function(request, response) {
@@ -16,14 +14,36 @@ module.exports = function(app) {
     response.render('dashboard.html');
   });
 
+  /* Renders faux-student view */
+  app.get('/student', function(request, response) {
+    response.render('student.html');
+  });
 
-  // for passport authentication, signin with google
-  app.get('/auth/google', passport.authenticate('google'));
+  /* Handles student post content */
+  app.post('/student/posts', function() {
+    if (!request.body.content) {
+      response.send(422, 'Must provide content.');
+    }
 
-  // Google will redirect the user to this URL after authentication.  Finish
-  // the process by verifying the assertion.  If valid, the user will be
-  // logged in.  Otherwise, authentication has failed.
-  app.get('/auth/google/return', 
-    passport.authenticate('google', { successRedirect: '/',
-                                      failureRedirect: '/login' }));
+    var post = new Post({
+      content: request.body.content,
+      active: true,
+      upvotes: 0
+    });
+
+    post.save(function(error, post) {
+      if (error) {
+        throw error;
+      } else {
+        response.json(200, post);
+      }
+    });
+
+    // socket.io ping teacher socket
+  });
+
+  /* Handles instructor archive student post */
+  app.post('/student/posts/archive', function() {
+
+  });
 }
