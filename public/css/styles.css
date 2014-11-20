@@ -17,6 +17,8 @@ header {
 
 section {
   margin-top: 80px; }
+  section h1, section h2, section h3 {
+    text-align: center; }
 
 .container {
   width: 960px;
@@ -31,23 +33,23 @@ section {
   font-weight: 100;
   font-family: "Helvetica Neue", sans-serif; }
 
-#signup {
+#signup, #question-form {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   color: #4c4c4c; }
-  #signup p {
+  #signup p, #question-form p {
     font-size: 12px;
     width: 150px;
     display: inline-block;
     margin-left: 18px; }
-  #signup h1 {
+  #signup h1, #question-form h1 {
     font-size: 32px;
     font-weight: 300;
     color: #4c4c4c;
     text-align: center;
     padding-top: 10px;
     margin-bottom: 10px; }
-  #signup .form-container {
+  #signup .form-container, #question-form .form-container {
     margin: 20px auto;
     width: 343px;
     height: auto;
@@ -59,18 +61,18 @@ section {
     -moz-box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.31);
     box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.31);
     border: solid 1px #cbc9c9; }
-  #signup input[type=radio] {
+  #signup input[type=radio], #question-form input[type=radio] {
     visibility: hidden; }
-  #signup form {
+  #signup form, #question-form form {
     margin: 0 30px; }
-  #signup label.radio {
+  #signup label.radio, #question-form label.radio {
     cursor: pointer;
     text-indent: 35px;
     overflow: visible;
     display: inline-block;
     position: relative;
     margin-bottom: 15px; }
-  #signup label.radio:before {
+  #signup label.radio:before, #question-form label.radio:before {
     background: #5E388F;
     content: '';
     position: absolute;
@@ -79,7 +81,7 @@ section {
     width: 20px;
     height: 20px;
     border-radius: 100%; }
-  #signup label.radio:after {
+  #signup label.radio:after, #question-form label.radio:after {
     opacity: 0;
     content: '';
     position: absolute;
@@ -96,13 +98,14 @@ section {
     -o-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
     transform: rotate(-45deg); }
-  #signup input[type=radio]:checked + label:after {
+  #signup input[type=radio]:checked + label:after, #question-form input[type=radio]:checked + label:after {
     opacity: 1; }
-  #signup hr {
+  #signup hr, #question-form hr {
     color: #a9a9a9;
     opacity: 0.3; }
-  #signup input[type=text], #signup input[type=password] {
-    width: 200px;
+  #signup input[type=text], #signup input[type=password], #question-form input[type=text], #question-form input[type=password] {
+    min-width: 200px;
+    width: auto;
     height: 39px;
     -webkit-border-radius: 0px 4px 4px 0px/5px 5px 4px 4px;
     -moz-border-radius: 0px 4px 4px 0px/0px 0px 4px 4px;
@@ -115,9 +118,9 @@ section {
     margin-left: -5px;
     margin-top: 13px;
     padding-left: 10px; }
-  #signup input[type=password] {
+  #signup input[type=password], #question-form input[type=password] {
     margin-bottom: 25px; }
-  #signup .icon-block {
+  #signup .icon-block, #question-form .icon-block {
     display: inline-block;
     width: 30px;
     background-color: #5E388F;
@@ -131,13 +134,13 @@ section {
     -moz-box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.09);
     box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.09);
     border: solid 0px #cbc9c9; }
-  #signup .gender {
+  #signup .gender, #question-form .gender {
     margin-left: 30px;
     margin-bottom: 30px; }
-  #signup .accounttype {
+  #signup .accounttype, #question-form .accounttype {
     margin-left: 8px;
     margin-top: 20px; }
-  #signup a.button {
+  #signup a.button, #question-form a.button {
     font-size: 14px;
     font-weight: 600;
     color: white;
@@ -158,7 +161,7 @@ section {
     transition: all 0.1s linear 0s;
     top: 0px;
     position: relative; }
-  #signup a.button:hover {
+  #signup a.button:hover, #question-form a.button:hover {
     top: 3px;
     background-color: #2e458b;
     -webkit-box-shadow: none;
@@ -173,32 +176,26 @@ section {
   width: 100%;
   min-height: 600px; }
 
-.questions {
+#questions {
   width: 90%;
-  min-width: 960px;
-  max-width: 1500px;
-  margin: 50px auto; }
+  margin-top: 50px; }
 
 .question {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   overflow: hidden;
-  width: 33%;
-  margin-left: 10px;
   background-color: white;
   margin-bottom: 13px;
   padding: 0px 10px;
   font: 14px;
-  color: #666; }
+  color: #444; }
 
 .question .meta {
   overflow: hidden;
   padding-bottom: 3px; }
 
 .question h2 {
-  float: left;
-  text-transform: uppercase;
   letter-spacing: 0.5px;
   font-size: 14px; }
 

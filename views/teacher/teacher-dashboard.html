@@ -30,7 +30,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-3">
-          <ul class="questions">
+          <ul id="questions">
           </ul>
         </div>
         <div class="col-md-9">
@@ -43,10 +43,10 @@
     <script type="text/x-handlebars-template" id="question-template">
       <li class="question">
         <div class="meta">
-          <h2> {{ text }} </h2>
+          <h2> {{ content }} </h2>
           <div class="actions">
             <a href="#" class="upvote pull-left">
-              <span class="upvote-count"> {{ vote }}</span>
+              <span class="upvote-count"> {{ upvotes }}</span>
             </a>
 
             <a href="#" class="archive pull-right">
@@ -65,6 +65,12 @@
     <script src="/js/handlebars-helpers.js"></script>
 
     <!-- Models -->
+    <script src="/js/teacher/bar-model.js"></script>
+    <script src="/js/teacher/question-model.js"></script>
+
+    <!-- Views -->
+    <script src="/js/teacher/main-view.js"></script>
+
 
     <!-- Main -->
     <script src="/js/teacher/main.js"></script>

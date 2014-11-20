@@ -1,5 +1,5 @@
 (function(window, document, undefined) {
-
+  // Retrieve and compile the Handlebars template for rendering questions
   var $questionTemplate = $('#question-template');
   var templates = {
     renderQuestion: Handlebars.compile($questionTemplate.html())
@@ -7,11 +7,9 @@
 
   var MainView = {};
 
+  /* Renders the question into the given $question element. */
   MainView.render = function($body) {
-    StudentView.render($body.find('#question-form'));
-
-    //render the questions
-    $questions = $body.find("#questions")
+    $questions = $body.find('#questions')
     QuestionModel.loadAll(function(error, questions) {
       if (error) {
         $('.error').text('Failed loading questions.');
@@ -39,5 +37,6 @@
       });
     });
   };
+
   window.MainView = MainView;
 })(this, this.document);
