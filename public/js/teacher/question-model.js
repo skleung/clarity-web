@@ -1,7 +1,7 @@
 (function(window, document, undefined) {
   var QuestionModel = {};
 
-  var POST_URL= '/questions';
+  var POST_URL= '/teacher/questions';
   var STATUS_OK = 200;
 
   /* Adds the given question to the list of questions. The question must *not* have

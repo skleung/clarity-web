@@ -21,7 +21,7 @@ module.exports = function(app) {
   });
 
   /* Loads all questions from MongoDB. */
-  app.get('/questions', function(request, response) {
+  app.get('/teacher/questions', function(request, response) {
     Question.find(function(error, questions) {
       if (error) {
         throw error;
