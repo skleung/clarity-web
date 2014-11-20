@@ -8,10 +8,10 @@
         content: $questionForm.find('input[name=content]').val()
       }, function(error, question) {
         if (error) {
-          // $('.error').text('Failed to add the post.');
+          console.log(error)
         } else {
           // Success!
-          console.log(question);
+          MainView.render($("body"));
         }
       });
     });
