@@ -1,10 +1,6 @@
 var Question = require('../models/question');
 
 module.exports = function(app, io) {
-  io.on('connection', function(socket) {
-    console.log('a user connected');
-  });
-
   /* Renders the index and landing page. */
   app.get('/', function(request, response) {
     response.render('index.html');
@@ -93,6 +89,7 @@ module.exports = function(app, io) {
       if (error) {
         throw error;
       } else {
+        io.emit('create-question', question); // io.emit abstracts out JSON encoding
         response.json(200, question);
       }
     });

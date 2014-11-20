@@ -4,6 +4,16 @@
   var QUESTIONS_URL = '/teacher/questions';
   var STATUS_OK = 200;
 
+  QuestionModel.connectSocket = function(createCallback, archiveCallback) {
+    var socket = io();
+    socket.on('create-question', function(question) {
+      createCallback(question);
+    });
+    socket.on('archive-question', function(id) {
+      archiveCallback(id);
+    });
+  }
+
   /* Adds the given question to the list of questions. The question must *not* have
    * an _id associated with it.
    *

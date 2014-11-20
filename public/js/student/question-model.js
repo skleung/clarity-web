@@ -1,10 +1,20 @@
 (function(window, document, undefined) {
   var QuestionModel = {};
 
-  var QUESTION_URL= '/student/questions';
+  var QUESTIONS_URL = '/student/questions';
   var STATUS_OK = 200;
 
-  // loads questions from the database
+  QuestionModel.connectSocket = function(createCallback, archiveCallback) {
+    var socket = io();
+    socket.on('create-question', function(question) {
+      createCallback(question);
+    });
+    socket.on('archive-question', function(id) {
+      archiveCallback(id);
+    });
+  }
+
+  /* Loads questions from the database */
   QuestionModel.loadAll = function(callback) {
     var request = new XMLHttpRequest();
     request.addEventListener('load', function() {
@@ -15,7 +25,7 @@
       }
     });
 
-    request.open('GET', QUESTION_URL, true);
+    request.open('GET', QUESTIONS_URL, true);
     request.send();
   };
 
@@ -36,7 +46,7 @@
       }
     });
 
-    request.open('POST', QUESTION_URL, true);
+    request.open('POST', QUESTIONS_URL, true);
     request.setRequestHeader('Content-type', 'application/json');
     request.send(JSON.stringify(question));
   };
@@ -56,7 +66,7 @@
       }
     });
 
-    request.open('POST', QUESTION_URL  + '/upvote', true);
+    request.open('POST', QUESTIONS_URL  + '/upvote', true);
     request.setRequestHeader('Content-type', 'application/json');
     request.send(JSON.stringify({ id: id }));
   };

@@ -1,11 +1,19 @@
 (function(window, document, undefined) {
   var StudentView = {};
 
-  StudentView.render = function($questionForm) {
-    console.log('here socket');
-    var socket = io();
-    console.log('there socket');
+  StudentView.renderCreate = function(question) {
+    // callback to render action of creating question in view
+    console.log(question);
+  };
 
+  StudentView.renderArchive = function(id) {
+    // callback to render action of archiving question in view
+  };
+
+
+  StudentView.render = function($questionForm) {
+    // Use "this.renderCreate()" and "this.renderArchive" here?
+    QuestionModel.connectSocket(StudentView.renderCreate, StudentView.renderArchive);
 
     $questionForm.submit(function(event) {
       event.preventDefault();
