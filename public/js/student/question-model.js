@@ -4,27 +4,6 @@
   var POST_URL= '/questions';
   var STATUS_OK = 200;
 
-  /**
-   * Loads all newsfeed questions from the server.
-   *
-   * Calls: callback(error, questions)
-   *  error -- the error that occurred or null if no error occurred
-   *  results -- an array of newsfeed questions
-   */
-  QuestionModel.loadAll = function(callback) {
-    var request = new XMLHttpRequest();
-    request.addEventListener('load', function() {
-      if (request.status === STATUS_OK) {
-        callback(null, JSON.parse(request.responseText));
-      } else {
-        callback(request.responseText);
-      }
-    });
-
-    request.open('GET', POST_URL, true);
-    request.send();
-  };
-
   /* Adds the given question to the list of questions. The question must *not* have
    * an _id associated with it.
    *
