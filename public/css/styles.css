@@ -1,157 +1,174 @@
 body {
-  color: #5E388F;
+  color: black;
   font: 16px/1.5 "Open Sans", "Helvetica Neue", Helvetica, Arial, Sans-serif;
-  background: #ecf0f1;
-}
+  background: #ecf0f1; }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-weight: normal;
-  font-family: "Raleway", Cambria, Georgia, Serif;
-}
+  font-family: "Raleway", Cambria, Georgia, Serif; }
 
 header {
   min-width: 960px;
   color: white;
   background-color: #5E388F;
   padding: 20px 0 15px;
-  overflow: hidden;
-}
+  overflow: hidden; }
+
+section {
+  margin-top: 80px; }
 
 .container {
   width: 960px;
-  margin: 0 auto;
-}
+  margin: 0 auto; }
 
 .title {
   font-size: 50px;
-  font-weight: 700;
-}
+  font-weight: 700; }
 
 .subtitle {
   font-size: 30px;
   font-weight: 100;
-  font-family: "Helvetica Neue", sans-serif;
-}
+  font-family: "Helvetica Neue", sans-serif; }
 
-#search {
-  float: right;
-  overflow: hidden;
-}
-
-#search-bar {
-  overflow: hidden;
-}
-
-#search input {
-  float: left;
-  border: none;
-  padding: 7px 10px;
-  width: 480px;
-  background: #f6f6f6;
-  outline: none;
-  color: #555;
-  margin: 5px 0;
-}
-
-#search span {
-  margin: 0;
-  line-height: 32px;
+#signup {
+  font-family: 'Open Sans', sans-serif;
   font-size: 16px;
-}
+  color: #4c4c4c; }
+  #signup p {
+    font-size: 12px;
+    width: 150px;
+    display: inline-block;
+    margin-left: 18px; }
+  #signup h1 {
+    font-size: 32px;
+    font-weight: 300;
+    color: #4c4c4c;
+    text-align: center;
+    padding-top: 10px;
+    margin-bottom: 10px; }
+  #signup html {
+    background-color: #ffffff; }
+  #signup .form-container {
+    margin: 20px auto;
+    width: 343px;
+    height: auto;
+    -webkit-border-radius: 8px/7px;
+    -moz-border-radius: 8px/7px;
+    border-radius: 8px/7px;
+    background-color: #ebebeb;
+    -webkit-box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.31);
+    -moz-box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.31);
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.31);
+    border: solid 1px #cbc9c9; }
+  #signup input[type=radio] {
+    visibility: hidden; }
+  #signup form {
+    margin: 0 30px; }
+  #signup label.radio {
+    cursor: pointer;
+    text-indent: 35px;
+    overflow: visible;
+    display: inline-block;
+    position: relative;
+    margin-bottom: 15px; }
+  #signup label.radio:before {
+    background: #5E388F;
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%; }
+  #signup label.radio:after {
+    opacity: 0;
+    content: '';
+    position: absolute;
+    width: 0.5em;
+    height: 0.25em;
+    background: transparent;
+    top: 7.5px;
+    left: 4.5px;
+    border: 3px solid #ffffff;
+    border-top: none;
+    border-right: none;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
+  #signup input[type=radio]:checked + label:after {
+    opacity: 1; }
+  #signup hr {
+    color: #a9a9a9;
+    opacity: 0.3; }
+  #signup input[type=text], #signup input[type=password] {
+    width: 200px;
+    height: 39px;
+    -webkit-border-radius: 0px 4px 4px 0px/5px 5px 4px 4px;
+    -moz-border-radius: 0px 4px 4px 0px/0px 0px 4px 4px;
+    border-radius: 0px 4px 4px 0px/5px 5px 4px 4px;
+    background-color: #fff;
+    -webkit-box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.09);
+    -moz-box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.09);
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.09);
+    border: solid 1px #cbc9c9;
+    margin-left: -5px;
+    margin-top: 13px;
+    padding-left: 10px; }
+  #signup input[type=password] {
+    margin-bottom: 25px; }
+  #signup .icon-block {
+    display: inline-block;
+    width: 30px;
+    background-color: #5E388F;
+    padding: 8px 0px 8px 15px;
+    margin-left: 15px;
+    -webkit-border-radius: 4px 0px 0px 4px;
+    -moz-border-radius: 4px 0px 0px 4px;
+    border-radius: 4px 0px 0px 4px;
+    color: white;
+    -webkit-box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.09);
+    -moz-box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.09);
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.09);
+    border: solid 0px #cbc9c9; }
+  #signup .gender {
+    margin-left: 30px;
+    margin-bottom: 30px; }
+  #signup .accounttype {
+    margin-left: 8px;
+    margin-top: 20px; }
+  #signup a.button {
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    padding: 6px 25px 0px 20px;
+    margin: 10px 8px 20px 0px;
+    display: inline-block;
+    margin-left: 15px;
+    text-decoration: none;
+    width: 50px;
+    height: 27px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: #5E388F;
+    -webkit-box-shadow: 0 3px rgba(58, 87, 175, 0.75);
+    -moz-box-shadow: 0 3px rgba(58, 87, 175, 0.75);
+    box-shadow: 0 3px rgba(58, 87, 175, 0.75);
+    transition: all 0.1s linear 0s;
+    top: 0px;
+    position: relative; }
+  #signup a.button:hover {
+    top: 3px;
+    background-color: #2e458b;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none; }
 
-#search .loading-icon {
-  display: none;
-  float: left;
-  padding: 5px 0 0 5px;
-}
+#logout {
+  position: relative;
+  margin-top: 35px; }
 
-#search.loading .loading-icon {
-  display: block;
-}
-
-#search button {
-  float: left;
-  border: none;
-  background: transparent;
-  padding: 11px 0 0 7px;
-  color: #fff;
-  outline: none;
-}
-
-#search.loading button {
-  display: none;
-}
-
-#search-results {
-  width: 500px;
-}
-
-#search-results .result {
-  overflow: hidden;
-  padding: 5px 8px;
-  cursor: pointer;
-  font-size: 15px;
-}
-
-#search-results .result:hover {
-  background: #3366bb;
-}
-
-#search-results img {
-  width: 32px;
-  float: left;
-  padding-right: 7px;
-}
-
-#newsfeed {
-  width: 90%;
-  min-width: 960px;
-  max-width: 1500px;
-  margin: 50px auto;
-  color: #444;
-}
-
-.post {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  overflow: hidden;
-
-  width: 33%;
-  display: inline-block;
-  margin-bottom: 13px;
-  padding: 0 10px;
-
-  font: 14px/1.2 "Open Sans", "Helvetica Neue", Helvetica, Arial, Sans-serif;
-  color: #666;
-}
-
-.post .meta {
-  overflow: hidden;
-  padding-bottom: 3px;
-}
-
-.post h2 {
-  float: left;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  font: 14px/1.2 "Open Sans", "Helvetica Neue", Helvetica, Arial, Sans-serif;
-}
-
-.post a {
-  color: #527EC9;
-  text-decoration: none;
-}
-
-.post img {
-  width: 100%;
-}
-
-.post .actions {
-  float: right;
-}
-
-.post .separator {
-  padding: 0 3px;
-}
+/*# sourceMappingURL=styles.css.map */
