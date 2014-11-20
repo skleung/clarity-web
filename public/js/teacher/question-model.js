@@ -1,7 +1,7 @@
 (function(window, document, undefined) {
   var QuestionModel = {};
 
-  var POST_URL= '/teacher/questions';
+  var QUESTIONS_URL = '/teacher/questions';
   var STATUS_OK = 200;
 
   /* Adds the given question to the list of questions. The question must *not* have
@@ -21,7 +21,7 @@
       }
     });
 
-    request.open('GET', POST_URL, true);
+    request.open('GET', QUESTIONS_URL , true);
     request.send();
   };
 
@@ -40,7 +40,7 @@
       }
     });
 
-    request.open('POST', POST_URL + '/delete', true);
+    request.open('POST', QUESTIONS_URL  + '/delete', true);
     request.setRequestHeader('Content-type', 'application/json');
     request.send(JSON.stringify({ id: id }));
   };

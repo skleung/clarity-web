@@ -30,17 +30,40 @@
 
     <div class="container">
       <div class="col-md-6">
+        <ul id="questions">
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <div class="form-container">
+          <form id="question-form">
+            <!-- TODO: have option to select from class that they teach -->
+            <label class="icon-block" for="content"><i class="fa fa-question"></i></label>
+            <input type="text" name="content" placeholder="(e.g. what did David just say?) " required/>
+            <input type="submit"></input>
+          </form>
+        </div>
       </div>
     </div>
-    <div class="form-container">
-      <form id="question-form">
-        <!-- TODO: have option to select from class that they teach -->
-        <label class="icon-block" for="content"><i class="fa fa-question"></i></label>
-        <input type="text" name="content" placeholder="(e.g. what did David just say?) " required/>
-        <input type="submit"></input>
-      </form>
-    </div>
 
+
+
+    <!-- handlebars template -->
+    <script type="text/x-handlebars-template" id="question-template">
+      <li class="question">
+        <div class="meta">
+          <h2> {{ content }} </h2>
+          <div class="actions">
+            <a href="#" class="upvote pull-left">
+              <span class="upvote-count"> {{ upvotes }}</span>
+            </a>
+
+            <a href="#" class="archive pull-right">
+              <i class="fa fa-check"></i>
+            </a>
+          </div>
+        </div>
+      </li>
+    </script>
 
     <!-- Libraries -->
     <script src="/js/lib/jquery.min.js"></script>
@@ -55,6 +78,7 @@
     <!-- Views -->
     <script src="/js/student/student-view.js"></script>
     <script src="/js/student/main-view.js"></script>
+
 
     <!-- Main -->
     <script src="/js/student/main.js"></script>

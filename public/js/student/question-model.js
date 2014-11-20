@@ -4,6 +4,21 @@
   var QUESTION_URL= '/student/questions';
   var STATUS_OK = 200;
 
+  // loads questions from the database
+  QuestionModel.loadAll = function(callback) {
+    var request = new XMLHttpRequest();
+    request.addEventListener('load', function() {
+      if (request.status === STATUS_OK) {
+        callback(null, JSON.parse(request.responseText));
+      } else {
+        callback(request.responseText);
+      }
+    });
+
+    request.open('GET', QUESTION_URL, true);
+    request.send();
+  };
+
   /* Adds the given question to the list of questions. The question must *not* have
    * an _id associated with it.
    *

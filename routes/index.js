@@ -58,6 +58,17 @@ module.exports = function(app) {
    */
 
   /* Renders faux-student view */
+  /* Loads all questions from MongoDB. */
+  app.get('/student/questions', function(request, response) {
+    Question.find(function(error, questions) {
+      if (error) {
+        throw error;
+      } else {
+        response.json(200, questions);
+      }
+    });
+  });
+
   app.get('/student/dashboard', function(request, response) {
     response.render('student/student-dashboard.html');
   });
