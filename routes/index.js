@@ -97,6 +97,56 @@ module.exports = function(app, io) {
     // socket.io ping teacher socket
   });
 
+
+  /* Upvotes an existing question by retrieving it, incrementing the vote count,
+   * and saving it to MongoDB. */
+  app.post('/student/questions/upvote', function(request, response) {
+    if (!request.body.id) {
+      response.send(422, 'Must provide an id.');
+      return;
+    }
+
+    Question.findById(request.body.id, function(error, question) {
+      if (error) {
+        throw error;
+      }
+
+      question.upvotes += 1;
+      question.save(function(error) {
+        if (error) {
+          throw error;
+        }
+
+        response.json(200, question);
+      });
+    });
+  });
+
+  /* Upvotes an existing question by retrieving it, incrementing the vote count,
+   * and saving it to MongoDB. */
+  app.post('/student/questions/downvote', function(request, response) {
+    console.log(request.body.id)
+    if (!request.body.id) {
+      response.send(422, 'Must provide an id.');
+      return;
+    }
+
+    Question.findById(request.body.id, function(error, question) {
+      if (error) {
+        throw error;
+      }
+
+      question.upvotes -= 1;
+      question.save(function(error) {
+        if (error) {
+          throw error;
+        }
+
+        response.json(200, question);
+      });
+    });
+  });
+
   /* Handles instructor archive student question */
   app.post('/student/questions/archive', function() {
 

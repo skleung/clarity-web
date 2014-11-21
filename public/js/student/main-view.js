@@ -31,11 +31,29 @@
     }
 
     // Delete question when the archive button is clicked
-    $question.find('.archive').click(function(event) {
+    $question.find('.remove').click(function(event) {
       event.preventDefault();
       QuestionModel.remove(question._id, function() {
         // Remove the question from the ticker list
         $question.slideUp("normal", function() { $(this).remove(); } );
+      });
+    });
+
+    // Delete question when the archive button is clicked
+    $question.find('#up').click(function(event) {
+      event.preventDefault();
+      QuestionModel.upvote(question._id, function(question) {
+        // rerender list to display upvotes?
+        $question.find('.upvote-count').text(question.upvotes);
+      });
+    });
+
+    // Delete question when the archive button is clicked
+    $question.find('#down').click(function(event) {
+      event.preventDefault();
+      QuestionModel.downvote(question._id, function(question) {
+        // rerender list to display upvotes?
+        $question.find('.upvote-count').text(question.upvotes);
       });
     });
   };

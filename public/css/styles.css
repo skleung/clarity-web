@@ -104,8 +104,7 @@ section {
     color: #a9a9a9;
     opacity: 0.3; }
   #signup input[type=text], #signup input[type=password], #question-form input[type=text], #question-form input[type=password] {
-    min-width: 200px;
-    width: auto;
+    width: 200px;
     height: 39px;
     -webkit-border-radius: 0px 4px 4px 0px/5px 5px 4px 4px;
     -moz-border-radius: 0px 4px 4px 0px/0px 0px 4px 4px;
@@ -174,7 +173,7 @@ section {
 
 #presentation {
   width: 100%;
-  min-height: 600px; }
+  min-height: 100%; }
 
 #questions {
   width: 90%;
@@ -214,6 +213,6 @@ section {
 
 .question:hover {
   cursor: pointer;
-  font-weight: 700; }
+  background-color: #e1d7ef; }
 
 /*# sourceMappingURL=styles.css.map */
