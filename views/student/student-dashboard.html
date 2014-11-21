@@ -35,11 +35,14 @@
       </div>
       <div class="col-md-6">
         <div class="form-container">
+          <h1> What would you like clarity on? </h1>
           <form id="question-form">
             <!-- TODO: have option to select from class that they teach -->
-            <label class="icon-block" for="content"><i class="fa fa-question"></i></label>
-            <input type="text" name="content" placeholder="(e.g. what did David just say?) " required/>
-            <input type="submit"></input>
+            <div class="input-group">
+              <label class="icon-block" for="content"><i class="fa fa-question"></i></label>
+              <input class="form-control" type="text" name="content" placeholder="(e.g. what did David just say?)" required/>
+              <input type="submit"></input>
+            </div>
           </form>
         </div>
       </div>
@@ -57,7 +60,6 @@
               <i id="up" class="fa fa-chevron-up"></i>
               <i id="down" class="fa fa-chevron-down"></i>
               <span class="upvote-count"> {{ upvotes }}</span>
-
             </a>
 
             <a href="#" class="remove pull-right">

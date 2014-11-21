@@ -10,11 +10,13 @@
   StudentView.renderCreate = function(question) {
     // callback to render action of creating question in view
     // TODO-ALERT: This isn't rendering on another student's page!
+    console.log(question);
     StudentView.renderQuestion($("#questions"), question);
   };
 
   StudentView.renderArchive = function(id) {
     // callback to render action of archiving question in view
+    console.log(id);
   };
 
 

@@ -86,7 +86,7 @@
       }
     });
 
-    request.open('POST', QUESTION_URL  + '/downvote', true);
+    request.open('POST', QUESTIONS_URL  + '/downvote', true);
     request.setRequestHeader('Content-type', 'application/json');
     request.send(JSON.stringify({ id: id }));
   };

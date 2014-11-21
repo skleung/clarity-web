@@ -4,13 +4,10 @@
   var QUESTIONS_URL = '/teacher/questions';
   var STATUS_OK = 200;
 
-  QuestionModel.connectSocket = function(createCallback, archiveCallback) {
+  QuestionModel.connectSocket = function(createCallback) {
     var socket = io();
     socket.on('create-question', function(question) {
       createCallback(question);
-    });
-    socket.on('archive-question', function(id) {
-      archiveCallback(id);
     });
   }
 

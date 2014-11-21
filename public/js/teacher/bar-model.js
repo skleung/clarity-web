@@ -18,7 +18,7 @@
       if (request.status === STATUS_OK) {
         callback(null, JSON.parse(request.responseText));
       } else {
-        callback(request.responseText);
+        callback(request.responseText, null);
       }
     });
 

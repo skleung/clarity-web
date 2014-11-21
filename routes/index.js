@@ -125,7 +125,6 @@ module.exports = function(app, io) {
   /* Upvotes an existing question by retrieving it, incrementing the vote count,
    * and saving it to MongoDB. */
   app.post('/student/questions/downvote', function(request, response) {
-    console.log(request.body.id)
     if (!request.body.id) {
       response.send(422, 'Must provide an id.');
       return;
@@ -141,10 +140,16 @@ module.exports = function(app, io) {
         if (error) {
           throw error;
         }
-
+        console.log("QUESTION");
+        console.log(question);
         response.json(200, question);
       });
     });
+  });
+
+  app.get('/bars', function(request, response) {
+    var understanding = 55+Math.random()*10;
+    response.json(200, {"understanding": understanding});
   });
 
   /* Handles instructor archive student question */

@@ -2,11 +2,12 @@
 
   var MainView = {};
 
+
   MainView.render = function($body) {
     StudentView.render($body.find('#question-form'));
-
+    QuestionModel.connectSocket(MainView.renderCreate, MainView.renderArchive);
     //render the questions
-    $questions = $body.find("#questions")
+    $questions = $body.find("#questions");
     QuestionModel.loadAll(function(error, questions) {
       if (error) {
         $('.error').text('Failed loading questions.');
@@ -16,6 +17,8 @@
         });
       }
     });
+
+    
   };
   window.MainView = MainView;
 })(this, this.document);
