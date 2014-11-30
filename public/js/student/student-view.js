@@ -9,7 +9,7 @@
 
   StudentView.renderCreate = function(question) {
     // callback to render action of creating question in view
-    debugger
+    // debugger
     StudentView.renderQuestion($("#questions"), question);
   };
 
@@ -19,7 +19,6 @@
 
   StudentView.renderUpvote = function(q) {
     $(".question").each(function(index) {
-      debugger
       if (index.id == q.id) {
         console.log(index);
 
@@ -42,7 +41,7 @@
           console.log(error)
         } else {
           // Success!
-          MainView.render($("body"));
+          // MainView.render($("body"));
         }
       });
     });
