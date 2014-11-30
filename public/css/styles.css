@@ -142,7 +142,7 @@ section {
   #signup .accounttype, #question-form .accounttype {
     margin-left: 8px;
     margin-top: 20px; }
-  #signup a.button, #question-form a.button {
+  #signup a.button, #signup input.button, #question-form a.button, #question-form input.button {
     font-size: 14px;
     font-weight: 600;
     color: white;
