@@ -103,7 +103,6 @@ module.exports = function(app, io) {
       if (error) {
         throw error;
       } else {
-        console.log("creating");
         io.emit('create-question', question); // io.emit abstracts out JSON encoding
         response.json(200, question);
       }

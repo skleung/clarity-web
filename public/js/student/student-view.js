@@ -9,7 +9,6 @@
 
   StudentView.renderCreate = function(question) {
     // callback to render action of creating question in view
-    // debugger
     StudentView.renderQuestion($("#questions"), question);
   };
 
@@ -18,10 +17,14 @@
   };
 
   StudentView.renderUpvote = function(q) {
-    $(".question").each(function(index) {
-      if (index.id == q.id) {
+    $(".question").each(function(index, question) {
+      console.log(index);
+      console.log($(this));
+      console.log(q);
+      if (question.content === q.content) {
+        console.log(question.id);
         console.log(index);
-
+        console.log(q.id);
       }
     });
   }
@@ -40,8 +43,7 @@
         if (error) {
           console.log(error)
         } else {
-          // Success!
-          // MainView.render($("body"));
+          console.log("saved question.")
         }
       });
     });
