@@ -4,13 +4,16 @@
   var QUESTIONS_URL = '/student/questions';
   var STATUS_OK = 200;
 
-  QuestionModel.connectSocket = function(createCallback, archiveCallback) {
+  QuestionModel.connectSocket = function(createCallback, archiveCallback, upvoteCallback) {
     var socket = io();
     socket.on('create-question', function(question) {
       createCallback(question);
     });
-    socket.on('archive-question', function(id) {
-      archiveCallback(id);
+    socket.on('archive-question', function(question) {
+      archiveCallback(question);
+    });
+    socket.on('upvote-question', function(question) {
+      upvoteCallback(question);
     });
   }
 

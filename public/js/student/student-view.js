@@ -9,20 +9,28 @@
 
   StudentView.renderCreate = function(question) {
     // callback to render action of creating question in view
-    // TODO-ALERT: This isn't rendering on another student's page!
-    console.log(question);
+    // debugger
     StudentView.renderQuestion($("#questions"), question);
   };
 
   StudentView.renderArchive = function(id) {
     // callback to render action of archiving question in view
-    console.log(id);
   };
+
+  StudentView.renderUpvote = function(q) {
+    $(".question").each(function(index) {
+      if (index.id == q.id) {
+        console.log(index);
+
+      }
+    });
+  }
+
 
 
   StudentView.render = function($questionForm) {
     // Use "this.renderCreate()" and "this.renderArchive" here?
-    QuestionModel.connectSocket(StudentView.renderCreate, StudentView.renderArchive);
+    QuestionModel.connectSocket(StudentView.renderCreate, StudentView.renderArchive, StudentView.renderUpvote);
 
     $questionForm.submit(function(event) {
       event.preventDefault();
@@ -33,7 +41,7 @@
           console.log(error)
         } else {
           // Success!
-          MainView.render($("body"));
+          // MainView.render($("body"));
         }
       });
     });

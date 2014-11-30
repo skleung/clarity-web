@@ -31,23 +31,23 @@
       <div class="container">
         <div class="form-container">
           <h1>Sign up today!</h1>
-          <form action="/start">
+          <form action="/login-post" method="GET">
             <hr>
               <div class="accounttype">
-                <input type="radio" value="None" id="radioOne" name="account" checked/>
+                <input type="radio" value="teacher" id="radioOne" name="account" checked/>
                 <label for="radioOne" class="radio" chec>Teacher</label>
-                <input type="radio" value="None" id="radioTwo" name="account" />
+                <input type="radio" value="student" id="radioTwo" name="account" />
                 <label for="radioTwo" class="radio">Student</label>
               </div>
             <hr>
             <label class="icon-block" for="name"><i class="fa fa-envelope "></i></label>
-            <input type="text" name="name" id="name" placeholder="Email" required/>
+            <input type="text" name="email" id="email" placeholder="Email" required/>
             <label class="icon-block" for="name"><i class="fa fa-user"></i></label>
             <input type="text" name="name" id="name" placeholder="Name" required/>
             <label class="icon-block" for="name"><i class="fa fa-shield"></i></label>
-            <input type="password" name="name" id="name" placeholder="Password" required/>
+            <input type="password" name="password" id="name" placeholder="Password" required/>
 
-            <a href="/start" class="button">Register</a>
+            <input type="submit" class="button">Register</input>
           </form>
         </div>
       </div>
