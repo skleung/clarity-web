@@ -6,6 +6,7 @@
 
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans|Raleway">
     <link rel="stylesheet" href="/css/lib/normalize.css">
+    <link rel="stylesheet" href="/css/lib/animate.css">
     <link rel="stylesheet" href="/css/lib/font-awesome.min.css">
     <link rel="stylesheet" href="/css/lib/bootstrap.min.css">
     <link rel="stylesheet" href="/css/styles.css">
@@ -29,22 +30,24 @@
     
 
     <div class="container">
-      <div class="col-md-6">
+      <div class="col-md-6 col-md-offset-4 text-center">
         <ul id="questions">
         </ul>
-      </div>
-      <div class="col-md-6">
-        <div class="form-container">
-          <h1> What would you like clarity on? </h1>
-          <form id="question-form">
-            <!-- TODO: have option to select from class that they teach -->
-            <div class="input-group">
-              <label class="icon-block" for="content"><i class="fa fa-question"></i></label>
-              <input class="form-control" type="text" name="content" placeholder="(e.g. what did David just say?)" required/>
-              <input type="submit"></input>
-            </div>
-          </form>
-        </div>
+        <form id="new-question-form">
+        <div class="input-group">
+            <input type="text" class="form-control">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button">Go!</button>
+            </span>
+          </div><!-- /input-group -->
+          <!-- TODO: have option to select from class that they teach -->
+          
+            <input type="text" name="content" placeholder="What would you like clarity on?" required></input>
+            <input type="submit" class="btn btn-primary"></input>
+
+
+
+        </form>
       </div>
     </div>
 

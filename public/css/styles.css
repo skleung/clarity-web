@@ -221,6 +221,12 @@ section {
 
 .question:hover {
   cursor: pointer;
-  background-color: #e1d7ef; }
+  background-color: #e1d7ef; 
+}
+
+.question.highlighted {
+  cursor: pointer;
+  background-color: #e1d7ef; 
+}
 
 /*# sourceMappingURL=styles.css.map */
