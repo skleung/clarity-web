@@ -1,0 +1,14 @@
+Now
+
+Lightbulb in student view
+rendering removal of question in both the teacher and student views
+Keyboard shorcuts for teacher archive (shouldn't have to aim cursor at button during lecture)
+Redesign understanding bar
+Plus button to add a question and render subsequent form
+Add timestamp (e.g. 56s ago)
+
+
+Future
+
+Sort by post time and/or poster in addition to upvotes
+Undo accidental archival or deletion of question like Gmail trash
