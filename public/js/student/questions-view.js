@@ -15,9 +15,6 @@
 
   QuestionsView.archiveQuestion = function(id) {
     // callback to render action of archiving question in view
-    console.log(id);
-    // delete question with associated id from questions-list (server-side
-    // socket.io has been configured)
     $(".question").each(function(index) {
       var curId = $(this).find(".id").val()
       if (curId === id) {
