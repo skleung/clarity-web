@@ -26,10 +26,6 @@ section {
   }
   margin-top: 80px;
 }
-.container {
-  width: 960px;
-  margin: 0 auto;
-}
 
 .form-container {
   padding: 10px 0;
@@ -257,6 +253,29 @@ section {
   color: #444;
 }
 
+a.home-link{
+  color: inherit;
+}
+a.home-link:hover{
+  text-decoration: none;
+}
+
+.new-question-wrapper h2{
+  padding: 20px;
+}
+
+#submit-new-question{
+  margin-top: 10px;
+}
+
+.new-question-wrapper input{
+  width: 90%;
+  height: 40px;
+  outline: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .question .meta {
   overflow: hidden;
   padding-bottom: 3px;
@@ -286,4 +305,8 @@ section {
 .question:hover{
   cursor: pointer;
   background-color: lighten($bg-color, 50%);
+}
+.new-question-wrapper:hover{
+  cursor: pointer;
+  background-color: white;
 }

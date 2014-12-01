@@ -20,10 +20,6 @@ section {
   section h1, section h2, section h3 {
     text-align: center; }
 
-.container {
-  width: 960px;
-  margin: 0 auto; }
-
 .form-container {
   padding: 10px 0; }
 
@@ -52,9 +48,11 @@ section {
     text-align: center;
     padding-top: 10px;
     margin-bottom: 10px; }
+  #signup #radioTwo, #question-form #radioTwo {
+    margin-left: 12px; }
   #signup .form-container, #question-form .form-container {
     margin: 20px auto;
-    width: 343px;
+    width: 323px;
     height: auto;
     -webkit-border-radius: 8px/7px;
     -moz-border-radius: 8px/7px;
@@ -67,7 +65,7 @@ section {
   #signup input[type=radio], #question-form input[type=radio] {
     visibility: hidden; }
   #signup form, #question-form form {
-    margin: 0 30px; }
+    margin: 10px 10px; }
   #signup label.radio, #question-form label.radio {
     cursor: pointer;
     text-indent: 35px;
@@ -108,7 +106,7 @@ section {
     opacity: 0.3; }
   #signup input[type=text], #signup input[type=password], #question-form input[type=text], #question-form input[type=password] {
     width: 200px;
-    height: 39px;
+    height: 36px;
     -webkit-border-radius: 0px 4px 4px 0px/5px 5px 4px 4px;
     -moz-border-radius: 0px 4px 4px 0px/0px 0px 4px 4px;
     border-radius: 0px 4px 4px 0px/5px 5px 4px 4px;
@@ -118,10 +116,8 @@ section {
     box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.09);
     border: solid 1px #cbc9c9;
     margin-left: -5px;
-    margin-top: 13px;
+    margin-top: 10px;
     padding-left: 10px; }
-  #signup input[type=password], #question-form input[type=password] {
-    margin-bottom: 25px; }
   #signup .icon-block, #question-form .icon-block {
     display: inline-block;
     width: 30px;
@@ -139,16 +135,19 @@ section {
   #signup .gender, #question-form .gender {
     margin-left: 30px;
     margin-bottom: 30px; }
+  #signup input[type=radio], #question-form input[type=radio] {
+    display: none; }
   #signup .accounttype, #question-form .accounttype {
-    margin-left: 8px;
-    margin-top: 20px; }
+    margin: 20px auto; }
+  #signup form, #question-form form {
+    text-align: center; }
   #signup a.button, #signup input.button, #question-form a.button, #question-form input.button {
     font-size: 14px;
     font-weight: 600;
     color: white;
     text-align: center;
     padding: 6px 25px 0px 20px;
-    margin: 10px 8px 20px 0px;
+    margin: 10px auto;
     display: inline-block;
     margin-left: 15px;
     text-decoration: none;
@@ -198,6 +197,25 @@ section {
   font: 14px;
   color: #444; }
 
+a.home-link {
+  color: inherit; }
+
+a.home-link:hover {
+  text-decoration: none; }
+
+.new-question-wrapper h2 {
+  padding: 20px; }
+
+#submit-new-question {
+  margin-top: 10px; }
+
+.new-question-wrapper input {
+  width: 90%;
+  height: 40px;
+  outline: none;
+  margin-top: 10px;
+  margin-bottom: 10px; }
+
 .question .meta {
   overflow: hidden;
   padding-bottom: 3px; }
@@ -221,12 +239,10 @@ section {
 
 .question:hover {
   cursor: pointer;
-  background-color: #e1d7ef; 
-}
+  background-color: #e1d7ef; }
 
-.question.highlighted {
+.new-question-wrapper:hover {
   cursor: pointer;
-  background-color: #e1d7ef; 
-}
+  background-color: white; }
 
 /*# sourceMappingURL=styles.css.map */

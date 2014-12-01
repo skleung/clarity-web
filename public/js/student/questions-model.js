@@ -92,5 +92,24 @@
     request.send(JSON.stringify({ id: id }));
   };
 
+  /* Removes/archives the question with the given id.
+   *
+   * Calls: callback(error)
+   *  error -- the error that occurred or null if no error occurred
+   */
+  QuestionsModel.remove = function(id, callback) {
+    var request = new XMLHttpRequest();
+    request.addEventListener('load', function() {
+      if (request.status === STATUS_OK) {
+        callback(null);
+      } else {
+        callback(request.responseText);
+      }
+    });
+    request.open('POST', '/teacher/questions/delete', true);
+    request.setRequestHeader('Content-type', 'application/json');
+    request.send(JSON.stringify({ id: id }));
+  };
+
   window.QuestionsModel = QuestionsModel;
 })(this, this.document);

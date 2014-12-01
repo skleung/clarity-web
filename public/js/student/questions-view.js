@@ -2,8 +2,10 @@
   var QuestionsView = {};
 
   var $questionTemplate = $('#question-template');
+  var $newQuestionTemplate = $('#new-question-template');
   var templates = {
-    renderQuestion: Handlebars.compile($questionTemplate.html())
+    renderQuestion: Handlebars.compile($questionTemplate.html()),
+    renderNewQuestionForm: Handlebars.compile($newQuestionTemplate.html())
   };
 
   QuestionsView.createQuestion = function(question) {
@@ -16,6 +18,12 @@
     console.log(id);
     // delete question with associated id from questions-list (server-side
     // socket.io has been configured)
+    $(".question").each(function(index) {
+      var curId = $(this).find(".id").val()
+      if (curId === id) {
+        $(this).slideUp();
+      }
+    });
   };
 
   QuestionsView.upvoteQuestion = function(q) {
@@ -53,20 +61,33 @@
         $('.error').text('Failed loading questions.');
       } else {
         questions.sort(function(a, b) {
-          return a.upvotes - b.upvotes
+          return b.upvotes - a.upvotes
         });
         questions.forEach(function(question) {
           QuestionsView.renderQuestion($questions, question);
         });
       }
     });
+    var $newQuestionForm = $(templates.renderNewQuestionForm())
+    $questions.prepend($newQuestionForm);
 
+
+    var $newQuestionInput = $("#new-question-text");
+    var $newQuestionTrigger = $("#add-new-question");
+    var $newQuestionSubmitButton = $body.find('#submit-new-question');
+    $newQuestionInput.hide();
+    $newQuestionSubmitButton.hide()
+
+    $newQuestionTrigger.click(function() {
+      $newQuestionInput.slideDown("fast");
+      $newQuestionSubmitButton.show();
+      $(this).hide();
+    });
     // Attaches event listeners to question form
-    var $questionForm = $body.find('#question-form');
-    $questionForm.submit(function(event) {
-      event.preventDefault();
+    
+    var addQuestion = function() {
       QuestionsModel.add({
-        content: $questionForm.find('input[name=content]').val()
+        content: $newQuestionInput.val()
       }, function(error, question) {
         if (error) {
           console.log(error);
@@ -74,6 +95,20 @@
           console.log("saved question.");
         }
       });
+      $newQuestionSubmitButton.hide();
+      $newQuestionInput.val("");
+      $newQuestionInput.hide();
+      $newQuestionTrigger.show();
+    };
+
+    $newQuestionSubmitButton.click(function(event) {
+      addQuestion();
+    });
+
+    $newQuestionInput.keyup(function(event) {
+      if (event.keyCode === 13) {
+        addQuestion();
+      }
     });
   };
 
@@ -81,17 +116,17 @@
   QuestionsView.renderQuestion = function($questions, question) {
     var $question = $(templates.renderQuestion(question));
     if (question.active) {
-      $question.prependTo($questions);
+      $question.appendTo($questions);
     }
 
-    // // Delete question when the archive button is clicked
-    // $question.find('.remove').click(function(event) {
-    //   event.preventDefault();
-    //   QuestionsModel.remove(question._id, function() {
-    //     // Remove the question from the ticker list
-    //     $question.slideUp("normal", function() { $(this).remove(); } );
-    //   });
-    // });
+    // Delete question when the archive button is clicked
+    $question.find('.remove').click(function(event) {
+      event.preventDefault();
+      QuestionsModel.remove(question._id, function() {
+        // Remove the question from the ticker list
+        $question.slideUp("normal", function() { $(this).remove(); } );
+      });
+    });
 
     // Delete question when the archive button is clicked
     $question.find('#up').click(function(event) {

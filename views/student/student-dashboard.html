@@ -17,12 +17,13 @@
       <div class="container">
         <div class="row-fluid">
           <div class="col-md-9">
-            <h1 class="title">
+            <a class="home-link" href="/"><h1 class="title">
               clarity
             </h1>
+          </a>
           </div>
           <div class="col-md-3">
-            <a href="/logout" id="logout" class="btn btn-default" style="color: white">Logout</a>
+            <a href="/logout" id="logout" class="btn btn-link" style="color:white">Logout</a>
           </div>
         </div>
       </div>
@@ -30,24 +31,9 @@
 
 
     <div class="container">
-      <div class="col-md-6 col-md-offset-4 text-center">
+      <div class="col-md-8 col-md-offset-2 text-center">
         <ul id="questions">
         </ul>
-        <form id="question-form">
-        <div class="input-group">
-            <input type="text" class="form-control">
-            <span class="input-group-btn">
-              <button class="btn btn-default" type="button">Go!</button>
-            </span>
-          </div><!-- /input-group -->
-          <!-- TODO: have option to select from class that they teach -->
-
-            <input type="text" name="content" placeholder="What would you like clarity on?" required></input>
-            <input type="submit" class="btn btn-primary"></input>
-
-
-
-        </form>
       </div>
     </div>
 
@@ -74,13 +60,23 @@
       </li>
     </script>
 
+    <script type="text/x-handlebars-template" id="new-question-template">
+      <li class="question new-question-wrapper">
+        <div class="meta">
+          <h2 id="add-new-question"><a href="#" ><i class="fa fa-plus"></i>Add a new question</a></h2>
+          <input id="new-question-text" type="text" placeholder="What are you seeking clarity on?"/>
+            <a href="#" id="submit-new-question" class="remove pull-right">
+              <i class="fa fa-2x fa-check-circle"></i>
+            </a>
+        </div>
+      </li>
+    </script>
+
     <!-- Libraries -->
     <script src="/js/lib/jquery.min.js"></script>
     <script src="/js/lib/handlebars.js"></script>
     <script src="/js/lib/libsocket.io-1.2.0.js"></script>
 
-    <!-- Helpers -->
-    <script src="/js/handlebars-helpers.js"></script>
 
     <!-- Models -->
     <script src="/js/student/questions-model.js"></script>
@@ -88,7 +84,6 @@
     <!-- Views -->
     <script src="/js/student/questions-view.js"></script>
     <script src="/js/student/main-view.js"></script>
-
 
     <!-- Main -->
     <script src="/js/student/main.js"></script>
