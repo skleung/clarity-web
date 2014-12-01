@@ -27,13 +27,13 @@
         </div>
       </div>
     </header>
-    
+
 
     <div class="container">
       <div class="col-md-6 col-md-offset-4 text-center">
         <ul id="questions">
         </ul>
-        <form id="new-question-form">
+        <form id="question-form">
         <div class="input-group">
             <input type="text" class="form-control">
             <span class="input-group-btn">
@@ -41,7 +41,7 @@
             </span>
           </div><!-- /input-group -->
           <!-- TODO: have option to select from class that they teach -->
-          
+
             <input type="text" name="content" placeholder="What would you like clarity on?" required></input>
             <input type="submit" class="btn btn-primary"></input>
 
@@ -83,10 +83,10 @@
     <script src="/js/handlebars-helpers.js"></script>
 
     <!-- Models -->
-    <script src="/js/student/question-model.js"></script>
+    <script src="/js/student/questions-model.js"></script>
 
     <!-- Views -->
-    <script src="/js/student/student-view.js"></script>
+    <script src="/js/student/questions-view.js"></script>
     <script src="/js/student/main-view.js"></script>
 
 

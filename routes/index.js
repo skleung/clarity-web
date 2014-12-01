@@ -16,7 +16,7 @@ module.exports = function(app, io) {
       response.writeHead(301,
         { Location: '/teacher/dashboard'}
       );
-      response.send();    
+      response.send();
     } else {
       response.writeHead(301,
         { Location: '/student/dashboard'}
@@ -47,16 +47,18 @@ module.exports = function(app, io) {
 
   /* Archives an existing question by removing it from MongoDB. */
   app.post('/teacher/questions/delete', function(request, response) {
-    if (!request.body.id) {
+    var id = request.body.id;
+    if (!id) {
       response.send(422, 'Must provide an id.');
       return;
     }
 
-    Question.findByIdAndRemove(request.body.id, function(error, question) {
+    Question.findByIdAndRemove(id, function(error, question) {
       if (error) {
         throw error;
       } else {
         response.send(200);
+        io.emit('archive-question', id); // io.emit abstracts out JSON encoding
       }
     });
   });
@@ -92,7 +94,6 @@ module.exports = function(app, io) {
     if (!request.body.content) {
       response.send(422, 'Must provide content.');
     }
-
     var question = new Question({
       content: request.body.content,
       active: true,
