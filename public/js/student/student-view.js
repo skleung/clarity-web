@@ -17,14 +17,22 @@
   };
 
   StudentView.renderUpvote = function(q) {
-    $(".question").each(function(index, question) {
-      console.log(index);
-      console.log($(this));
-      console.log(q);
-      if (question.content === q.content) {
-        console.log(question.id);
-        console.log(index);
-        console.log(q.id);
+    $(".question").each(function(index) {
+      var curId = $(this).find(".id").val()
+      if (curId === q._id) {
+        $(this).find('.upvote-count').text(q.upvotes);
+        // Get the above question
+        var aboveUpvotes = undefined;
+        var $aboveQuestion = undefined;
+        if (index > 0) {
+          $aboveQuestion = $($(".question")[index-1]);
+          aboveUpvotes = parseInt($aboveQuestion.find(".upvote-count").html())
+        }
+        if (aboveUpvotes !== undefined && q.upvotes > aboveUpvotes){
+          $aboveQuestion.removeClass('animated bounceIn')
+          $aboveQuestion.insertAfter($(this));
+          $(this).addClass('animated bounceIn');
+        }
       }
     });
   }
@@ -69,8 +77,7 @@
     $question.find('#up').click(function(event) {
       event.preventDefault();
       QuestionModel.upvote(question._id, function(question) {
-        // rerender list to display upvotes?
-        $question.find('.upvote-count').text(question.upvotes);
+        //succeeding in upvoting
       });
     });
 
@@ -79,7 +86,6 @@
       event.preventDefault();
       QuestionModel.downvote(question._id, function(question) {
         // rerender list to display upvotes?
-        $question.find('.upvote-count').text(question.upvotes);
       });
     });
   };
