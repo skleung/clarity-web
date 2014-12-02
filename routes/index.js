@@ -25,6 +25,10 @@ module.exports = function(app, io) {
     }
   });
 
+  app.get('/student/join', function(request, response) {
+    response.render('student/join.html')
+  });
+
   /*
    * Teachers
    */

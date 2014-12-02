@@ -76,7 +76,7 @@
     $newQuestionSubmitButton.hide()
 
     $newQuestionTrigger.click(function() {
-      $newQuestionInput.slideDown("fast");
+      $newQuestionInput.fadeIn("fast");
       $newQuestionSubmitButton.show();
       $(this).hide();
     });

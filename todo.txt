@@ -1,4 +1,9 @@
-Now
+
+Sherman: 
+View by post time button sorting button
+Logout potentially as footer
+
+
 
 Lightbulb in student view
 Keyboard shorcuts for teacher archive (shouldn't have to aim cursor at button during lecture)
@@ -12,5 +17,11 @@ Sort by post time and/or poster in addition to upvotes
 Undo accidental archival or deletion of question like Gmail trash
 
 Done
-Plus button to add a question and render subsequent form
-rendering removal of question in both the teacher and student views
+  Plus button to add a question and render subsequent form
+  rendering removal of question in both the teacher and student views
+  Asking for confirmation of check
+  Search bar for the teacher
+  A mock-view for the classes near you
+  Have place marker for Teacher with name of university
+  Use switch button for understanding
+  Center logo and search bar to the right

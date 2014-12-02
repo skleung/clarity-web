@@ -13,10 +13,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 header {
-  min-width: 960px;
   color: white;
   background-color: $bg-color;
-  padding: 20px 0 15px;
+  padding: 20px 20px;
   overflow: hidden;
 }
 
@@ -25,6 +24,10 @@ section {
     text-align: center;
   }
   margin-top: 80px;
+}
+
+#search-form {
+  margin-top: 35px;
 }
 
 .form-container {
@@ -41,6 +44,13 @@ section {
   font-weight: 100;
   font-family: "Helvetica Neue", sans-serif;
 }
+
+@media screen and (max-width: 480px)
+{
+  .subtitle {
+    font-size: 20px;
+  }
+} 
 
 #signup, #question-form {
   font-family: 'Open Sans', sans-serif;
@@ -78,6 +88,13 @@ section {
     -moz-box-shadow: 1px 2px 5px rgba(0,0,0,.31);
     box-shadow: 1px 2px 5px rgba(0,0,0,.31);
     border: solid 1px #cbc9c9;
+  }
+  .class-list-wrapper {
+    background-color: white;
+  }
+  .class-list {
+    width: 100%;
+    margin-left: 0px;
   }
 
   input[type=radio] {
@@ -157,7 +174,7 @@ section {
     display: inline-block;
     width: 30px;
     background-color: $bg-color;
-    padding: 8px 0px 8px 15px;
+    padding: 8px 8px 8px 15px;
     margin-left: 15px;
     -webkit-border-radius: 4px 0px 0px 4px;
     -moz-border-radius: 4px 0px 0px 4px;
@@ -236,7 +253,6 @@ section {
 
 #questions {
   width: 90%;
-  margin-top: 50px;
 }
 
 .question {
@@ -255,11 +271,16 @@ section {
 
 a.home-link{
   color: inherit;
+  text-decoration: none;
 }
 a.home-link:hover{
   text-decoration: none;
 }
 
+
+.col-sm-4 {
+  width: 33%;
+}
 .new-question-wrapper h2{
   padding: 20px;
 }
@@ -272,22 +293,24 @@ a.home-link:hover{
   width: 90%;
   height: 40px;
   outline: none;
+  border: none;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
 .question .meta {
   overflow: hidden;
+  padding-top: 10px;
   padding-bottom: 3px;
 }
 
 .question h2 {
   letter-spacing: 0.5px;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .question a {
-  color: #527EC9;
+  color: $bg-color;
   text-decoration: none;
 }
 
@@ -301,6 +324,42 @@ a.home-link:hover{
     font-size: 25px;
     margin-bottom: 3px;
   }
+}
+
+.question #archive-confirm {
+  display: none;
+}
+#archive-confirm:hover {
+  text-decoration: none;
+}
+.toggle-action {
+  font-size: 20px;
+  margin-top: 15px;
+}
+.search-bar {
+  margin-top: 20px;
+}
+.search-bar a{
+  color: white;
+  text-decoration:none;
+}
+.search-bar a:hover{
+  text-decoration:none;
+}
+
+.class-list {
+  .row {
+    font-size: 20px;  
+    padding: 15px 0px;  
+  }
+  .row.active, .row:hover{
+    cursor: pointer;
+    background-color:lighten($bg-color, 50%);
+  }
+}
+.sorting-links {
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 .question:hover{
   cursor: pointer;

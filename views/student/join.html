@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>clarity</title>
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans|Raleway">
+    <link rel="stylesheet" href="/css/lib/normalize.css">
+    <link rel="stylesheet" href="/css/lib/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <div class="row">
+          <h1 class="title">
+            clarity
+          </h1>
+        </div>
+        <div class="row">
+          <h3 class="subtitle">
+            closing the student-teacher feedback loop
+          </h3>
+        </div>
+      </div>
+    </header>
+
+    <section id="signup">
+      <div class="container">
+        <h2>Join a class near you!</h2>
+        <div class="form-container class-list-wrapper">
+          <form action="/start" class="class-list">
+            <!-- TODO: have option to select from class that they teach -->
+            <a href="/student/dashboard" class="home-link">
+              <div class="row">
+                CS 147
+              </div>
+            </a>
+            <a href="/student/dashboard" class="home-link">
+              <div class="row">
+                CS 108
+              </div>
+            </a>
+            <a href="/student/dashboard" class="home-link">
+              <div class="row">
+                CS 221
+              </div>
+            </a>
+
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Libraries -->
+    <script src="/js/lib/jquery.min.js"></script>
+    <script src="/js/lib/handlebars.js"></script>
+
+    <!-- Helpers -->
+    <script src="/js/handlebars-helpers.js"></script>
+
+    <!-- Models -->
+    <script src="/js/post-model.js"></script>
+    <script src="/js/search-model.js"></script>
+
+    <!-- Views -->
+    <script src="/js/main-view.js"></script>
+    <script src="/js/search-view.js"></script>
+    <script src="/js/newsfeed-view.js"></script>
+
+    <!-- Main -->
+    <script src="/js/main.js"></script>
+  </body>
+</html>

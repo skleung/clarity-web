@@ -65,8 +65,11 @@
       $question.prependTo($questions);
     }
 
+    $question.find(".archive").click(function(event) {
+      $question.find("#archive-confirm").animate({width:'toggle'},350);
+    });
     // Delete question when the archive button is clicked
-    $question.find('.archive').click(function(event) {
+    $question.find('#archive-confirm').click(function(event) {
       event.preventDefault();
       QuestionsModel.remove(question._id, function() {
         // Remove the question from the ticker list

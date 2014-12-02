@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="/css/lib/font-awesome.min.css">
     <link rel="stylesheet" href="/css/lib/animate.css">
     <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/lib/bootstrap.min.css">
+
   </head>
 
   <body>
@@ -18,12 +18,18 @@
       <div class="container">
         <div class="row-fluid">
           <div class="col-md-9">
-            <h1 class="title">
-              clarity
-            </h1>
+            <a class="home-link" href="/">
+              <h1 class="title">
+                clarity
+              </h1>
+            </a>
           </div>
           <div class="col-md-3">
-            <a href="/logout" id="logout" class="btn btn-link" style="color: white;">Logout</a>
+            <form class="navbar-form navbar-left" id="search-form" role="search">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search">
+              </div>
+            </form>
           </div>
         </div>
       </div>
@@ -41,7 +47,7 @@
           </ul>
         </div>
         <div class="col-md-9">
-          <iframe src="http://shermanleung.com/clarity" id="presentation"></iframe>
+          <iframe src="https://docs.google.com/presentation/d/1xUCSirzpr0XrUlUkqpGd6W0eDjmR2A46rqRYPOIGXo4/" id="presentation"></iframe>
         </div>
       </div>
     </div>
@@ -58,7 +64,7 @@
             </a>
 
             <a href="#" class="archive pull-right">
-              <i class="fa fa-check"></i>
+              <i class="fa fa-check"></i><a href="#" class="pull-right" id="archive-confirm">Confirm Archive?</a>
             </a>
           </div>
         </div>
