@@ -107,11 +107,12 @@ section {
 
   label.radio {
     cursor: pointer;
-    text-indent: 35px;
+    text-indent: 25px;
     overflow: visible;
     display: inline-block;
     position: relative;
     margin-bottom: 15px;
+    margin-right: 15px;
   }
 
   label.radio:before {
