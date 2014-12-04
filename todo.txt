@@ -1,11 +1,9 @@
 
 Sherman: 
-View by post time button sorting button
 Logout potentially as footer
 
 
 
-Lightbulb in student view
 Keyboard shorcuts for teacher archive (shouldn't have to aim cursor at button during lecture)
 Redesign understanding bar
 Add timestamp (e.g. 56s ago)
@@ -25,3 +23,5 @@ Done
   Have place marker for Teacher with name of university
   Use switch button for understanding
   Center logo and search bar to the right
+  Lightbulb in student view
+  View by post time button sorting button

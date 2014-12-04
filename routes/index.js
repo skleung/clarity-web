@@ -101,6 +101,7 @@ module.exports = function(app, io) {
     var question = new Question({
       content: request.body.content,
       active: true,
+      created_at: Date.now(),
       upvotes: 0
     });
 

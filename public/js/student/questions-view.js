@@ -74,7 +74,6 @@
     var $newQuestionSubmitButton = $body.find('#submit-new-question');
     $newQuestionInput.hide();
     $newQuestionSubmitButton.hide()
-
     $newQuestionTrigger.click(function() {
       $newQuestionInput.fadeIn("fast");
       $newQuestionSubmitButton.show();
@@ -111,6 +110,22 @@
 
   /* Given question information, renders a question element into $question. */
   QuestionsView.renderQuestion = function($questions, question) {
+
+    // calculates milliseconds elapsed
+    var msElapsed = Date.now() - Date.parse(question.created_at);
+    var minElapsed = Math.round(msElapsed/1000/60);
+    var hoursElapsed = 0;
+    if (minElapsed > 60) {
+      hoursElapsed = Math.floor(minElapsed/60);
+    }
+    // string to display next to post
+    var lastUpdated = "";
+    if (hoursElapsed === 0){
+      lastUpdated = minElapsed + "m";
+    } else {
+      lastUpdated = hoursElapsed + "h";
+    }
+    question.lastUpdated = lastUpdated;
     var $question = $(templates.renderQuestion(question));
     if (question.active) {
       $question.appendTo($questions);
