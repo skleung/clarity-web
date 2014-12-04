@@ -66,7 +66,7 @@
     }
 
     $question.find(".archive").click(function(event) {
-      $question.find("#archive-confirm").animate({width:'toggle'},350);
+      $question.find("#archive-confirm").fadeToggle("fast");
     });
     // Delete question when the archive button is clicked
     $question.find('#archive-confirm').click(function(event) {

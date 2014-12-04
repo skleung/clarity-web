@@ -20,5 +20,6 @@
   $("#toggle-understanding-off").click(function() {
     toggleOff();
   })
+  $("[name='sorting']").bootstrapSwitch();
 
 })(this, this.document);

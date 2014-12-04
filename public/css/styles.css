@@ -26,6 +26,7 @@ section {
   padding: 10px 0; }
 
 .title {
+  font-family: "Helvetica Neue";
   font-size: 50px;
   font-weight: 700; }
 
@@ -194,7 +195,8 @@ section {
   height: 700px; }
 
 #questions {
-  width: 90%; }
+  width: 90%;
+  margin-top: 30px; }
 
 .question {
   -webkit-box-sizing: border-box;
@@ -212,7 +214,8 @@ a.home-link {
   text-decoration: none; }
 
 a.home-link:hover {
-  text-decoration: none; }
+  text-decoration: none;
+  color: white; }
 
 .col-sm-4 {
   width: 33%; }
@@ -238,7 +241,11 @@ a.home-link:hover {
 
 .question h2 {
   letter-spacing: 0.5px;
-  font-size: 16px; }
+  font-size: 16px;
+  text-align: left; }
+
+.question.content {
+  text-align: left; }
 
 .question a {
   color: #5E388F;
@@ -261,10 +268,10 @@ a.home-link:hover {
 
 .toggle-action {
   font-size: 20px;
-  margin-top: 15px; }
+  margin-top: 24px; }
 
 .search-bar {
-  margin-top: 20px; }
+  margin-top: 24px; }
 
 .search-bar a {
   color: white;
