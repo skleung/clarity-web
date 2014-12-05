@@ -56,6 +56,9 @@
       if (error) {
         $('.error').text('Failed loading questions.');
       } else {
+        questions.sort(function(a, b) {
+          return b.upvotes - a.upvotes
+        });
         questions.forEach(function(question) {
           QuestionsView.renderQuestion($questions, question);
         });
@@ -67,7 +70,7 @@
   QuestionsView.renderQuestion = function($questions, question) {
     var $question = $(templates.renderQuestion(question));
     if (question.active) {
-      $question.prependTo($questions);
+      $question.appendTo($questions);
     }
 
     $question.find(".archive").click(function(event) {
