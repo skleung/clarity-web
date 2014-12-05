@@ -116,9 +116,14 @@ section {
   #signup hr, #question-form hr {
     color: #a9a9a9;
     opacity: 0.3; }
+  @media screen and (max-width: 480) {
+    #signup input[type=text], #signup input[type=password], #question-form input[type=text], #question-form input[type=password] {
+      width: 90%; }
+    #signup .form-container, #question-form .form-container {
+      width: 90%; } }
   #signup input[type=text], #signup input[type=password], #question-form input[type=text], #question-form input[type=password] {
-    width: 200px;
     height: 36px;
+    width: 200px;
     -webkit-border-radius: 0px 4px 4px 0px/5px 5px 4px 4px;
     -moz-border-radius: 0px 4px 4px 0px/0px 0px 4px 4px;
     border-radius: 0px 4px 4px 0px/5px 5px 4px 4px;

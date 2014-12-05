@@ -155,10 +155,17 @@ section {
     color: #a9a9a9;
     opacity: 0.3;
   }
-
+  @media screen and (max-width: 480) {
+    input[type=text], input[type=password]{
+      width: 90%;
+    }
+    .form-container {
+      width: 90%;
+    }
+  }
   input[type=text], input[type=password]{
-    width: 200px;
     height: 36px;
+    width: 200px;
     -webkit-border-radius: 0px 4px 4px 0px/5px 5px 4px 4px;
     -moz-border-radius: 0px 4px 4px 0px/0px 0px 4px 4px;
     border-radius: 0px 4px 4px 0px/5px 5px 4px 4px;
