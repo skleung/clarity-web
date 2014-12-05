@@ -88,7 +88,7 @@ module.exports = function(app, io) {
 
     question.save(function(error, question) {
       if (error) {
-        throw error;
+        response.send(422, "YO BIB");
       } else {
         io.emit('create-question', question); // io.emit abstracts out JSON encoding
         response.json(200, question);
