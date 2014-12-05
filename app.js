@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 var http = require('http').Server(app);
+var WebSocketServer = require("ws").Server;
 var io = require('socket.io')(http);
 
 var uristring = process.env.MONGOHQ_URL || process.env.MONGOLAB_URI || "mongodb://localhost/clarity-db";
@@ -15,14 +16,10 @@ mongoose.connect(uristring, function (err, res) {
   }
 });
 
-io.configure(function () { 
-  io.set("transports", ["xhr-polling"]); 
-  io.set("polling duration", 10); 
-});
-
 require('./settings.js')(app, express);
 require('./routes/index.js')(app, io);
 
 http.listen(port, function() {
   console.log('Listening at 127.0.0.1:' + port);
 });
+
