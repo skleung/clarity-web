@@ -1,5 +1,5 @@
 $bg-color: #5E388F;
-$body-font: "Open Sans", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+$body-font: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, Sans-serif;
 body {
   color: darken($bg-color, 50%);
   font: 16px/1.5 $body-font;
@@ -9,7 +9,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-weight: normal;
-  font-family: "Raleway", Cambria, Georgia, Serif;
+  font-family: 'Helvetica Neue', Cambria, Georgia, Serif;
 }
 
 header {
@@ -35,7 +35,7 @@ section {
 }
 
 .title {
-  font-family: "Helvetica Neue";
+  font-family: 'Helvetica Neue';
   font-size: 50px;
   font-weight: 700;
 }
