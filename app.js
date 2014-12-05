@@ -3,12 +3,21 @@ var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 
+var uristring = process.env.MONGOHQ_URL || process.env.MONGOLAB_URI || "mongodb://localhost/clarity-db";
+var port = process.env.PORT || 3000
+
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/clarity-db');
+mongoose.connect(uristring, function (err, res) {
+  if (err) {
+  console.log ('ERROR connecting to: ' + uristring + '. ' + err);
+  } else {
+  console.log ('Succeeded connected to: ' + uristring);
+  }
+});
 
 require('./settings.js')(app, express);
 require('./routes/index.js')(app, io);
 
-http.listen(3000, function() {
-  console.log('Listening at 127.0.0.1:' + 3000);
+http.listen(port, function() {
+  console.log('Listening at 127.0.0.1:' + port);
 });
