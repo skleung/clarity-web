@@ -15,6 +15,11 @@ mongoose.connect(uristring, function (err, res) {
   }
 });
 
+io.configure(function () {
+  io.set("transports", ["xhr-polling"]);
+  io.set("polling duration", 10);
+});
+
 require('./settings.js')(app, express);
 require('./routes/index.js')(app, io);
 
