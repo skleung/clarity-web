@@ -58,7 +58,7 @@ section {
     margin-left: 12px; }
   #signup .form-container, #question-form .form-container {
     margin: 20px auto;
-    width: 323px;
+    width: 300px;
     height: auto;
     -webkit-border-radius: 8px/7px;
     -moz-border-radius: 8px/7px;
@@ -120,7 +120,7 @@ section {
     #signup input[type=text], #signup input[type=password], #question-form input[type=text], #question-form input[type=password] {
       width: 90%; }
     #signup .form-container, #question-form .form-container {
-      width: 90%; } }
+      width: 60%; } }
   #signup input[type=text], #signup input[type=password], #question-form input[type=text], #question-form input[type=password] {
     height: 36px;
     width: 200px;
@@ -200,6 +200,7 @@ section {
   height: 700px; }
 
 #questions {
+  padding: 0px;
   width: auto;
   margin-top: 30px; }
 
