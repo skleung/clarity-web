@@ -15,17 +15,9 @@ mongoose.connect(uristring, function (err, res) {
   }
 });
 
-io.on("connection", function(ws) {
-  var id = setInterval(function() {
-    ws.send(JSON.stringify(new Date()), function() {  })
-  }, 1000)
-
-  console.log("websocket connection open")
-
-  io.on("close", function() {
-    console.log("websocket connection close")
-    clearInterval(id)
-  })
+io.configure(function () { 
+  io.set("transports", ["xhr-polling"]); 
+  io.set("polling duration", 10); 
 });
 
 require('./settings.js')(app, express);
