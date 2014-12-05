@@ -13,7 +13,12 @@
   }
 
   QuestionsView.archiveQuestion = function(id) {
-    // callback to render the action of archiving a question in the view
+    $(".question").each(function(index) {
+      var curId = $(this).find(".id").val()
+      if (curId === id) {
+        $(this).slideUp();
+      }
+    });
   };
 
   QuestionsView.upvoteQuestion = function(q) {

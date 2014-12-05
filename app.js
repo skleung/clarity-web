@@ -1,7 +1,6 @@
 var express = require('express');
 var app = express();
 var http = require('http').Server(app);
-var WebSocketServer = require("ws").Server;
 var io = require('socket.io')(http);
 
 var uristring = process.env.MONGOHQ_URL || process.env.MONGOLAB_URI || "mongodb://localhost/clarity-db";
