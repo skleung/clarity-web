@@ -3,10 +3,7 @@ Sherman:
 Logout potentially as footer
 
 
-
 Keyboard shorcuts for teacher archive (shouldn't have to aim cursor at button during lecture)
-Redesign understanding bar
-Add timestamp (e.g. 56s ago)
 
 
 Future
@@ -25,3 +22,6 @@ Done
   Center logo and search bar to the right
   Lightbulb in student view
   View by post time button sorting button
+Add timestamp (e.g. 56s ago)
+Redesign understanding bar
+FIX FONT IN STUDENT DASHBOARD

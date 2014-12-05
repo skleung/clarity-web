@@ -6,26 +6,7 @@ module.exports = function(app, io) {
     response.render('index.html');
   });
 
-  /* rendering login page */
-  app.get('/login', function(request, response) {
-    response.render('login.html');
-  });
-
-  app.get('/login-post', function(request, response) {
-    if (request.body.account === "teacher") {
-      response.writeHead(301,
-        { Location: '/teacher/dashboard'}
-      );
-      response.send();
-    } else {
-      response.writeHead(301,
-        { Location: '/student/dashboard'}
-      );
-      response.send();
-    }
-  });
-
-  app.get('/student/join', function(request, response) {
+  app.get('/student', function(request, response) {
     response.render('student/join.html')
   });
 
@@ -68,7 +49,7 @@ module.exports = function(app, io) {
   });
 
   /* rendering start page */
-  app.get('/start', function(request, response) {
+  app.get('/teacher', function(request, response) {
     response.render('teacher/start.html');
   });
 

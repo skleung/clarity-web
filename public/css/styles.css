@@ -195,7 +195,7 @@ section {
   height: 700px; }
 
 #questions {
-  width: 90%;
+  width: auto;
   margin-top: 30px; }
 
 .question {
