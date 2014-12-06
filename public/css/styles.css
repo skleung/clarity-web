@@ -210,7 +210,6 @@ section {
   box-sizing: border-box;
   overflow: hidden;
   background-color: white;
-  margin-bottom: 13px;
   padding: 0px 10px;
   font: 14px;
   color: #444; }
@@ -242,10 +241,11 @@ a.home-link:hover {
 
 .question .meta {
   overflow: hidden;
-  padding-top: 10px;
-  padding-bottom: 3px; }
+  padding-top: 15px;
+  padding-bottom: 10px; }
 
 .question h2 {
+  margin-top: 0px;
   letter-spacing: 0.5px;
   font-size: 16px;
   text-align: left; }
@@ -299,6 +299,9 @@ a.home-link:hover {
 
 .question:hover {
   cursor: pointer;
+  background-color: #e1d7ef; }
+
+.selected-question {
   background-color: #e1d7ef; }
 
 .new-question-wrapper:hover {

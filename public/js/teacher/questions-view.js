@@ -64,7 +64,47 @@
         });
       }
     });
+
+    $questions.click(function(event) {
+      event.preventDefault;
+      QuestionsView.selectQuestion($questions, $(event.target));
+    });
+
+    $(document).keydown(function(event) {
+      if (event.keyCode === 38) {
+        event.preventDefault;
+        QuestionsView.selectPrevQuestion($questions);
+      }
+      if (event.keyCode === 40) {
+        event.preventDefault;
+        QuestionsView.selectNextQuestion($questions);
+      }
+    });
   };
+
+  QuestionsView.selectQuestion = function($questions, $target) {
+    $questions.find('.selected-question').removeClass('selected-question');
+    $target.closest('li.question').addClass('selected-question');
+  }
+
+  QuestionsView.selectPrevQuestion = function($questions) {
+    var $selected = $questions.find('.selected-question').removeClass('selected-question');
+    if ($selected) {
+      var $siblings = $questions.children();
+      $siblings.eq(($siblings.index($selected) - 1) % $siblings.length).addClass('selected-question');
+    }
+  }
+
+  QuestionsView.selectNextQuestion = function($questions) {
+    var $selected = $questions.find('.selected-question');
+    $selected.removeClass('selected-question');
+    var $siblings = $questions.children();
+    if ($selected.length === 0) {
+      $siblings.eq(0).addClass('selected-question');
+    } else {
+      $siblings.eq(($siblings.index($selected) + 1) % $siblings.length).addClass('selected-question');
+    }
+  }
 
   /* Given question information, renders a question element into $question. */
   QuestionsView.renderQuestion = function($questions, question) {
@@ -83,6 +123,18 @@
         // Remove the question from the ticker list
         $question.slideUp("normal", function() { $(this).remove(); } );
       });
+    });
+
+    $(document).keydown(function(event) {
+      if (event.keyCode === 39 || event.keyCode === 32) {
+        event.preventDefault();
+        if ($question.hasClass('selected-question')) {
+          QuestionsModel.remove(question._id, function() {
+            // Remove the question from the ticker list
+            $question.slideUp("normal", function() { $(this).remove(); } );
+          });
+        }
+      }
     });
   };
 

@@ -51,7 +51,7 @@ section {
   .subtitle {
     font-size: 20px;
   }
-} 
+}
 
 #signup, #question-form {
   font-family: 'Open Sans', sans-serif;
@@ -272,10 +272,7 @@ section {
   box-sizing: border-box;
   overflow: hidden;
   background-color: white;
-
-  margin-bottom: 13px;
   padding: 0px 10px;
-
   font: 14px;
   color: #444;
 }
@@ -312,11 +309,12 @@ a.home-link:hover{
 
 .question .meta {
   overflow: hidden;
-  padding-top: 10px;
-  padding-bottom: 3px;
+  padding-top: 15px;
+  padding-bottom: 10px;
 }
 
 .question h2 {
+  margin-top: 0px;
   letter-spacing: 0.5px;
   font-size: 16px;
   text-align: left;
@@ -365,8 +363,8 @@ a.home-link:hover{
 
 .class-list {
   .row {
-    font-size: 20px;  
-    padding: 15px 0px;  
+    font-size: 20px;
+    padding: 15px 0px;
   }
   .row.active, .row:hover{
     cursor: pointer;
@@ -379,6 +377,9 @@ a.home-link:hover{
 }
 .question:hover{
   cursor: pointer;
+  background-color: lighten($bg-color, 50%);
+}
+.selected-question{
   background-color: lighten($bg-color, 50%);
 }
 .new-question-wrapper:hover{
